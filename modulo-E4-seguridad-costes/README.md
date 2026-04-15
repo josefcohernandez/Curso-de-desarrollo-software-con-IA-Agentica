@@ -19,6 +19,7 @@ Al completar este módulo serás capaz de:
 5. **Configurar** effort levels y fallback models para maximizar la relación calidad/coste
 6. **Diseñar** un benchmark de productividad para tu equipo con métricas personales y de equipo
 7. **Medir** el ROI real de la adopción de IA agéntica en desarrollo de software
+8. **Identificar** los 10 riesgos específicos de aplicaciones agénticas (OWASP Top 10 for Agentic Applications 2026) y aplicar mitigaciones concretas para cada uno
 
 ---
 
@@ -33,6 +34,7 @@ Al completar este módulo serás capaz de:
 | 3 | [03-token-budgeting.md](teoria/03-token-budgeting.md) | Token budgeting y gestión de costes: costes reales, 6 estrategias de optimización, presupuesto por tarea | 20 min |
 | 4 | [04-estrategias-modelo.md](teoria/04-estrategias-modelo.md) | Estrategias de selección de modelo: framework de 5 preguntas, fallback-model, effort levels | 15 min |
 | 5 | [05-benchmarking-productividad.md](teoria/05-benchmarking-productividad.md) | Benchmarking de productividad: métricas personales y de equipo, proceso de 5 pasos | 15 min |
+| 6 | [06-seguridad-agentica.md](teoria/06-seguridad-agentica.md) | Seguridad agéntica: OWASP Top 10 for Agentic Applications, vectores MCP, principio de least agency | 20 min |
 
 ### Ejercicios Prácticos
 
@@ -63,6 +65,10 @@ Al completar este módulo serás capaz de:
 - **Effort levels**: niveles de razonamiento del modelo (low, medium, high, max) que afectan calidad, velocidad y coste
 - **Fallback model**: modelo de respaldo cuando el principal no está disponible, para degradación elegante
 - **Mutation score vs coverage**: el mutation score mide calidad real de tests; aquí aplicamos el mismo principio a security reviews
+- **OWASP Top 10 for Agentic Applications**: los 10 riesgos específicos de agentes autónomos publicados por OWASP en 2025/2026: goal hijacking, tool misuse, excessive agency, insecure output handling, privilege escalation, context poisoning, insecure multi-agent communication, cascading hallucination failures, insufficient logging y rogue agent behavior
+- **Least Agency**: principio de mínimo privilegio aplicado a agentes — dar solo la autonomía que el problema justifica, en el nivel más bajo posible (consulta, acción reversible, irreversible, impacto externo)
+- **Tool Poisoning**: ataque en el que las descripciones de herramientas MCP contienen instrucciones maliciosas que el agente interpreta como comandos
+- **MCP Supply Chain Attack**: instalación de servidores MCP maliciosos desde registros públicos no auditados
 
 ---
 

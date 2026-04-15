@@ -171,10 +171,127 @@ Configura alertas en la consola de tu proveedor:
 
 ---
 
+## Prompt Caching Avanzado
+
+Más allá del caching automático, existen mecanismos explícitos para maximizar el ahorro.
+
+### Cache Control Explícito (API)
+
+Cuando construyes aplicaciones con la API de Anthropic (no solo usando Claude Code como herramienta), puedes controlar qué partes del contexto se cachean explícitamente:
+
+```python
+from anthropic import Anthropic
+
+client = Anthropic()
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    system=[
+        {
+            "type": "text",
+            "text": "Eres un asistente de desarrollo. Convenciones del proyecto: ...",
+            "cache_control": {"type": "ephemeral"}  # Marca para cachear
+        }
+    ],
+    messages=[{"role": "user", "content": "Implementa el endpoint GET /api/users"}]
+)
+
+# En la respuesta, verifica los cache hits:
+# response.usage.cache_creation_input_tokens  → tokens cacheados por primera vez
+# response.usage.cache_read_input_tokens      → tokens leídos de cache (90% descuento)
+```
+
+**Cómo funciona**: el campo `cache_control` con `type: "ephemeral"` marca un bloque como cacheable. En la primera llamada se paga el coste completo + un 25% extra de escritura. En las siguientes (dentro del TTL de 5 minutos), se paga solo el 10%.
+
+**Reglas del cache**:
+- El cache funciona por **prefijo**: el contenido cacheado debe estar al principio del contexto y ser idéntico byte a byte
+- TTL de 5 minutos: si no hay otra llamada en 5 minutos, el cache expira
+- Mínimo: 1,024 tokens para Sonnet/Opus, 2,048 para Haiku
+- Puedes poner hasta 4 breakpoints de cache en un prompt
+
+### Message Batches API
+
+Para tareas que no requieren respuesta inmediata, la Batches API de Anthropic ofrece un **50% de descuento** sobre los precios estándar:
+
+```python
+# Crear un batch de tareas
+batch = client.messages.batches.create(
+    requests=[
+        {
+            "custom_id": "review-file-1",
+            "params": {
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 2048,
+                "messages": [{"role": "user", "content": f"Revisa este código: {code_1}"}]
+            }
+        },
+        {
+            "custom_id": "review-file-2",
+            "params": {
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 2048,
+                "messages": [{"role": "user", "content": f"Revisa este código: {code_2}"}]
+            }
+        }
+        # ... hasta 100,000 requests por batch
+    ]
+)
+
+# El batch se procesa en hasta 24 horas
+# Consultar estado:
+status = client.messages.batches.retrieve(batch.id)
+```
+
+**Cuándo usar Batches API**:
+
+| Caso de uso | ¿Batches API? | Por qué |
+|-------------|---------------|---------|
+| Code review de 50 PRs acumulados | Si | No necesitas respuesta inmediata |
+| Migración masiva de ficheros | Si | Fan-out donde cada tarea es independiente |
+| Generación de documentación del proyecto completo | Si | Batch de tareas de documentación |
+| Debugging interactivo | No | Necesitas respuesta inmediata para iterar |
+| Desarrollo en tiempo real | No | La latencia de hasta 24h es inaceptable |
+| Evaluaciones de agentes (evals) | Si | Batch de evaluaciones con LLM-as-judge |
+
+### Estrategia Combinada de Caching
+
+La combinación óptima para minimizar costes en producción:
+
+```text
+1. Contexto estable (CLAUDE.md, system prompt) → cache_control ephemeral
+   - Se paga 1x completo + 25% escritura la primera vez
+   - Se paga 10% en las llamadas siguientes (dentro de 5 min)
+
+2. Tareas batch sin urgencia → Message Batches API
+   - 50% descuento sobre precio estándar
+   - Compatible con prompt caching (se acumulan los descuentos)
+
+3. Tareas interactivas → modelo por tarea (estrategia 1)
+   - Haiku para exploración, Sonnet para desarrollo, Opus para arquitectura
+
+4. Prefijo estable → KV-cache hit rate alto
+   - Mantén la información que cambia al FINAL del contexto
+   - La información estable va al INICIO (se cachea el prefijo)
+```
+
+**Ahorro estimado con la estrategia combinada**:
+
+| Componente | Ahorro | Mecanismo |
+|-----------|--------|-----------|
+| Prompt caching explícito | 70-90% en input repetido | cache_control + prefijo estable |
+| Batches API | 50% | Procesamiento asíncrono |
+| Modelo por tarea | 50-80% | Haiku vs Opus según necesidad |
+| Combinado (mejor caso) | 85-95% | Todo junto para tareas batch con contexto estable |
+
+---
+
 ## Resumen
 
 - Los output tokens cuestan 3-5x más que los input tokens; optimiza la verbosidad de las respuestas
 - Los cached tokens son tu aliado: un CLAUDE.md bien escrito se cachea y cuesta ~10% después del primer mensaje
-- Las 6 estrategias combinadas pueden reducir costes un 50-70% sin perder productividad
+- El `cache_control` explícito permite controlar qué se cachea en la API; el KV-cache prefijo premia mantener el inicio del contexto estable
+- La Message Batches API ofrece 50% de descuento para tareas asíncronas — ideal para code review masivo, migraciones y evals
+- Las 6 estrategias base + caching avanzado + batches pueden reducir costes un 85-95% en el mejor caso
 - Asigna budget por tipo de tarea antes de empezar; si lo excedes, reformula
 - Monitorea el gasto a nivel de equipo: un desarrollador que gasta 10x más que los demás necesita coaching, no más budget

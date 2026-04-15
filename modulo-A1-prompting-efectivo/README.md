@@ -21,6 +21,7 @@ Al completar este módulo serás capaz de:
 5. **Decidir** cuándo dar contexto explícito y cuándo dejar que el agente explore por sí mismo
 6. **Iterar** de forma eficiente sobre resultados parciales, usando feedback específico y la regla de las 2 correcciones
 7. **Crear** una colección personal de prompts reutilizables para tus tareas frecuentes
+8. **Aplicar** las 5 operaciones de context engineering (select, compress, order, isolate, format) para gestionar el contexto a lo largo de sesiones de trabajo complejas
 
 ---
 
@@ -36,6 +37,7 @@ Al completar este módulo serás capaz de:
 | 4 | [04-cookbook-antes-despues.md](teoria/04-cookbook-antes-despues.md) | Prompt cookbook — antes y después: 5 casos de transformación con código real | 15 min |
 | 5 | [05-contexto-vs-exploracion.md](teoria/05-contexto-vs-exploracion.md) | Cuándo dar contexto vs. dejar que el agente explore: tabla de decisión y regla 80/20 | 10 min |
 | 6 | [06-iteracion-correccion.md](teoria/06-iteracion-correccion.md) | Iteración y corrección de rumbo: corrección progresiva, regla de las 2 correcciones | 10 min |
+| 7 | [07-context-engineering.md](teoria/07-context-engineering.md) | Context engineering: las 5 operaciones, patrones de fallo de contexto y KV-cache | 20 min |
 
 ### Ejercicios Prácticos
 
@@ -65,6 +67,9 @@ Al completar este módulo serás capaz de:
 - **Anti-patrones**: prompt vago, scope creep, delegación ciega, saturación de contexto
 - **Regla 80/20**: el 80% de las tareas solo necesitan 2-3 líneas de contexto
 - **Regla de las 2 correcciones**: si corriges el mismo aspecto más de 2 veces, el problema está en el prompt
+- **Context engineering**: "the art of curating and maintaining the optimal set of tokens during LLM inference" — gestión dinámica del contexto durante toda la sesión
+- **Las 5 operaciones**: select, compress, order, isolate, format — las operaciones fundamentales para gestionar contexto
+- **Patrones de fallo de contexto**: context poisoning, context distraction, context confusion, context clash
 
 ---
 

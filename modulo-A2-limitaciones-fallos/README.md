@@ -6,7 +6,7 @@ Los agentes de código no son infalibles. Alucinan APIs, introducen regresiones 
 
 En este módulo desarrollarás un ojo clínico para los 8 tipos de fallo más comunes de agentes de código, aprenderás estrategias de prevención para cada uno y practicarás la detección con ejercicios realistas que simulan errores reales.
 
-**Tiempo estimado: 2 horas**
+**Tiempo estimado: 2 horas 15 min**
 
 ---
 
@@ -21,6 +21,7 @@ Al completar este módulo serás capaz de:
 5. **Reconocer** los síntomas de degradación por contexto saturado y aplicar técnicas de mitigación (`/clear`, `/compact`, subagentes)
 6. **Decidir** cuándo delegar una tarea a IA y cuándo es más seguro o eficiente hacerla manualmente
 7. **Aplicar** un flujo de verificación sistemático que combine compilación, tests y revisión de diff
+8. **Identificar** los 4 niveles del espectro de delegación y gestionar conscientemente el riesgo de vibe coding
 
 ---
 
@@ -36,6 +37,7 @@ Al completar este módulo serás capaz de:
 | 4 | [04-over-engineering.md](teoria/04-over-engineering.md) | Over-engineering: cuando el agente hace demasiado, señales de alarma y cómo prevenirlo | 15 min |
 | 5 | [05-degradacion-contexto.md](teoria/05-degradacion-contexto.md) | Degradación por contexto saturado: síntomas, cuándo ocurre y técnicas de mitigación | 10 min |
 | 6 | [06-cuando-no-usar-ia.md](teoria/06-cuando-no-usar-ia.md) | Cuándo NO usar IA: 6 escenarios donde el humano es mejor, la regla generación vs decisión | 10 min |
+| 7 | [07-vibe-coding.md](teoria/07-vibe-coding.md) | Vibe coding: espectro de delegación, riesgos documentados y guardrails para operar profesionalmente | 15 min |
 
 ### Ejercicios Prácticos
 
@@ -66,6 +68,8 @@ Al completar este módulo serás capaz de:
 - **Degradación de contexto**: pérdida progresiva de coherencia en sesiones largas (>30-50 intercambios)
 - **Regla generación vs decisión**: usa IA para generar, nunca para decidir sin supervisión en contextos de alto riesgo
 - **Red de seguridad**: tests + compilación + diff review = tu flujo de verificación antes de aceptar cualquier cambio
+- **Vibe coding**: delegación sin supervisión (nivel 4 del espectro); aceptable solo en prototipos desechables, nunca en código de producción
+- **Espectro de delegación**: 4 niveles (autocompletado, generación asistida, delegación supervisada, vibe coding) con riesgos diferenciados
 
 ---
 
@@ -73,7 +77,7 @@ Al completar este módulo serás capaz de:
 
 1. **Lee la teoría en orden**: empieza por la taxonomía general (01) y luego profundiza en cada tipo de fallo (02-05)
 2. **Interioriza las señales de alarma**: cada teoría incluye indicadores prácticos que puedes aplicar inmediatamente
-3. **Termina con la teoría 06**: saber cuándo NO usar IA es tan valioso como saber usarla bien
+3. **Lee las teorías 06 y 07 en último lugar**: la teoría 06 establece cuándo no delegar; la 07 cierra el módulo con el marco completo de delegación responsable
 4. **Haz los ejercicios con código real**: cada ejercicio simula fallos reales — no leas la solución antes de intentarlo
 5. **Aplica inmediatamente**: en tu próxima sesión de trabajo con IA, usa la taxonomía para evaluar cada respuesta
 

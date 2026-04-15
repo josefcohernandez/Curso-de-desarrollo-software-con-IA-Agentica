@@ -34,7 +34,7 @@ Al completar este módulo serás capaz de:
 | 3 | [03-compliance-regulacion.md](teoria/03-compliance-regulacion.md) | Compliance y sectores regulados: GDPR, SOC 2, PCI-DSS, HIPAA y controles recomendados | 15 min |
 | 4 | [04-responsible-disclosure.md](teoria/04-responsible-disclosure.md) | Responsible disclosure y seguridad: cuando el agente encuentra o introduce vulnerabilidades | 10 min |
 | 5 | [05-comparativa-herramientas.md](teoria/05-comparativa-herramientas.md) | Comparativa objetiva de herramientas: Claude Code, Cursor, Copilot, Windsurf, Cline | 15 min |
-| 6 | [06-futuro-desarrollo-ia.md](teoria/06-futuro-desarrollo-ia.md) | El futuro del desarrollo con IA: tendencias claras y lo que no cambiará | 10 min |
+| 6 | [06-futuro-desarrollo-ia.md](teoria/06-futuro-desarrollo-ia.md) | El futuro del desarrollo con IA: tendencias claras (MCP, computer use, agentic RAG, agentes autónomos) y lo que no cambiará | 15 min |
 
 ### Ejercicios Prácticos
 
@@ -63,6 +63,8 @@ Al completar este módulo serás capaz de:
 - **Responsible disclosure**: protocolo diferente cuando el agente encuentra una vulnerabilidad vs. cuando la introduce
 - **No hay herramienta perfecta**: cada herramienta tiene fortalezas y debilidades; la elección depende de tu contexto
 - **Lo que no cambia**: pensamiento crítico, buenas specs, tests, y la responsabilidad del developer sobre su código
+- **Computer use**: agentes que interactúan con interfaces gráficas, ya en producción (GA desde noviembre 2025)
+- **Agentic RAG**: agentes que gestionan su propia búsqueda de conocimiento de forma iterativa e inteligente
 
 ---
 

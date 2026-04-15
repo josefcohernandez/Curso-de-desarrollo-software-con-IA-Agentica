@@ -145,4 +145,4 @@ Tras los cambios, ejecuta npm test -- test/auth.test.ts y reporta.
 
 ## Siguiente
 
-Ya completaste toda la teoría del Módulo A1. Continúa con los [ejercicios prácticos](../ejercicios/01-comparativa-prompts.md) para poner en práctica lo aprendido.
+Continúa con [07 - Context Engineering](07-context-engineering.md), donde aprenderás a gestionar el contexto de forma dinámica durante sesiones de trabajo complejas: las 5 operaciones, los patrones de fallo y cómo maximizar la eficiencia.

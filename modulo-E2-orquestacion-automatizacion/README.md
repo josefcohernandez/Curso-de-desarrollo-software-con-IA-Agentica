@@ -6,7 +6,7 @@ Cuando un solo agente no es suficiente, necesitas orquestar múltiples agentes t
 
 Este módulo cubre los patrones de coordinación multi-agente, la creación de prompts para ejecución desatendida, el procesamiento en lote a escala, el testing de prompts como artefactos de producción y la gestión de fallos en automatización.
 
-**Tiempo estimado: 2 horas**
+**Tiempo estimado: 2.75 horas**
 
 ---
 
@@ -19,6 +19,8 @@ Al completar este módulo serás capaz de:
 3. **Implementar** procesamiento batch a escala con fan-out, control de concurrencia y gestión de fallos
 4. **Crear** test suites para prompts de producción con assertions, golden tests y testing adversarial
 5. **Definir** estrategias de recuperación ante fallos en ejecución desatendida: logging, checkpoints y alertas
+6. **Seleccionar** el framework de orquestación adecuado (LangGraph, CrewAI, OpenAI Agents SDK, Google ADK, Semantic Kernel, AutoGen) según el ecosistema y la complejidad del flujo
+7. **Implementar** un servidor MCP con FastMCP que exponga tools y resources a cualquier cliente compatible (Claude Code, Cursor, Copilot)
 
 ---
 
@@ -33,6 +35,10 @@ Al completar este módulo serás capaz de:
 | 3 | [03-batch-processing.md](teoria/03-batch-processing.md) | Procesamiento en lote a escala: fan-out, control de fallos y monitorización | 10 min |
 | 4 | [04-testing-de-prompts.md](teoria/04-testing-de-prompts.md) | Testing de prompts como artefactos de producción: 4 técnicas y framework de evaluación | 10 min |
 | 5 | [05-gestion-fallos-desatendidos.md](teoria/05-gestion-fallos-desatendidos.md) | Gestión de fallos en ejecución desatendida: tipos, recuperación y alertas | 10 min |
+| 6 | [06-frameworks-orquestacion.md](teoria/06-frameworks-orquestacion.md) | Frameworks de producción: LangGraph, CrewAI, OpenAI Agents SDK, Google ADK, Semantic Kernel, AutoGen | 15 min |
+| 7 | [07-mcp-protocolo.md](teoria/07-mcp-protocolo.md) | MCP: arquitectura host/client/server, las 3 primitivas (tools, resources, prompts), FastMCP, seguridad y portabilidad | 20 min |
+| 8 | [08-evaluacion-agentes.md](teoria/08-evaluacion-agentes.md) | Evaluación de agentes (evals): métricas, LLM-as-judge, framework de 3 niveles, SWE-bench y diseño de evals propias | 20 min |
+| 9 | [09-memoria-agentes.md](teoria/09-memoria-agentes.md) | Memoria de agentes: 4 tipos, mecanismos en coding agents, frameworks (Mem0, Letta, LangGraph Checkpointing), patrones y memoria en orquestación multi-agente | 15 min |
 
 ### Ejercicios Prácticos
 
@@ -62,12 +68,17 @@ Al completar este módulo serás capaz de:
 - **Testing de prompts**: assertions sobre output, golden tests, adversarial testing, regression testing
 - **Gestión de fallos**: logging, checkpoints, alertas, post-processing
 - **Comunicación entre agentes**: ficheros compartidos, tasks/mensajes, git branches/worktrees
+- **Frameworks de orquestación**: LangGraph (grafos de estado), CrewAI (roles declarativos), OpenAI Agents SDK (handoffs + guardrails), Google ADK (jerárquico nativo), Semantic Kernel (planners enterprise), AutoGen (conversación multi-agente)
+- **Criterio de selección**: ecosistema, complejidad del flujo, necesidad de ciclos y estado persistente
+- **MCP (Model Context Protocol)**: protocolo abierto para integración de herramientas; primitivas tools/resources/prompts; servidor con FastMCP; portabilidad entre clientes; seguridad (tool poisoning, supply chain, SSRF)
+- **Evaluación de agentes (evals)**: task completion rate, tool use accuracy, context retention; LLM-as-judge; framework de 3 niveles (unit, integration, end-to-end); SWE-bench como benchmark estándar
+- **Memoria de agentes**: in-context, externa persistente, episódica, semántica; CLAUDE.md como memoria explícita; auto-memory de Claude Code; frameworks Mem0, Letta, LangGraph Checkpointing; patrones write-through, summarize-and-store, retrieve-and-augment, forget-and-prune; memoria jerárquica en multi-agente
 
 ---
 
 ## Flujo de Trabajo Recomendado
 
-1. **Lee la teoría en orden**: empieza por patrones de orquestación (01), luego prompts para CI/CD (02), batch processing (03), testing de prompts (04) y gestión de fallos (05)
+1. **Lee la teoría en orden**: empieza por patrones de orquestación (01), luego prompts para CI/CD (02), batch processing (03), testing de prompts (04), gestión de fallos (05), frameworks de producción (06), MCP (07), evaluación de agentes (08) y memoria de agentes (09)
 2. **Relaciona con tu experiencia**: piensa en tareas de tu trabajo diario donde cada patrón aplicaría
 3. **Haz los ejercicios progresivamente**: pipeline simple (01), prompt robusto (02), batch real (03) y testing (04)
 4. **Mide resultados**: en cada ejercicio, observa cuántas tareas se completan sin intervención humana

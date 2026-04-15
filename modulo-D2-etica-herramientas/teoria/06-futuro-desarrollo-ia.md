@@ -37,17 +37,46 @@ La orquestación de múltiples agentes especializados ya es posible y seguirá e
 
 ### 3. Integración con herramientas externas (MCP)
 
-El Model Context Protocol y estándares similares permiten a los agentes interactuar con herramientas externas (bases de datos, APIs, servicios cloud, issue trackers).
+El Model Context Protocol (MCP) se ha consolidado como el estándar universal de integración entre agentes y herramientas externas. Lanzado por Anthropic en noviembre 2024, para 2026 tiene más de 97 millones de descargas mensuales del SDK y está adoptado por todos los grandes proveedores: OpenAI, Google DeepMind, AWS, Microsoft, Hugging Face y LangChain.
 
-**Implicación para ti**: la frontera entre "lo que hace el agente" y "lo que haces tú" se expande continuamente. Lo que hoy requiere intervención manual, mañana será automático.
+MCP permite a los agentes interactuar con bases de datos, APIs, issue trackers, observabilidad, CI/CD y sistemas de comunicación a través de un protocolo estandarizado. Un servidor MCP desarrollado una vez funciona en Claude Code, Cursor, Copilot, Windsurf, Cline y cualquier otro cliente compatible.
 
-### 4. El coding agent como herramienta estándar
+**Implicación para ti**: la frontera entre "lo que hace el agente" y "lo que haces tú" se expande continuamente. Saber construir y configurar servidores MCP es una habilidad de alto valor — es la diferencia entre un agente genérico y uno integrado con tu infraestructura. Ver el [Módulo E2: MCP en Profundidad](../modulo-E2-orquestacion-automatizacion/teoria/07-mcp-protocolo.md) para aprender la arquitectura y construcción de servidores MCP.
 
-De la misma forma que nadie cuestiona si un developer necesita un IDE o control de versiones, el agente de código se convertirá en una herramienta estándar del toolkit.
+### 4. Computer Use: agentes que interactúan con interfaces gráficas
+
+Una capacidad que en 2024 era experimental y en 2026 está en producción: los agentes pueden ver y operar interfaces gráficas como lo haría un humano — hacer clic, escribir texto, navegar por aplicaciones web.
+
+- **Anthropic Computer Use**: disponible en GA desde Claude Opus 4.5 (noviembre 2025). El agente recibe screenshots, interpreta la interfaz y genera acciones (clic, scroll, tecleo). Casos de uso: testing de UI, automatización de sistemas legacy sin API, web scraping inteligente.
+- **OpenAI Computer-Using Agent (CUA) / Operator**: modelo que navega la web y ejecuta tareas multi-paso en un navegador controlado. Operativo para consumidores y empresas.
+
+**Implicación para ti**: la automatización ya no está limitada a lo que tiene API. Sistemas legacy, interfaces admin, herramientas SaaS sin integración — todo es automatizable si el agente puede "verlo". Pero el riesgo también escala: un agente con computer use puede hacer clic en "Delete" tan fácilmente como en "Save".
+
+### 5. Agentic RAG: agentes que gestionan su propio conocimiento
+
+RAG (Retrieval-Augmented Generation) evolucionó de un patrón estático (busca → inyecta → genera) a un patrón agéntico donde el agente decide cuándo buscar, qué buscar, cómo iterar sobre los resultados y si la información recuperada es suficiente.
+
+```text
+RAG clásico:
+  Query → Búsqueda vectorial → Top-K documentos → LLM genera respuesta
+
+Agentic RAG:
+  Query → Agente analiza → Decide si necesita buscar → Busca → Evalúa resultados
+        → ¿Suficiente? No → Reformula query → Busca de nuevo → Evalúa
+        → ¿Suficiente? Sí → Genera respuesta con fuentes verificadas
+```
+
+En desarrollo de software, agentic RAG se manifiesta cuando el agente busca en documentación interna, wikis corporativas, o bases de conocimiento del equipo para informar sus decisiones. La combinación de MCP (para acceder a las fuentes) + agentic RAG (para buscar inteligentemente) es uno de los patrones de producción más comunes en 2026.
+
+**Implicación para ti**: los agentes que solo conocen lo que está en su context window son limitados. Los que pueden buscar, evaluar y acumular conocimiento de fuentes externas son significativamente más útiles en entornos enterprise.
+
+### 7. El coding agent como herramienta estándar
+
+De la misma forma que nadie cuestiona si un developer necesita un IDE o control de versiones, el agente de código se convertirá en una herramienta estándar del toolkit. En 2026, el 72% de developers usa herramientas de IA diariamente y el 41% del código global es generado con asistencia de IA.
 
 **Implicación para ti**: no usar IA no te hará peor developer. Pero saber usarla bien te hará significativamente más productivo.
 
-### 5. Especialización por dominio
+### 8. Especialización por dominio
 
 Los agentes genéricos evolucionan hacia agentes especializados: para frontend, para DevOps, para data engineering, para mobile. Cada uno con conocimiento profundo de su dominio.
 
@@ -93,7 +122,10 @@ Usar IA no te exime de entender lo que hace tu código. Si no puedes explicar po
 | Especificación y diseño | La IA necesita buenas specs para producir buen código |
 | Code review y pensamiento crítico | Más código generado = más código que revisar |
 | Testing y verificación | La red de seguridad se vuelve más importante |
+| Context engineering | Curar y gestionar el contexto óptimo durante la inferencia es la habilidad central del desarrollo con IA |
 | Arquitectura de sistemas | Las decisiones de alto nivel siguen siendo humanas |
+| Seguridad agéntica | Los riesgos de agentes autónomos (OWASP Top 10 Agentic) requieren expertise específico |
+| Orquestación y evaluación | Diseñar sistemas multi-agente y evaluar su rendimiento en producción |
 | Conocimiento de dominio | La IA no conoce tu negocio |
 | Comunicación | Explicar problemas al agente y a los humanos |
 
