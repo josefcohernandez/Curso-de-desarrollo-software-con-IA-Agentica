@@ -28,7 +28,7 @@ Mientras que un curso de herramienta enseña *qué botones pulsar*, este curso e
 
 ## Estructura del curso
 
-El curso está organizado en **3 bloques progresivos** con **8 módulos** + proyecto final:
+El curso está organizado en **4 bloques progresivos** con **12 módulos** + proyecto final:
 
 ### Bloque A: El Oficio (Módulos A1-A4)
 
@@ -43,7 +43,7 @@ El curso está organizado en **3 bloques progresivos** con **8 módulos** + proy
 
 | Módulo | Título | Tiempo | Descripción |
 |--------|--------|--------|-------------|
-| B1 | El Día a Día: Escenarios End-to-End | 2.5h | Onboarding, incidente en producción, proyecto greenfield, legacy code, día típico |
+| B1 | El Día a Día — Escenarios End-to-End | 2.5h | Onboarding, incidente en producción, proyecto greenfield, legacy code, día típico |
 | B2 | Trabajar con Diferentes Stacks | 2.5h | Frontend, backend, DevOps/IaC, data, mobile — patrones por dominio |
 
 ### Bloque C: Equipo y Organización (Módulos C1-C2)
@@ -53,19 +53,28 @@ El curso está organizado en **3 bloques progresivos** con **8 módulos** + proy
 | C1 | Adopción en Equipos y Métricas | 2h | Fases de adopción, resistencia al cambio, convenciones de equipo, ROI |
 | C2 | Ética, Responsabilidad y Panorama de Herramientas | 2h | IP, privacidad, compliance, comparativa de herramientas, futuro del desarrollo |
 
+### Bloque D: Nivel Experto (Módulos D1-D4)
+
+| Módulo | Título | Tiempo | Descripción |
+|--------|--------|--------|-------------|
+| D1 | Arquitectura de Software Orientada a IA | 2h | AI-readability, patrones modulares, documentación como contrato, anti-patrones |
+| D2 | Orquestación Multi-Agente y Automatización a Escala | 2h | Patrones de coordinación, prompts para CI/CD, batch processing, testing de prompts |
+| D3 | Testing Avanzado y AI Pair Programming | 2h | Property-based testing, mutation testing, visual regression, flow state |
+| D4 | Seguridad, Costes y Optimización | 2h | Threat modeling, security review profundo, token budgeting, benchmarking |
+
 ### Proyecto Final
 
 | Módulo | Título | Tiempo | Descripción |
 |--------|--------|--------|-------------|
 | P | Caso Práctico Integrador | 4-6h | Sprint simulado de 3 días aplicando todas las técnicas del curso |
 
-**Tiempo total estimado: 21-23 horas**
+**Tiempo total estimado: 29-31 horas**
 
 ---
 
 ## Ruta de aprendizaje
 
-```
+```text
 BLOQUE A: EL OFICIO
 ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐
 │   A1    │──▶│   A2    │──▶│   A3    │──▶│   A4    │
@@ -86,6 +95,13 @@ BLOQUE C: EQUIPO Y ORGANIZACIÓN  ▼
                               │Adopción │   │ Ética y │
                               │equipos  │   │herramie.│
                               └─────────┘   └─────────┘
+                                  │
+BLOQUE D: NIVEL EXPERTO          ▼
+┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐
+│   D1    │──▶│   D2    │──▶│   D3    │──▶│   D4    │
+│Arquitec.│   │Orquesta.│   │Testing +│   │Segurida│
+│para IA  │   │multi-ag.│   │Pair Prog│   │+ Costes│
+└─────────┘   └─────────┘   └─────────┘   └─────────┘
                                                 │
 PROYECTO FINAL                                  ▼
                               ┌──────────────────────┐
@@ -101,7 +117,7 @@ PROYECTO FINAL                                  ▼
 
 ### Como formación guiada
 
-Sigue los bloques en orden (A → B → C → Proyecto). Cada módulo construye sobre los anteriores. Dedica al menos 1 semana al Bloque A — es la base de todo lo demás.
+Sigue los bloques en orden (A → B → C → D → Proyecto). Cada módulo construye sobre los anteriores. Dedica al menos 1 semana al Bloque A — es la base de todo lo demás. El Bloque D (Experto) es opcional si no necesitas nivel avanzado.
 
 ### Como referencia rápida
 
@@ -111,6 +127,10 @@ Sigue los bloques en orden (A → B → C → Proyecto). Cada módulo construye 
 - **"¿Cómo debuggeo con IA?"** → Módulo A4
 - **"¿Cómo introduzco IA en mi equipo?"** → Módulo C1
 - **"¿Qué herramienta de IA elijo?"** → Módulo C2
+- **"¿Cómo diseño software para que la IA trabaje mejor?"** → Módulo D1
+- **"¿Cómo coordino múltiples agentes?"** → Módulo D2
+- **"¿Cómo hago testing avanzado con IA?"** → Módulo D3
+- **"¿Cómo gestiono costes y seguridad?"** → Módulo D4
 
 ### En paralelo con el Curso de Claude Code
 
@@ -123,7 +143,8 @@ Si estás haciendo el [Curso de Claude Code](https://github.com/josefcohernandez
 | Semana 5-6 | M11-M15 (Experto) | A3-A4 (Code Review + Debugging) |
 | Semana 7 | — | B1-B2 (Escenarios + Stacks) |
 | Semana 8 | — | C1-C2 (Equipos + Ética) |
-| Semana 9-10 | M16 (Proyecto Final) | Proyecto (combinable) |
+| Semana 9-10 | — | D1-D4 (Nivel Experto) |
+| Semana 11-12 | M16 (Proyecto Final) | Proyecto (combinable) |
 
 ---
 
@@ -131,7 +152,7 @@ Si estás haciendo el [Curso de Claude Code](https://github.com/josefcohernandez
 
 Este curso es **independiente pero complementario** al [Curso de Desarrollo Asistido con Claude Code](https://github.com/josefcohernandez/claude-code-course).
 
-```
+```text
 Curso de Claude Code                     Este curso
 ━━━━━━━━━━━━━━━━━━━                      ━━━━━━━━━━
 
@@ -141,6 +162,12 @@ M09 Agentes      ◄────────────────────
 M11 Enterprise   ◄──────────────────────► C1 Adopción equipos
 M12 Metodologías ◄──────────────────────► A3 Code Review
                  ◄──────────────────────► A4 Debugging
+M04 Memoria      ◄──────────────────────► D1 Arquitectura para IA
+M09 Agentes      ◄──────────────────────► D2 Orquestación
+M10 CI/CD        ◄──────────────────────► D2 Orquestación
+M12 Metodologías ◄──────────────────────► D3 Testing avanzado
+M11 Enterprise   ◄──────────────────────► D4 Seguridad y costes
+M03 Contexto     ◄──────────────────────► D4 Seguridad y costes
 M16 Proyecto     ◄──────────────────────► Proyecto
 ```
 
@@ -153,7 +180,7 @@ M16 Proyecto     ◄────────────────────
 
 ## Estructura de carpetas
 
-```
+```text
 Curso-Desarrollo-Profesional-con-IA-Agentica/
 ├── README.md                              # Este archivo
 ├── modulo-A1-prompting-efectivo/
@@ -266,6 +293,55 @@ Curso-Desarrollo-Profesional-con-IA-Agentica/
 │       ├── 02-analisis-compliance.md
 │       ├── 03-comparativa-practica.md
 │       └── 04-caso-etico.md
+├── modulo-D1-arquitectura-para-ia/
+│   ├── README.md
+│   ├── teoria/
+│   │   ├── 01-ai-readability.md
+│   │   ├── 02-patrones-modulares.md
+│   │   ├── 03-anti-patrones-arquitectonicos.md
+│   │   └── 04-documentacion-como-contrato.md
+│   └── ejercicios/
+│       ├── 01-evaluar-ai-readability.md
+│       ├── 02-refactorizar-para-ia.md
+│       └── 03-documentar-para-ia.md
+├── modulo-D2-orquestacion-automatizacion/
+│   ├── README.md
+│   ├── teoria/
+│   │   ├── 01-patrones-orquestacion.md
+│   │   ├── 02-prompts-para-cicd.md
+│   │   ├── 03-batch-processing.md
+│   │   ├── 04-testing-de-prompts.md
+│   │   └── 05-gestion-fallos-desatendidos.md
+│   └── ejercicios/
+│       ├── 01-pipeline-multi-agente.md
+│       ├── 02-prompt-para-cicd.md
+│       ├── 03-migracion-batch.md
+│       └── 04-test-suite-prompts.md
+├── modulo-D3-testing-pair-programming/
+│   ├── README.md
+│   ├── teoria/
+│   │   ├── 01-testing-generativo.md
+│   │   ├── 02-mutation-testing.md
+│   │   ├── 03-visual-regression.md
+│   │   ├── 04-pair-programming-ia.md
+│   │   └── 05-flow-state-productividad.md
+│   └── ejercicios/
+│       ├── 01-property-based-testing.md
+│       ├── 02-mutation-testing.md
+│       └── 03-sesion-pair-programming.md
+├── modulo-D4-seguridad-costes/
+│   ├── README.md
+│   ├── teoria/
+│   │   ├── 01-threat-modeling.md
+│   │   ├── 02-security-review-profundo.md
+│   │   ├── 03-token-budgeting.md
+│   │   ├── 04-estrategias-modelo.md
+│   │   └── 05-benchmarking-productividad.md
+│   └── ejercicios/
+│       ├── 01-threat-model-proyecto.md
+│       ├── 02-audit-seguridad-profundo.md
+│       ├── 03-optimizar-costes.md
+│       └── 04-benchmark-equipo.md
 ├── proyecto-final/
 │   ├── README.md
 │   ├── enunciado/
@@ -295,7 +371,7 @@ Curso-Desarrollo-Profesional-con-IA-Agentica/
 
 | Versión | Fecha | Cambios principales |
 |---------|-------|---------------------|
-| 1.0 | Abril 2026 | Versión inicial — 8 módulos + proyecto en 3 bloques |
+| 1.0 | Abril 2026 | Versión inicial — 12 módulos + proyecto en 4 bloques (A: El Oficio, B: Escenarios, C: Equipo, D: Experto) |
 
 ---
 
