@@ -121,9 +121,9 @@ No revises solo en el momento de generación. Programa revisiones periódicas de
 | Quincenal | Patrones de acceso a datos, error handling | Detectar inconsistencias entre módulos |
 | Mensual | Suite de tests completa | Detectar tests frágiles y coverage falso |
 
-### 2. Mantener CLAUDE.md actualizado
+### 2. Mantener actualizado el archivo de instrucciones
 
-Un `CLAUDE.md` (o archivo de instrucciones equivalente) bien mantenido reduce la deuda técnica porque el agente conoce las convenciones:
+Un archivo de instrucciones bien mantenido (`AGENTS.md`, `CLAUDE.md` o equivalente) reduce la deuda técnica porque el agente conoce las convenciones:
 
 ```markdown
 ## Patrones del proyecto

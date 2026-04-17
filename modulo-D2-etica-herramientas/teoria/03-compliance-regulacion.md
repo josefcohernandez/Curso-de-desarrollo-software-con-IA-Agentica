@@ -153,21 +153,22 @@ El EU AI Act es la primera regulación integral de IA a nivel mundial. Su implem
 
 | Fecha | Hito |
 |-------|------|
-| **Febrero 2025** | Entrada en aplicación parcial: prohibiciones de prácticas de IA inaceptables |
-| **Agosto 2025** | Obligaciones para modelos de IA de propósito general (GPAI) |
-| **2 de agosto de 2026** | **Aplicación completa** de las reglas para sistemas de IA de alto riesgo |
+| **Febrero 2025** | Empiezan a aplicar prohibiciones y obligaciones iniciales de alfabetización en IA |
+| **Agosto 2025** | Empiezan a aplicar obligaciones para modelos de IA de propósito general (GPAI) |
+| **Agosto 2026** | Entra en vigor una parte importante del régimen operativo para sistemas y proveedores |
+| **Agosto 2027** | Despliegue completo del calendario principal del AI Act |
 
-Fuente: [artificialintelligenceact.eu/implementation-timeline/](https://artificialintelligenceact.eu/implementation-timeline/)
+Fuente orientativa: portal oficial del AI Act Service Desk de la UE y FAQ de la Comisión Europea.
 
 ### Relevancia para desarrollo con IA agéntica
 
-Las herramientas de generación de código con IA (como Claude Code, Copilot, Cursor) **no están clasificadas como "alto riesgo"** bajo el AI Act actual. Sin embargo, hay escenarios donde sí afecta:
+Las herramientas de generación de código con IA (como Claude Code, Codex, Copilot o Cursor) **no son automáticamente "alto riesgo"** por el mero hecho de generar código. La clasificación depende del uso previsto y del sistema final en el que se integran. Aun así, hay escenarios donde sí afecta:
 
 | Escenario | Impacto |
 |-----------|---------|
 | **Desarrollo de software para dispositivos médicos** | Si usas IA para generar código de un dispositivo médico (alto riesgo), la organización puede necesitar cumplir con los requisitos del AI Act |
 | **Infraestructura crítica** | Código generado por IA para sistemas de control de energía, agua o transporte cae bajo escrutinio regulatorio |
-| **Desarrollo general** | Impacto mínimo — los desarrolladores individuales no se ven afectados directamente |
+| **Desarrollo general** | Impacto relativamente bajo, pero conviene documentar el uso de IA y seguir el calendario regulatorio |
 
 ### Requisitos clave
 
@@ -179,7 +180,7 @@ Las herramientas de generación de código con IA (como Claude Code, Copilot, Cu
 
 ### Implicación práctica
 
-Para la mayoría de los equipos de desarrollo, el EU AI Act **no cambia el día a día**. La excepción son equipos enterprise en sectores regulados (salud, infraestructura crítica, seguridad) que deben:
+Para la mayoría de los equipos de desarrollo, el EU AI Act **no cambia drásticamente el día a día**. La excepción son equipos enterprise en sectores regulados (salud, infraestructura crítica, seguridad) que deben:
 
 - Evaluar si el software que desarrollan cae bajo la clasificación de "alto riesgo"
 - Documentar el uso de herramientas de IA en el proceso de desarrollo

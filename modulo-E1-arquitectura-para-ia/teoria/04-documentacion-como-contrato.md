@@ -1,8 +1,8 @@
 # Documentación como Contrato con el Agente
 
-## CLAUDE.md como Contrato Bidireccional
+## El Archivo de Instrucciones como Contrato Bidireccional
 
-CLAUDE.md y `.claude/rules/` funcionan como **contratos bidireccionales**:
+Un archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md`, `.cursorrules` o equivalente) y las reglas temáticas de la herramienta funcionan como **contratos bidireccionales**:
 
 - **Tú escribes las reglas**: arquitectura, convenciones, restricciones, flujos de trabajo
 - **El agente las sigue**: lee estos archivos al iniciar cada sesión y adapta su comportamiento
@@ -11,9 +11,9 @@ Es "bidireccional" porque no es solo documentación pasiva — es una especifica
 
 ---
 
-## Qué Incluir en un CLAUDE.md Orientado a AI-Readability
+## Qué Incluir en un Archivo de Instrucciones Orientado a AI-Readability
 
-Un CLAUDE.md efectivo cubre 4 áreas fundamentales:
+Un archivo de instrucciones efectivo cubre 4 áreas fundamentales:
 
 ### 1. Arquitectura
 
@@ -67,9 +67,9 @@ Documenta lo que el agente NO debe hacer — las prohibiciones son tan important
 
 ---
 
-## Organización con `.claude/rules/`
+## Organización con Reglas por Tema
 
-Para proyectos grandes, un solo CLAUDE.md puede volverse demasiado extenso. Usa `.claude/rules/` para organizar por tema:
+Para proyectos grandes, un solo archivo raíz puede volverse demasiado extenso. Usa la carpeta de reglas o documentación temática que soporte tu herramienta para organizar por tema:
 
 ```text
 .claude/
@@ -81,7 +81,7 @@ Para proyectos grandes, un solo CLAUDE.md puede volverse demasiado extenso. Usa 
 │   └── security.md          # Restricciones de seguridad
 ```
 
-Cada archivo en `.claude/rules/` se carga automáticamente cuando es relevante, proporcionando contexto especializado sin saturar el contexto base.
+Cada archivo temático aporta contexto especializado sin saturar el contexto base. El nombre exacto de la carpeta cambia según la herramienta; el patrón es estable.
 
 ---
 
@@ -143,10 +143,10 @@ para mantener el formato consistente.
 
 ---
 
-## Ejemplo Completo: CLAUDE.md para un Proyecto E-Commerce
+## Ejemplo Completo: Archivo de Instrucciones para un Proyecto E-Commerce
 
 ```markdown
-# CLAUDE.md — E-Commerce Platform
+# AGENTS.md — E-Commerce Platform
 
 ## Qué es este proyecto
 Plataforma de e-commerce B2C. Stack: Node.js + TypeScript, Express,
@@ -187,7 +187,7 @@ PostgreSQL con Prisma, React frontend.
 
 ## Verificación: ¿Tu Documentación Funciona?
 
-Después de crear o actualizar tu CLAUDE.md, verifica con esta prueba:
+Después de crear o actualizar tu archivo de instrucciones (`AGENTS.md`, `CLAUDE.md` o equivalente), verifica con esta prueba:
 
 1. Abre una nueva sesión con el agente (sin contexto previo)
 2. Pide una tarea que requiera conocer la arquitectura (ej: "Añade un endpoint para listar órdenes")

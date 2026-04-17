@@ -44,13 +44,13 @@ Ejemplo de flujo:
 4. Revisas el resultado cuando tú decides
 ```
 
-### 2. Plan Mode antes de ejecutar
+### 2. Fase de planificación antes de ejecutar
 
-Usar Plan Mode (pensar antes de actuar) reduce el número de iteraciones. Menos iteraciones = menos interrupciones.
+Usar una fase explícita de planificación (pensar antes de actuar) reduce el número de iteraciones. Menos iteraciones = menos interrupciones.
 
 ```text
-Flujo sin Plan Mode: 5 prompts × 30s espera = 2.5 min de espera + 5 interrupciones
-Flujo con Plan Mode: 1 plan + 1 ejecución = 1 min de espera + 2 interrupciones
+Flujo sin planificación previa: 5 prompts × 30s espera = 2.5 min de espera + 5 interrupciones
+Flujo con planificación previa: 1 plan + 1 ejecución = 1 min de espera + 2 interrupciones
 ```
 
 ### 3. Acumular tareas (batching)
@@ -103,7 +103,7 @@ No dediques más del 50% de tu jornada laboral al modo "supervisión de IA". Alt
 
 Las sesiones de supervisión intensa de IA no deben superar los 90 minutos sin pausa. Después de 90 minutos:
 
-1. **Para** la sesión (guarda contexto con `/compact` o notas)
+1. **Para** la sesión (guarda contexto con la función de compactación o con notas)
 2. **Cambia** de actividad por al menos 15-20 minutos
 3. **Retoma** con ojos frescos -- es probable que detectes problemas que antes no veías
 
@@ -133,7 +133,7 @@ Formato simple en un archivo de notas diario:
 - Modo predominante: Ping-pong TDD
 - Satisfacción: 4/5
 - Nota: El refactor de auth necesitó 6 prompts, demasiados. 
-  Debí usar Plan Mode antes de empezar.
+  Debí hacer una fase de planificación antes de empezar.
 ```
 
 ### Interpretación de las métricas
@@ -154,7 +154,7 @@ Formato simple en un archivo de notas diario:
 
 ## Resumen
 
-- La latencia del agente rompe el flow state; usa background, Plan Mode y batching para minimizar interrupciones
+- La latencia del agente rompe el flow state; usa background, fase de planificación y batching para minimizar interrupciones
 - La fatiga de supervisión es real y peligrosa: cuando dejas de cuestionar al agente, dejas de aportar valor
 - Regla del 50/50: máximo la mitad de tu jornada en supervisión de IA
 - Sesiones de supervisión: máximo 90 minutos sin pausa

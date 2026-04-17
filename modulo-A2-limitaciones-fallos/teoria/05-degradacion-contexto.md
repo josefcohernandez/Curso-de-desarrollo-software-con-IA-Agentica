@@ -59,32 +59,32 @@ Factores que **aceleran** la degradación:
 
 ## Técnicas de Prevención
 
-### 1. `/clear` entre tareas
+### 1. Reset de contexto entre tareas
 
 La técnica más efectiva. Cada tarea independiente debería ser una sesión limpia:
 
 ```text
 # Tarea 1: implementar endpoint de usuarios
 [... 15 intercambios ...]
-/clear
+[reinicia la sesión o usa el comando de limpieza de contexto]
 
 # Tarea 2: corregir bug en autenticación
 [empieza con contexto fresco]
 ```
 
-### 2. `/compact` con instrucciones
+### 2. Compactación con instrucciones
 
-Cuando necesitas mantener la sesión pero el contexto se está llenando, usa `/compact` para comprimir la conversación. Incluye instrucciones sobre qué preservar:
+Cuando necesitas mantener la sesión pero el contexto se está llenando, usa la función de compactación de tu herramienta o resume manualmente la conversación. Incluye instrucciones sobre qué preservar:
 
 ```text
-/compact Preserva: estamos usando PostgreSQL, la estructura de la API sigue
+[compacta o resume preservando]: estamos usando PostgreSQL, la estructura de la API sigue
 REST, el archivo principal es src/server.ts, y acabamos de terminar el
 módulo de usuarios.
 ```
 
 ### 3. Subagentes para investigación
 
-En herramientas que soportan subagentes (Claude Code), delega las tareas de investigación a un agente secundario. Esto mantiene el contexto principal limpio:
+En herramientas que soportan subagentes, delega las tareas de investigación a un agente secundario. Esto mantiene el contexto principal limpio:
 
 ```text
 Usa un subagente para buscar todos los archivos que importan el módulo
@@ -98,9 +98,9 @@ El subagente consume su propio contexto, y solo el resumen vuelve a tu sesión p
 En lugar de una sesión maratón, estructura el trabajo en fases con checkpoints:
 
 ```text
-Fase 1: Diseño de la estructura de datos (10-15 intercambios → /clear)
-Fase 2: Implementación del backend (10-15 intercambios → /clear)
-Fase 3: Tests e integración (10-15 intercambios → /clear)
+Fase 1: Diseño de la estructura de datos (10-15 intercambios → sesión nueva)
+Fase 2: Implementación del backend (10-15 intercambios → sesión nueva)
+Fase 3: Tests e integración (10-15 intercambios → sesión nueva)
 ```
 
 Al iniciar cada fase, reinyecta solo el contexto necesario:
@@ -116,13 +116,13 @@ Implementa el primer endpoint: GET /api/users
 
 ### 5. La regla de los 20 minutos
 
-> Si llevas más de 20 minutos en la misma sesión sin hacer `/clear`, probablemente deberías hacerlo.
+> Si llevas más de 20 minutos en la misma sesión sin reiniciar o limpiar contexto, probablemente deberías hacerlo.
 
 Esta regla heurística funciona porque 20 minutos de interacción activa suelen corresponder a 25-35 intercambios, que es la zona donde empieza la degradación.
 
 ---
 
-## Señales de Que Debes Hacer `/clear`
+## Señales de Que Debes Reiniciar la Sesión
 
 Detente y limpia la sesión si observas cualquiera de estas señales:
 
@@ -139,5 +139,5 @@ Detente y limpia la sesión si observas cualquiera de estas señales:
 - La degradación por contexto es inevitable en sesiones largas — no es un bug, es una limitación
 - Se manifiesta como contradicciones, duplicaciones, ignorar restricciones y baja de calidad
 - Empieza a ser notable tras 30-50 intercambios o cuando se leen muchos archivos
-- Tu arsenal: `/clear` entre tareas, `/compact` con instrucciones, subagentes, fases separadas
+- Tu arsenal: sesiones nuevas entre tareas, compactación o resumen con instrucciones, subagentes y fases separadas
 - La regla de los 20 minutos es tu mejor heurística: si llevas más de 20 minutos, limpia

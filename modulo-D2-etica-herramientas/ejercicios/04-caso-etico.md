@@ -89,7 +89,7 @@ Diseña un proceso de 3 pasos para detectar este tipo de situaciones antes de qu
 
 ```markdown
 - [ ] El análisis legal identifica correctamente la violación de GPL
-- [ ] Se reconoce que la responsabilidad es del developer/empresa, no del agente
+- [ ] Se reconoce que la responsabilidad es del desarrollador/la empresa, no del agente
 - [ ] Se evalúan al menos 3 opciones con pros y contras reales
 - [ ] La decisión elegida es viable y se justifica
 - [ ] El plan de prevención incluye medidas técnicas concretas (no solo "tener cuidado")
@@ -100,7 +100,7 @@ Diseña un proceso de 3 pasos para detectar este tipo de situaciones antes de qu
 
 ## Reflexión
 
-- ¿Es justo que el developer sea responsable de código que no escribió conscientemente?
+- ¿Es justo que el desarrollador sea responsable de código que no escribió conscientemente?
 - ¿Deberían las herramientas de IA detectar y advertir cuando reproducen código con licencia restrictiva?
 - ¿Cómo cambiaría tu análisis si la licencia fuera MIT en lugar de GPL?
 

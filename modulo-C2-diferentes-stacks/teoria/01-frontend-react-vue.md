@@ -114,7 +114,7 @@ Use Tailwind CSS, mobile-first responsive.
 | Aspecto | Qué esperar del agente | Tu responsabilidad |
 |---------|----------------------|-------------------|
 | Generación de componentes | Excelente para componentes individuales | Pedir composición, no monolitos |
-| State management | Funcional pero inconsistente | Definir el patrón en CLAUDE.md |
+| State management | Funcional pero inconsistente | Definir el patrón en el archivo de instrucciones del repositorio |
 | CSS/Tailwind | Bueno en desktop, limitado en responsive | Pedir mobile-first y accesibilidad |
 | Testing | Buena cobertura básica | Verificar edge cases y accesibilidad |
 | Performance | No optimiza renders por defecto | Pedir memoización explícitamente |

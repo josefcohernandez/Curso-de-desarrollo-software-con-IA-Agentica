@@ -12,7 +12,7 @@ Evalúa si los prompts son específicos, acotados, con verificación, y si sigue
 
 | Nivel | Descripción | Ejemplos |
 |-------|-------------|----------|
-| **Excelente** | Los prompts incluyen contexto, restricciones, resultado esperado y forma de verificar. Se usan los patrones correctos para cada tipo de tarea. Se aplica `/clear` entre tareas no relacionadas. | "El test en test/tasks.test.js:45 falla con 'TypeError'. El código relevante está en src/services/task.js. Investiga y corrige. Verifica que los 12 tests pasan." |
+| **Excelente** | Los prompts incluyen contexto, restricciones, resultado esperado y forma de verificar. Se usan los patrones correctos para cada tipo de tarea. Se reinicia o limpia el contexto entre tareas no relacionadas. | "El test en test/tasks.test.js:45 falla con 'TypeError'. El código relevante está en src/services/task.js. Investiga y corrige. Verifica que los 12 tests pasan." |
 | **Bueno** | Los prompts son específicos y producen resultados aceptables, pero les falta algún componente (generalmente la verificación o las restricciones). | "Fix the bug in the task service that causes a TypeError when updating a task" |
 | **Necesita Mejora** | Los prompts son vagos, sin restricciones ni verificación. Se acumula scope creep. Muchas iteraciones para cada tarea. | "Fix the tests", "Add authentication", "Make it work" |
 
@@ -20,7 +20,7 @@ Evalúa si los prompts son específicos, acotados, con verificación, y si sigue
 
 ## Criterio 2: Pensamiento Crítico (25%)
 
-Evalúa si el developer detecta y corrige fallos del agente, revisa el código antes de aceptarlo, y aplica las técnicas del [Módulo A2](../../modulo-A2-limitaciones-fallos/README.md) y [Módulo A3](../../modulo-A3-revision-codigo-ia/README.md).
+Evalúa si el desarrollador detecta y corrige fallos del agente, revisa el código antes de aceptarlo, y aplica las técnicas del [Módulo A2](../../modulo-A2-limitaciones-fallos/README.md) y [Módulo A3](../../modulo-A3-revision-codigo-ia/README.md).
 
 | Nivel | Descripción | Ejemplos |
 |-------|-------------|----------|
@@ -44,24 +44,24 @@ Evalúa el resultado final: funcionalidad, tests, ausencia de over-engineering, 
 
 ## Criterio 4: Proceso y Metodología (20%)
 
-Evalúa si se siguieron los workflows de cada módulo: SDD ([Módulo B2](../../modulo-B2-sdd-monografico/README.md)), TDD y Gherkin ([Módulo B1](../../modulo-B1-estrategias-desarrollo-ia/README.md)), Plan Mode, `/clear`, subagentes, debugging sistemático.
+Evalúa si se siguieron los workflows de cada módulo: SDD ([Módulo B2](../../modulo-B2-sdd-monografico/README.md)), TDD y Gherkin ([Módulo B1](../../modulo-B1-estrategias-desarrollo-ia/README.md)), fase de planificación, sesiones nuevas o limpieza de contexto, subagentes y debugging sistemático.
 
 | Nivel | Descripción | Ejemplos |
 |-------|-------------|----------|
-| **Excelente** | Se usa TDD (tests primero) en la implementación. Se usa Plan Mode para diseño. Se aplica `/clear` entre contextos. El debugging del Día 2 sigue un proceso sistemático. Se documenta el proceso, no solo el resultado. | "Fase 1.4: Escribí primero los tests para el CRUD, luego pedí implementación. El agente falló en el test de DELETE idempotente, lo que reveló un bug en mi spec." |
+| **Excelente** | Se usa TDD (tests primero) en la implementación. Se usa una fase de planificación para diseño. Se reinicia o limpia el contexto entre cambios de tarea. El debugging del Día 2 sigue un proceso sistemático. Se documenta el proceso, no solo el resultado. | "Fase 1.4: Escribí primero los tests para el CRUD, luego pedí implementación. El agente falló en el test de DELETE idempotente, lo que reveló un bug en mi spec." |
 | **Bueno** | Se intenta seguir el proceso pero no siempre de forma rigurosa. Se usa TDD parcialmente. Se documenta el proceso de forma básica. | Tests y código se escriben al mismo tiempo (no estrictamente TDD), pero se verifica al final. |
-| **Necesita Mejora** | No hay proceso visible. El código se genera y se acepta sin workflow. No se usa Plan Mode ni `/clear`. El debugging es ad-hoc. | Se genera todo de una vez con un solo prompt largo, sin iteración ni verificación intermedia. |
+| **Necesita Mejora** | No hay proceso visible. El código se genera y se acepta sin workflow. No se usa planificación previa ni limpieza de contexto. El debugging es ad-hoc. | Se genera todo de una vez con un solo prompt largo, sin iteración ni verificación intermedia. |
 
 ---
 
 ## Criterio 5: Documentación (10%)
 
-Evalúa la calidad de SPEC.md, ARCHITECTURE.md, CLAUDE.md, la auditoría de seguridad y RETROSPECTIVE.md.
+Evalúa la calidad de SPEC.md, ARCHITECTURE.md, el archivo de instrucciones del repositorio, la auditoría de seguridad y RETROSPECTIVE.md.
 
 | Nivel | Descripción | Ejemplos |
 |-------|-------------|----------|
-| **Excelente** | Todos los documentos están completos y son útiles. La retrospectiva incluye métricas cuantitativas y reflexiones cualitativas. El CLAUDE.md es utilizable por otro developer. La auditoría tiene hallazgos reales. | RETROSPECTIVE.md con tiempos por fase, prompts que funcionaron vs que fallaron, y lecciones aplicables a futuros proyectos. |
-| **Bueno** | Los documentos existen y cubren lo básico. La retrospectiva tiene métricas pero poca reflexión. El CLAUDE.md es genérico. | Documentos completos pero sin profundidad. CLAUDE.md copiado del template sin adaptar. |
+| **Excelente** | Todos los documentos están completos y son útiles. La retrospectiva incluye métricas cuantitativas y reflexiones cualitativas. El archivo de instrucciones es utilizable por otro desarrollador. La auditoría tiene hallazgos reales. | RETROSPECTIVE.md con tiempos por fase, prompts que funcionaron vs que fallaron, y lecciones aplicables a futuros proyectos. |
+| **Bueno** | Los documentos existen y cubren lo básico. La retrospectiva tiene métricas pero poca reflexión. El archivo de instrucciones es genérico. | Documentos completos pero sin profundidad. Archivo de instrucciones copiado del template sin adaptar. |
 | **Necesita Mejora** | Faltan documentos o están incompletos. La retrospectiva es superficial o ausente. No hay auditoría de seguridad. | Falta SPEC.md o ARCHITECTURE.md. RETROSPECTIVE.md de 5 líneas sin métricas. |
 
 ---

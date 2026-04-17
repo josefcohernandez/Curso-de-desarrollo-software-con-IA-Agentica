@@ -53,7 +53,7 @@ y los modelos en src/models/. Usamos TypeScript y Prisma como ORM.
 
 El contexto le da al agente el **modelo mental** del proyecto. Sin él, el agente tiene que explorar desde cero — lo cual es válido en algunas situaciones, pero consume más tokens y tiempo.
 
-> **Relación con el Curso de Claude Code**: el contexto permanente del proyecto se configura en archivos `CLAUDE.md` (ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md)). El contexto del prompt complementa esa información con lo específico de la tarea actual.
+> **Relación con el Curso de Claude Code**: el contexto permanente del proyecto suele vivir en un archivo de instrucciones persistentes del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente; ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md)). El contexto del prompt complementa esa información con lo específico de la tarea actual.
 
 ### 2. Intención
 
@@ -95,7 +95,7 @@ Si no puedes responder esas preguntas, necesitas más trabajo previo:
 |-----------|--------|
 | No hay tests para esta área | Pide primero que escriba los tests, luego que implemente |
 | No sabes cuál es el comportamiento correcto | Pide primero que investigue y reporte, luego que implemente |
-| El criterio de éxito es subjetivo ("que quede bonito") | Descompón en criterios objetivos o usa Plan Mode para que proponga opciones |
+| El criterio de éxito es subjetivo ("que quede bonito") | Descompón en criterios objetivos o usa una fase de planificación para que proponga opciones |
 
 ---
 
@@ -126,7 +126,7 @@ Eso significa que:
 | Chatbot vs. agente | El chatbot responde, el agente actúa |
 | Los 3 componentes | Contexto + Intención + Verificación |
 | La regla de oro | Sin verificación, no hay implementación confiable |
-| Modelo mental | Brief para un developer senior nuevo en el equipo |
+| Modelo mental | Brief para un desarrollador senior nuevo en el equipo |
 
 ---
 

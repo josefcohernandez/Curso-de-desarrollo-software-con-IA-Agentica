@@ -4,8 +4,8 @@
 
 En frontend web, abres el navegador y ves el resultado. En mobile, la situación tiene matices importantes (actualizado a 2026):
 
-- **Claude Code puede recibir y analizar screenshots** gracias a su capacidad multimodal. Puedes pegar o arrastrar capturas de pantalla directamente en la conversación y el agente las interpreta.
-- **Computer Use** (preview, solo macOS) permite a Claude capturar screenshots automáticamente del escritorio.
+- **Algunas herramientas multimodales pueden recibir y analizar screenshots**. En Claude Code, por ejemplo, puedes pegar o arrastrar capturas directamente en la conversación.
+- **Algunas herramientas incorporan capacidades de computer use o browser use**, pero su disponibilidad y nivel de autonomía cambian según proveedor y plataforma.
 - **Sin embargo**, el agente **no puede lanzar autónomamente un simulador mobile, interactuar con él ni capturar pantallas del simulador** por su cuenta. No puede tocar botones, hacer scroll ni navegar por la app.
 
 En la práctica, tú sigues siendo los "ojos" del agente en la mayoría de workflows mobile estándar: ejecutas la app en el simulador, capturas la pantalla y se la envías al agente para que itere. El workflow visual iterativo que describimos a continuación sigue siendo la forma más efectiva de trabajar.
@@ -80,7 +80,7 @@ Push onto current stack, don't switch tabs.
 
 ### State management
 
-Sin dirección, el agente mezclará soluciones. Define reglas claras en CLAUDE.md: estado local con useState/setState, estado del servidor con React Query/Riverpod, estado global con Zustand/Provider.
+Sin dirección, el agente mezclará soluciones. Define reglas claras en tu archivo de instrucciones del repositorio: estado local con useState/setState, estado del servidor con React Query/Riverpod, estado global con Zustand/Provider.
 
 ### Performance: el punto ciego
 
@@ -98,6 +98,6 @@ renderItem, getItemLayout, windowSize={5}.
 |---------|----------------------|-------------------|
 | Generación de pantallas | Estructura correcta, layout aproximado | Verificar en simulador |
 | Navegación | Funcional con dirección explícita | Definir estructura completa upfront |
-| State management | Funcional pero inconsistente | Reglas claras en CLAUDE.md |
+| State management | Funcional pero inconsistente | Reglas claras en el archivo de instrucciones del repositorio |
 | Performance | No optimiza por defecto | Perfilar y reportar con datos |
 | Cross-platform | Puede olvidar diferencias iOS/Android | Testar en ambas plataformas |

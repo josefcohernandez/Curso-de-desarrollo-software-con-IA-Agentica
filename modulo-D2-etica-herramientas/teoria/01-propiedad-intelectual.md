@@ -2,7 +2,7 @@
 
 ## Introducción
 
-¿De quién es el código que genera un agente de IA? ¿Puedes usarlo libremente en un proyecto comercial? ¿Qué pasa si el agente reproduce código de un proyecto open source? Estas preguntas no tienen respuestas definitivas todavía, pero como developer profesional necesitas un marco práctico para tomar decisiones.
+¿De quién es el código que genera un agente de IA? ¿Puedes usarlo libremente en un proyecto comercial? ¿Qué pasa si el agente reproduce código de un proyecto open source? Estas preguntas no tienen respuestas definitivas todavía, pero como desarrollador profesional necesitas un marco práctico para tomar decisiones.
 
 ---
 
@@ -14,15 +14,20 @@
 - Las leyes de copyright fueron diseñadas para obras creadas por humanos; la IA cae en un vacío legal en la mayoría de jurisdicciones
 - Varios tribunales en EE.UU. y la UE están resolviendo casos que sentarán precedentes
 
-### La tendencia
+### Lo prudente a día de hoy
 
-El consenso emergente es que el código generado por IA siguiendo instrucciones específicas de un humano se considera **obra derivada del humano** que proporcionó las instrucciones. Es decir:
+Lo más útil es separar tres preguntas que a menudo se mezclan:
 
-- Si escribes un prompt detallado con especificaciones, restricciones y verificaciones
-- Y el agente genera código en respuesta a esas instrucciones
-- Y tú revisas, editas y apruebas el resultado
+1. **Qué dicen los ToS del proveedor sobre el output**
+2. **Si ese output es o no protegible por copyright en tu jurisdicción**
+3. **Si el resultado reproduce material preexistente con licencia incompatible**
 
-Entonces el código resultante se trata como tu obra, de la misma forma que el código que escribirías con ayuda de Stack Overflow o documentación.
+En la práctica:
+
+- Muchos proveedores asignan al usuario derechos contractuales sobre el output o no reclaman su titularidad.
+- Eso **no equivale automáticamente** a que exista copyright fuerte sobre el resultado.
+- La protección depende del grado de aportación humana: selección, edición, estructura, refinamiento y decisiones expresivas.
+- La mera provisión de prompts, por sí sola, puede no ser suficiente.
 
 ### El riesgo real
 
@@ -36,9 +41,9 @@ El riesgo no está en la generación — está en la **reproducción**. Si el ag
 
 | Aspecto | Recomendación |
 |---------|---------------|
-| Uso general de código IA | Permitido — trátalo como código tuyo que debes revisar |
+| Uso general de código IA | Posible, pero trátalo como borrador bajo tu responsabilidad |
 | Reproducción literal | Riesgo — verifica que no sea copia de proyectos con licencia restrictiva |
-| Licencia de la herramienta | Lee los ToS — la mayoría te otorgan derechos sobre el output |
+| ToS de la herramienta | Léelos: suelen regular el output, pero no resuelven por sí solos la copyrightabilidad |
 | Patentes | Zona gris — consultar con legal si pretendes patentar código IA |
 
 ### Para proyectos open source
@@ -66,7 +71,7 @@ El riesgo no está en la generación — está en la **reproducción**. Si el ag
 | **Cursor** | Similar a Copilot — el output te pertenece |
 | **Cline** | Open source — el output depende del proveedor LLM que configures |
 
-> **Importante**: estas políticas pueden cambiar. Revisa los Terms of Service actuales antes de tomar decisiones.
+> **Importante**: estas políticas pueden cambiar. Revisa los Terms of Service actuales antes de tomar decisiones y no confundas "el proveedor me deja usar el output" con "el output está jurídicamente blindado".
 
 ---
 
@@ -90,7 +95,7 @@ El riesgo no está en la generación — está en la **reproducción**. Si el ag
 
 ## La Regla Práctica
 
-> **Trata el código generado por IA como un borrador que tú refinaste. La responsabilidad final del código que entra en producción siempre es tuya.**
+> **Trata el código generado por IA como un borrador que tú diriges, revisas y asumes. La responsabilidad final del código que entra en producción siempre es tuya.**
 
 Esto significa:
 - Tú firmas los commits, tú haces el merge, tú respondes por el código
@@ -107,10 +112,12 @@ Esto no es diferente de copiar código de Stack Overflow: la responsabilidad de 
 | Pregunta | Respuesta práctica |
 |----------|-------------------|
 | ¿Puedo usar código IA en mi proyecto comercial? | Sí, con revisión y bajo tu responsabilidad |
-| ¿De quién es el código? | Tuyo (en la mayoría de jurisdicciones y según los ToS de las herramientas) |
+| ¿De quién es el código? | Depende: revisa ToS, jurisdicción y grado de aportación humana |
 | ¿Qué riesgo hay? | Reproducción de código con licencia restrictiva |
 | ¿Cómo mitigo el riesgo? | Revisar código sospechoso, buscar coincidencias, verificar licencias |
 | ¿Necesito consultar con legal? | Sí, si trabajas en enterprise o manejas IP sensible |
+
+> **Nota**: este capítulo ofrece un marco práctico, no asesoramiento legal.
 
 ---
 

@@ -87,9 +87,9 @@ function add(a: number, b: number): number {
 
 El código es correcto funcionalmente pero no sigue las convenciones del proyecto: nomenclatura diferente, patrones de error handling distintos, formato inconsistente.
 
-**Cuándo ocurre**: cuando el agente no tiene acceso a las convenciones del proyecto (CLAUDE.md, ESLint config, etc.).
+**Cuándo ocurre**: cuando el agente no tiene acceso a las convenciones del proyecto (archivo de instrucciones del repositorio, config de linting, etc.).
 
-**Tu defensa**: incluir reglas de estilo en tu CLAUDE.md o archivo de configuración.
+**Tu defensa**: incluir reglas de estilo en tu `AGENTS.md`, `CLAUDE.md` o archivo equivalente, además de las configs automáticas del proyecto.
 
 ### 6. Degradación por Contexto
 
@@ -97,13 +97,13 @@ En sesiones largas, el agente empieza a olvidar instrucciones previas, contradec
 
 **Cuándo ocurre**: típicamente tras 30-50 intercambios, o cuando se han leído muchos archivos grandes.
 
-**Tu defensa**: `/clear` entre tareas, `/compact` antes de llenar la ventana.
+**Tu defensa**: reiniciar la sesión entre tareas y resumir o compactar el contexto antes de saturarlo.
 
 ### 7. Sesgo de Recencia
 
 El agente propone soluciones basadas en patrones recientes de su training data, ignorando las convenciones del proyecto. Puede sugerir React Server Components en un proyecto que usa Next.js Pages Router, o async/await donde el proyecto usa callbacks consistentemente.
 
-**Tu defensa**: ser explícito sobre las convenciones del proyecto en el prompt o CLAUDE.md.
+**Tu defensa**: ser explícito sobre las convenciones del proyecto en el prompt o en el archivo de instrucciones del repositorio.
 
 ### 8. Confianza Excesiva
 

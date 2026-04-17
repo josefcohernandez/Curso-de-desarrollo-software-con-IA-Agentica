@@ -14,7 +14,7 @@ La resistencia a la adopción de IA en equipos de desarrollo no es un problema �
 | "Me va a quitar el trabajo" | Miedo laboral | Evidencia: la IA aumenta productividad, no reemplaza. El valor del dev está en las decisiones, no en teclear |
 | "Es más lento que hacerlo yo" | Curva de aprendizaje | Dar tiempo. Los primeros 2-3 días son más lentos; después se acelera. Compartir métricas de early adopters |
 | "Introduce bugs sutiles" | Experiencia real | Validar la preocupación. Enseñar prácticas de verificación (tests, code review). Es un riesgo real que se mitiga con proceso |
-| "No quiero depender de una herramienta" | Autonomía profesional | Respetar. La IA es una opción, no una obligación. Algunos devs son más productivos sin ella en ciertas tareas |
+| "No quiero depender de una herramienta" | Autonomía profesional | Respetar. La IA es una opción, no una obligación. Algunos desarrolladores son más productivos sin ella en ciertas tareas |
 
 ---
 
@@ -22,7 +22,7 @@ La resistencia a la adopción de IA en equipos de desarrollo no es un problema �
 
 ### 1. "No confío en código que no escribí"
 
-Esta es probablemente la resistencia más sana. Un developer que no confía ciegamente en código generado tiene **exactamente la actitud correcta** para trabajar con IA.
+Esta es probablemente la resistencia más sana. Un desarrollador que no confía ciegamente en código generado tiene **exactamente la actitud correcta** para trabajar con IA.
 
 **Estrategia**:
 - Mostrar que el enfoque correcto es revisar el código IA con el mismo rigor (o más) que un PR de un compañero
@@ -36,8 +36,8 @@ Esta es probablemente la resistencia más sana. Un developer que no confía cieg
 El miedo laboral es comprensible pero generalmente infundado en el corto-medio plazo. La IA cambia el tipo de trabajo, no lo elimina.
 
 **Estrategia**:
-- Compartir datos concretos: las empresas que adoptan IA tienden a contratar más developers, no menos
-- Resaltar que el valor del developer está en entender el problema, tomar decisiones de diseño y garantizar calidad — habilidades que la IA no reemplaza
+- Compartir datos concretos: las empresas que adoptan IA tienden a contratar más desarrolladores, no menos
+- Resaltar que el valor del desarrollador está en entender el problema, tomar decisiones de diseño y garantizar calidad — habilidades que la IA no reemplaza
 - Ser honesto: la IA sí reduce la necesidad de trabajo mecánico, pero aumenta la capacidad de abordar problemas más complejos
 
 **Qué decir**: "La IA cambia en qué gastas tu tiempo, no si te necesitan. Pasas menos tiempo escribiendo boilerplate y más tiempo diseñando y revisando."
@@ -48,7 +48,7 @@ Los primeros días con cualquier herramienta nueva son más lentos. Si alguien e
 
 **Estrategia**:
 - Pedir una prueba honesta: 5 días hábiles de uso activo antes de evaluar
-- Emparejar al developer con un early adopter para las primeras sesiones
+- Emparejar al desarrollador con un early adopter para las primeras sesiones
 - Sugerir empezar con tareas donde la IA brilla (exploración de codebase, tests, boilerplate) en lugar de las más complejas
 
 **Qué decir**: "Dale una semana. Si después de 5 días sigues sintiéndote más lento, lo dejamos. Pero hazme el favor de empezar por estas tareas [lista]."
@@ -66,7 +66,7 @@ Esta preocupación es **100% legítima**. La IA introduce bugs. El [Módulo A2](
 
 ### 5. "No quiero depender de una herramienta"
 
-La autonomía profesional es un valor legítimo. Algunos developers prefieren tener control total sobre cada línea de código.
+La autonomía profesional es un valor legítimo. Algunos desarrolladores prefieren tener control total sobre cada línea de código.
 
 **Estrategia**:
 - **Respetar la decisión**. No todo el equipo necesita usar IA para que la adopción sea exitosa
@@ -82,7 +82,7 @@ La autonomía profesional es un valor legítimo. Algunos developers prefieren te
 
 > **Nunca obligar, siempre demostrar.**
 
-Los mejores evangelistas de IA en un equipo no son los managers que imponen herramientas — son los **compañeros que muestran resultados**. Cuando un developer ve que su colega resolvió en 20 minutos algo que normalmente toma 2 horas, la curiosidad es inevitable.
+Los mejores evangelistas de IA en un equipo no son los managers que imponen herramientas — son los **compañeros que muestran resultados**. Cuando un desarrollador ve que su colega resolvió en 20 minutos algo que normalmente toma 2 horas, la curiosidad es inevitable.
 
 ---
 
@@ -93,7 +93,7 @@ Los mejores evangelistas de IA en un equipo no son los managers que imponen herr
 | "Es obligatorio a partir del lunes" | Genera resistencia activa y sabotaje pasivo |
 | "Si no usas IA, te quedas atrás" | Crea ansiedad en lugar de motivación |
 | Ignorar las preocupaciones | Las preocupaciones no desaparecen, se convierten en resentimiento |
-| Forzar pair programming con IA | Invade el espacio de autonomía del developer |
+| Forzar pair programming con IA | Invade el espacio de autonomía del desarrollador |
 | Vincular bonus/evaluaciones al uso de IA | Incentiva uso superficial, no adopción real |
 
 ---

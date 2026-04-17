@@ -69,7 +69,7 @@ What patterns and conventions does this project follow?
 | Errores | "Clase `AppError` centralizada en `src/errors/`" |
 | API | "Respuestas envueltas en `{ data, error, meta }`" |
 
-**Consejo**: guarda estas convenciones en un archivo de notas personal o en tu CLAUDE.md del proyecto. Las necesitarás para escribir código consistente.
+**Consejo**: guarda estas convenciones en un archivo de notas personal o en el archivo de instrucciones del proyecto (`AGENTS.md`, `CLAUDE.md` o equivalente). Las necesitarás para escribir código consistente.
 
 ### Paso 4: Primera contribución (30 minutos)
 

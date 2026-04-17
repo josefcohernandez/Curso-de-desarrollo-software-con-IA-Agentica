@@ -37,7 +37,7 @@ Reescribe el prompt para que el refactor sea seguro. Incluye:
 - Objetivo claro del refactor
 - Restricciones que prevengan la eliminación de funciones usadas
 - Cómo verificar que nada se rompió
-- Uso de Plan Mode
+- Uso de una fase de planificación
 
 ---
 
@@ -110,7 +110,7 @@ Después de 4 iteraciones, el agente sigue sin resolver el bug.
 Responde estas preguntas:
 
 1. Qué información crítica faltaba en el prompt original?
-2. En qué punto debería el usuario haber hecho `/clear` y replanteado?
+2. En qué punto debería el usuario haber reiniciado la sesión o limpiado el contexto y replanteado?
 3. Qué regla de la [teoría 06](../teoria/06-iteracion-correccion.md) se violó?
 
 ### Tu tarea

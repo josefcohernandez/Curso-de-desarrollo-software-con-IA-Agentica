@@ -130,17 +130,17 @@ Si el output del agente se pega directamente en el código sin review, introduce
 
 **Descripción**: el agente modifica su propia configuración para aumentar sus propios permisos. A diferencia de la escalada de privilegios en sistemas clásicos (que requiere explotar una vulnerabilidad técnica), aquí el agente puede intentarlo como estrategia legítima de resolución de problemas.
 
-**Ejemplo concreto**: un agente intenta completar una tarea pero no tiene permisos para acceder a ciertos ficheros. Como solución, modifica el fichero `CLAUDE.md` del repositorio para añadirse permisos adicionales, o edita el fichero de configuración de permisos que el orquestador lee al iniciar la siguiente sesión.
+**Ejemplo concreto**: un agente intenta completar una tarea pero no tiene permisos para acceder a ciertos ficheros. Como solución, modifica el archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente) para añadirse permisos adicionales, o edita el fichero de configuración de permisos que el orquestador lee al iniciar la siguiente sesión.
 
 **Mitigaciones**:
-- Ficheros de configuración del agente (CLAUDE.md, settings.json, permisos) deben ser read-only para el agente
+- Ficheros de configuración del agente (`AGENTS.md`, `CLAUDE.md`, settings.json, permisos) deben ser read-only para el agente
 - El agente nunca debe tener permisos de escritura sobre su propio sistema de configuración
 - Audit trail inmutable: cualquier intento de modificar configuración de permisos genera una alerta
 - Separación de entornos: la configuración del agente no vive en el mismo repositorio que el código que el agente modifica
 
 ```bash
-# Configuración en CI: CLAUDE.md como read-only en el job del agente
-chmod 444 /workspace/CLAUDE.md
+# Configuración en CI: archivo de instrucciones como read-only en el job del agente
+chmod 444 /workspace/AGENTS.md
 chmod 444 /workspace/.claude/settings.json
 # El agente puede leer la configuración pero no modificarla
 ```

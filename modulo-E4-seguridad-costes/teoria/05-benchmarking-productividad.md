@@ -37,7 +37,7 @@ Formato simple en un archivo diario:
 - Modo predominante: Investigación + Mob
 - Supervisión: 70% del tiempo
 - Satisfacción: 3/5
-- Nota: Bug de pagination fue difícil, debí usar Plan Mode
+- Nota: el bug de paginación fue difícil; debí forzar una fase de planificación antes de implementar
 ```
 
 ---
@@ -77,7 +77,7 @@ Si adoptas IA y el bug escape rate sube, estás intercambiando velocidad por cal
 Interpretación:
   Bug escape rate estable o descendente → la IA está ayudando bien
   Bug escape rate ascendente → necesitas más review, mejores prompts, 
-    o mutation testing (ver módulo D3)
+    o mutation testing (ver módulo E3)
 ```
 
 ### Developer satisfaction: no la ignores
@@ -118,7 +118,7 @@ Qué registrar durante el baseline:
 Aplica las técnicas del curso:
 - Mejores prompts (módulo A1)
 - Model selection por tarea (este módulo)
-- Modos de pair programming (módulo D3)
+- Modos de pair programming (módulo E3)
 - Token budgeting (este módulo)
 
 ### Paso 3: Medir resultado (2 semanas)

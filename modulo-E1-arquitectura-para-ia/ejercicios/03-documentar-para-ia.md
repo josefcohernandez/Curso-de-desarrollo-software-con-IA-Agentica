@@ -1,12 +1,12 @@
-# Ejercicio 3: Crear un CLAUDE.md Completo y Verificar su Impacto
+# Ejercicio 3: Crear un Archivo de Instrucciones Completo y Verificar su Impacto
 
 ## Objetivo
 
-Crear un CLAUDE.md completo para un proyecto existente que cubra arquitectura, testing, convenciones y restricciones. Luego verificar que el agente produce mejor código con esta documentación.
+Crear un archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente) para un proyecto existente que cubra arquitectura, testing, convenciones y restricciones. Luego verificar que el agente produce mejor código con esta documentación.
 
 ## Contexto
 
-La documentación como contrato es uno de los mecanismos más efectivos para mejorar los resultados de un agente. Este ejercicio mide el impacto real de un CLAUDE.md bien escrito comparando el comportamiento del agente antes y después.
+La documentación como contrato es uno de los mecanismos más efectivos para mejorar los resultados de un agente. Este ejercicio mide el impacto real de un archivo de instrucciones bien escrito comparando el comportamiento del agente antes y después.
 
 ---
 
@@ -14,7 +14,7 @@ La documentación como contrato es uno de los mecanismos más efectivos para mej
 
 ### Paso 1: Mide el baseline (antes)
 
-Abre una sesión con tu agente de código en un proyecto que **no tenga** CLAUDE.md. Pide una tarea concreta:
+Abre una sesión con tu agente de código en un proyecto que **no tenga** un archivo de instrucciones del repositorio. Pide una tarea concreta:
 
 ```text
 Añade un endpoint GET /api/health que devuelva el estado de la aplicación
@@ -31,7 +31,7 @@ Observa y documenta:
 
 Anota el resultado en una tabla:
 
-| Aspecto | Resultado sin CLAUDE.md |
+| Aspecto | Resultado sin archivo de instrucciones |
 |---------|------------------------|
 | Ubicación del archivo | ... |
 | Error handling | ... |
@@ -39,9 +39,9 @@ Anota el resultado en una tabla:
 | Tests | ... |
 | Correcciones necesarias | ... |
 
-### Paso 2: Crea el CLAUDE.md
+### Paso 2: Crea el archivo de instrucciones
 
-Crea un archivo `CLAUDE.md` en la raíz del proyecto con las 4 secciones esenciales:
+Crea un archivo en la raíz del proyecto con el nombre que use tu herramienta (`AGENTS.md`, `CLAUDE.md` o equivalente) y cubre estas 4 secciones esenciales:
 
 **Sección 1 — Arquitectura**: describe la estructura del proyecto, qué hay en cada directorio y cómo se relacionan los módulos.
 
@@ -51,9 +51,9 @@ Crea un archivo `CLAUDE.md` en la raíz del proyecto con las 4 secciones esencia
 
 **Sección 4 — Restricciones**: documenta lo que el agente NO debe hacer (archivos prohibidos, comandos peligrosos, dependencias no permitidas).
 
-### Paso 3: Opcionalmente añade `.claude/rules/`
+### Paso 3: Opcionalmente añade reglas por tema
 
-Si tu proyecto tiene áreas especializadas, crea reglas específicas:
+Si tu herramienta soporta reglas especializadas por carpeta o tema, crea reglas específicas:
 
 ```text
 .claude/
@@ -75,7 +75,7 @@ y uptime en segundos.
 
 Observa y documenta los mismos aspectos:
 
-| Aspecto | Sin CLAUDE.md | Con CLAUDE.md |
+| Aspecto | Sin archivo de instrucciones | Con archivo de instrucciones |
 |---------|---------------|---------------|
 | Ubicación del archivo | ... | ... |
 | Error handling | ... | ... |
@@ -83,22 +83,22 @@ Observa y documenta los mismos aspectos:
 | Tests | ... | ... |
 | Correcciones necesarias | ... | ... |
 
-### Paso 5: Itera sobre el CLAUDE.md
+### Paso 5: Itera sobre el archivo de instrucciones
 
 Si el agente aún comete errores que podrían evitarse con mejor documentación:
 1. Identifica qué regla falta o no es suficientemente clara
-2. Añádela al CLAUDE.md
+2. Añádela al archivo de instrucciones
 3. Repite el test con una tarea diferente
 
 ---
 
 ## Criterios de Éxito
 
-- [ ] Has medido el comportamiento del agente antes del CLAUDE.md
-- [ ] Tu CLAUDE.md cubre las 4 secciones: arquitectura, testing, convenciones, restricciones
+- [ ] Has medido el comportamiento del agente antes del archivo de instrucciones
+- [ ] Tu archivo de instrucciones cubre las 4 secciones: arquitectura, testing, convenciones, restricciones
 - [ ] Has verificado una mejora medible en el comportamiento del agente
 - [ ] Has iterado al menos una vez para mejorar la documentación
-- [ ] El CLAUDE.md es específico de tu proyecto, no genérico
+- [ ] El archivo de instrucciones es específico de tu proyecto, no genérico
 
 ## Tiempo Estimado
 

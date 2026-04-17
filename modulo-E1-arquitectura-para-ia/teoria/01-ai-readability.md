@@ -7,7 +7,7 @@ La AI-readability es la facilidad con la que un agente de código puede entender
 Un agente no lee código como un humano:
 - **No tiene intuición**: no "sabe" lo que hace un archivo por su ubicación o nombre
 - **No reconoce convenciones implícitas**: si no está escrito, no existe
-- **No recuerda entre sesiones**: cada conversación empieza desde cero
+- **No recuerda de forma fiable entre sesiones**: si no hay memoria persistente, cada conversación empieza casi desde cero
 - **Tiene un contexto limitado**: no puede tener todo el proyecto en mente a la vez
 
 Esto significa que un proyecto perfectamente legible para humanos puede ser confuso para un agente, y viceversa. La AI-readability no reemplaza la legibilidad humana — la complementa.
@@ -21,7 +21,7 @@ Esto significa que un proyecto perfectamente legible para humanos puede ser conf
 | **Modularidad explícita** | Cada módulo tiene una responsabilidad clara y documentada | `auth/` con README que explica el flujo de autenticación | Funciones de auth dispersas en 15 ficheros sin documentación |
 | **Interfaces como contrato** | Las APIs internas tienen tipos, validación y documentación | TypeScript con types exportados y validación Zod | JavaScript sin tipos, sin JSDoc, sin validación |
 | **Tests como especificación** | Los tests documentan el comportamiento esperado | Tests descriptivos: `"should reject expired tokens"` | Tests que solo verifican implementación: `"should call verify()"` |
-| **Convenciones explícitas** | Las reglas del proyecto están escritas, no asumidas | CLAUDE.md con convenciones de naming y estructura | "Todos saben que usamos camelCase" |
+| **Convenciones explícitas** | Las reglas del proyecto están escritas, no asumidas | `AGENTS.md`, `CLAUDE.md` o `.cursorrules` con convenciones de naming y estructura | "Todos saben que usamos camelCase" |
 | **Bajo acoplamiento** | Los módulos se pueden entender de forma aislada | Dependency injection, interfaces claras entre módulos | Imports circulares, variables globales compartidas |
 
 ### Pilar 1: Modularidad explícita
@@ -82,7 +82,7 @@ describe("PaymentService", () => {
 
 ### Pilar 4: Convenciones explícitas
 
-Todo lo que "todos saben" pero nadie ha escrito es invisible para el agente. Documenta en CLAUDE.md o `.claude/rules/`:
+Todo lo que "todos saben" pero nadie ha escrito es invisible para el agente. Documenta en `AGENTS.md`, `CLAUDE.md`, `.cursorrules` o el mecanismo equivalente de tu herramienta:
 
 - Naming conventions (archivos, funciones, variables)
 - Estructura de directorios y dónde va cada cosa

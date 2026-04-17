@@ -123,7 +123,7 @@ Incluye un diagrama de flujo en texto si ayuda a entender el proceso.
 
 ```text
 Quiero refactorizar [área] para [objetivo: legibilidad, performance, testabilidad].
-Plan Mode: primero investiga el estado actual y propón un plan.
+Fase de planificación: primero investiga el estado actual y propón un plan.
 Restricciones:
 - Mantener la API pública intacta
 - Los [N] tests existentes deben seguir pasando
@@ -132,7 +132,7 @@ Restricciones:
 
 ### Notas de uso
 
-- Siempre usar Plan Mode para refactors (primero planificar, luego ejecutar)
+- Siempre usar una fase de planificación para refactors (primero planificar, luego ejecutar)
 - Especificar el objetivo evita que el agente refactorice "de más"
 - Los tests como restricción son la red de seguridad más importante
 
@@ -140,7 +140,7 @@ Restricciones:
 
 ```text
 Quiero refactorizar src/services/task_service.py para mejorar testabilidad.
-Plan Mode: primero investiga el estado actual del archivo y propón un plan.
+Fase de planificación: primero investiga el estado actual del archivo y propón un plan.
 El archivo tiene 280 líneas con queries SQL directas mezcladas con lógica de negocio.
 Objetivo: extraer las queries a src/repositories/task_repo.py siguiendo el repository pattern
 que ya se usa en src/repositories/user_repo.py.

@@ -140,7 +140,7 @@ La feature se implementó en 2 días. Cero regresiones en el flujo de pedidos (v
 
 ### Contexto
 
-Un módulo de autenticación de 3 años de antigüedad, escrito originalmente por un developer que ya no está en el equipo. Mezcla lógica de negocio con acceso a base de datos en el mismo archivo. Tiene tests unitarios frágiles que mockean todo. El equipo quiere refactorizarlo para poder añadir OAuth2 en el futuro, pero tiene pánico de romper el login.
+Un módulo de autenticación de 3 años de antigüedad, escrito originalmente por un desarrollador que ya no está en el equipo. Mezcla lógica de negocio con acceso a base de datos en el mismo archivo. Tiene tests unitarios frágiles que mockean todo. El equipo quiere refactorizarlo para poder añadir OAuth2 en el futuro, pero tiene pánico de romper el login.
 
 ### SDD para refactoring: diferente al greenfield
 

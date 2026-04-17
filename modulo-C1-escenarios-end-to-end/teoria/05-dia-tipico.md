@@ -13,13 +13,13 @@ Has aprendido los workflows individuales: onboarding, incidentes, greenfield, le
 | 09:00 | Revisar PRs del equipo | Pedir resumen de diffs grandes; verificar lógica compleja con el agente | Ligera |
 | 09:30 | Standup: asignan 2 tickets | Usar el agente para explorar el contexto de cada ticket (archivos relevantes, tests existentes) | Ligera |
 | 10:00 | Ticket 1: fix bug en API | Workflow de debugging: reproducir, aislar, fix, test. Sesión enfocada con el agente | **Profunda** |
-| 11:00 | `/clear` + Ticket 2: nueva feature | Workflow spec-first: entender requisitos, Plan Mode, diseñar approach, empezar TDD | **Profunda** |
+| 11:00 | Nueva sesión o reset de contexto + Ticket 2: nueva feature | Workflow spec-first: entender requisitos, fase de planificación, diseñar approach, empezar TDD | **Profunda** |
 | 12:30 | Almuerzo | Descanso total — cerrar la herramienta de IA | Descanso |
 | 13:30 | Code review de PR de compañero | IA como segundo reviewer; verificar edge cases y regresiones | Ligera |
 | 14:00 | Continuar ticket 2 | Sesión nueva, reinyectar contexto del spec. Implementar y testear | **Profunda** |
 | 16:00 | Tests de integración fallan | Debugging con logs + agente. Investigación rápida, no sesión profunda | Ligera |
 | 16:30 | PR + documentación | IA genera descripción de PR, actualiza docs, prepara changelog | Ligera |
-| 17:00 | Planificar mañana | Anotar estado de tickets y contexto en CLAUDE.md para mañana | Ligera |
+| 17:00 | Planificar mañana | Anotar estado de tickets y contexto en `AGENTS.md`, `CLAUDE.md` o notas del repositorio para mañana | Ligera |
 
 ---
 
@@ -55,17 +55,17 @@ Tareas cortas y acotadas donde el riesgo de error es bajo. No requieren supervis
 
 ## Los 5 patrones de éxito del día a día
 
-### 1. `/clear` entre tickets — nunca mezclar contextos
+### 1. Sesión nueva o reset de contexto entre tickets: nunca mezclar contextos
 
 ```text
 -- Terminas ticket 1 (bug fix en el módulo de pagos) --
-/clear
+-- Cierras la sesión actual o ejecutas el comando de limpieza de contexto --
 -- Empiezas ticket 2 (feature en el módulo de usuarios) --
 ```
 
 **Por qué es crítico**: el contexto del ticket 1 (archivos de pagos, lógica financiera) contamina las decisiones del ticket 2 (archivos de usuarios, lógica de permisos). El agente puede hacer referencia a archivos irrelevantes o aplicar patrones del módulo equivocado.
 
-### 2. Plan Mode para features de más de 1 hora
+### 2. Fase de planificación para features de más de 1 hora
 
 Si una tarea va a llevar más de una hora, invierte 10-15 minutos en planificar antes de escribir código:
 
@@ -113,11 +113,11 @@ La **fatiga de supervisión de IA** es real. Después de supervisar activamente 
 
 | Momento | Acción de contexto |
 |---------|-------------------|
-| Inicio del día | Leer CLAUDE.md y notas del día anterior para recordar estado |
-| Antes de cada ticket | `/clear` para empezar con contexto limpio |
-| Tras 20+ minutos en una sesión | Evaluar si necesitas `/compact` para reducir contexto |
+| Inicio del día | Leer `AGENTS.md`, `CLAUDE.md` o notas del día anterior para recordar estado |
+| Antes de cada ticket | Empezar con contexto limpio: nueva sesión o comando de reset |
+| Tras 20+ minutos en una sesión | Evaluar si necesitas compactar, resumir o reiniciar contexto |
 | Antes del almuerzo | Anotar estado actual del trabajo en un comentario o nota |
-| Fin del día | Actualizar CLAUDE.md con decisiones tomadas y estado de tickets |
+| Fin del día | Actualizar el archivo de instrucciones persistentes o las notas del repo con decisiones tomadas y estado de tickets |
 
 ---
 

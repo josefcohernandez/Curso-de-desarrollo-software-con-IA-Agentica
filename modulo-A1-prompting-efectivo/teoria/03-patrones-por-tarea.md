@@ -141,7 +141,7 @@ No modifiques ningún archivo. Solo investiga y dame un resumen estructurado.
 
 ```text
 Quiero refactorizar [área] para [objetivo: legibilidad, performance, testabilidad].
-Plan Mode: primero investiga el estado actual y propón un plan.
+Primero investiga el estado actual y propón un plan.
 Restricciones:
 - Mantener la API pública intacta
 - Los [N] tests existentes deben seguir pasando
@@ -170,7 +170,7 @@ Tras la implementación, ejecuta npm test -- test/services/ para verificar.
 
 ### Notas
 
-- **Siempre usar Plan Mode** (o pedir plan primero) para refactors — implementar directamente es arriesgado
+- **Siempre pedir una fase de planificación** antes de implementar un refactor: si tu herramienta ofrece un modo específico de planificación, úsalo; si no, pídelo explícitamente en el prompt
 - Especifica el objetivo del refactor: "legibilidad" y "performance" producen resultados muy diferentes
 - La restricción "tests deben seguir pasando" es tu red de seguridad
 
@@ -271,7 +271,7 @@ antes de elegir.
 | **Fix Bug** | Test que falla, error reportado, comportamiento incorrecto | Error exacto + archivo + verificación |
 | **Add Feature** | Nueva funcionalidad, nuevo endpoint, nueva lógica | Contexto de negocio + restricciones + tests first |
 | **Explore** | Codebase nuevo, sistema desconocido, pre-investigación | "No modifiques nada" + preguntas específicas |
-| **Refactor** | Código difícil de mantener, deuda técnica, preparar para nueva feature | Plan Mode + tests como red de seguridad |
+| **Refactor** | Código difícil de mantener, deuda técnica, preparar para nueva feature | Fase de planificación + tests como red de seguridad |
 | **Code Review** | PR listo para merge, código nuevo que revisar, auditoría | Criterios específicos + priorización |
 | **Migrate** | Cambio de versión, nueva dependencia, deprecaciones | Incremental + verificar entre pasos + documentación |
 

@@ -4,7 +4,9 @@
 
 Usar IA para escribir código plantea preguntas que van más allá de la productividad: ¿de quién es el código generado? ¿Qué datos estás enviando al proveedor? ¿Cumple con las regulaciones de tu sector? Y en un mercado con múltiples herramientas, ¿cuál es la adecuada para tu contexto?
 
-Este módulo te da un marco práctico para responder estas preguntas. No es un curso de derecho ni un análisis exhaustivo del mercado — es lo que un developer profesional necesita saber para tomar decisiones informadas y responsables.
+Este módulo te da un marco práctico para responder estas preguntas. No es un curso de derecho ni un análisis exhaustivo del mercado: es lo que un desarrollador profesional necesita saber para tomar decisiones informadas y responsables.
+
+> **Nota de lectura**: la parte de panorama de herramientas debe leerse como una foto de mercado. Úsala para comparar categorías, criterios y trade-offs, pero verifica siempre las características, precios y políticas actuales antes de decidir.
 
 **Tiempo estimado: 2 horas**
 
@@ -57,13 +59,13 @@ Al completar este módulo serás capaz de:
 
 ## Conceptos Clave
 
-- **Propiedad intelectual**: el código generado por IA con tu dirección se trata como obra derivada tuya, pero la responsabilidad final es siempre del developer
+- **Propiedad intelectual**: los ToS del proveedor, la copyrightabilidad del output y el riesgo de reproducción no son lo mismo; hay que distinguirlos
 - **Privacidad por contexto**: el riesgo varía de bajo (open source) a muy alto (gobierno/defensa), y la mitigación debe corresponderse
 - **Compliance**: GDPR, SOC 2, PCI-DSS e HIPAA tienen implicaciones específicas para el uso de IA en desarrollo
 - **Responsible disclosure**: protocolo diferente cuando el agente encuentra una vulnerabilidad vs. cuando la introduce
 - **No hay herramienta perfecta**: cada herramienta tiene fortalezas y debilidades; la elección depende de tu contexto
-- **Lo que no cambia**: pensamiento crítico, buenas specs, tests, y la responsabilidad del developer sobre su código
-- **Computer use**: agentes que interactúan con interfaces gráficas, ya en producción (GA desde noviembre 2025)
+- **Lo que no cambia**: pensamiento crítico, buenas specs, tests, y la responsabilidad del desarrollador sobre su código
+- **Computer use**: agentes que interactúan con interfaces gráficas; la disponibilidad y el nivel de autonomía varían por proveedor y fecha
 - **Agentic RAG**: agentes que gestionan su propia búsqueda de conocimiento de forma iterativa e inteligente
 
 ---

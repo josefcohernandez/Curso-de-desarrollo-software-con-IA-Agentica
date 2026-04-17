@@ -14,18 +14,18 @@ La fórmula base es simple:
 ROI = ((Ahorro anual - Coste anual) / Coste anual) × 100
 
 Donde:
-  Ahorro anual = Horas ahorradas/semana × Coste/hora × 52 semanas × Num developers
-  Coste anual  = (Licencia/mes × 12 × Num developers) + Coste de adopción
+  Ahorro anual = Horas ahorradas/semana × Coste/hora × 52 semanas × Num desarrolladores
+  Coste anual  = (Licencia/mes × 12 × Num desarrolladores) + Coste de adopción
 ```
 
 ### Ejemplo Concreto
 
 ```text
 Datos:
-  - Equipo: 5 developers
-  - Coste/hora por developer: $60 (salario + overhead)
-  - Ahorro estimado: 3 horas/semana por developer (conservador)
-  - Licencia herramienta: $100/mes por developer
+  - Equipo: 5 desarrolladores
+  - Coste/hora por desarrollador: $60 (salario + overhead)
+  - Ahorro estimado: 3 horas/semana por desarrollador (conservador)
+  - Licencia herramienta: $100/mes por desarrollador
   - Coste de adopción (one-time): $2,000 (tiempo de setup + formación)
 
 Cálculo:
@@ -34,7 +34,7 @@ Cálculo:
   ROI = (($46,800 - $8,000) / $8,000) × 100 = 485%
 ```
 
-Incluso con estimaciones conservadoras, el ROI suele ser muy favorable porque el coste de las herramientas es bajo comparado con el coste del tiempo de los developers.
+Incluso con estimaciones conservadoras, el ROI suele ser muy favorable porque el coste de las herramientas es bajo comparado con el coste del tiempo de los desarrolladores.
 
 ---
 
@@ -44,8 +44,8 @@ Estos datos varían enormemente por contexto, equipo y tipo de proyecto. Úsalos
 
 | Dato | Rango típico | Fuente |
 |------|-------------|--------|
-| Ahorro de tiempo por developer | 2-5 horas/semana | Surveys de la industria (2024-2026) |
-| Coste de herramienta | $20-100/mes por developer | Precios públicos (mediados 2026) |
+| Ahorro de tiempo por desarrollador | 2-5 horas/semana | Surveys de la industria (2024-2026) |
+| Coste de herramienta | $20-100/mes por desarrollador | Precios públicos (mediados 2026) |
 | Tiempo hasta break-even | 2-4 semanas de uso activo | Experiencia reportada por equipos |
 | Curva de aprendizaje | 3-5 días para ser productivo | Con formación; más sin ella |
 | Impacto en cycle time | Reducción del 15-40% | Depende del tipo de tareas |
@@ -66,7 +66,7 @@ Estos datos varían enormemente por contexto, equipo y tipo de proyecto. Úsalos
 
 ### Paso 1: Piloto Acotado (2-4 semanas)
 
-- Seleccionar 3-5 developers voluntarios (early adopters)
+- Seleccionar 3-5 desarrolladores voluntarios (early adopters)
 - Medir cycle time baseline durante la primera semana (sin IA)
 - Medir cycle time con IA durante las semanas 2-4
 - Documentar 3-5 casos de éxito concretos con tiempos
@@ -94,7 +94,7 @@ Usar la fórmula del framework con los datos del piloto en lugar de estimaciones
 ```markdown
 ## Propuesta: Adopción de IA para Desarrollo
 
-### Resultados del piloto (4 semanas, 5 developers)
+### Resultados del piloto (4 semanas, 5 desarrolladores)
 - Cycle time medio: reducción del 32%
 - PRs por semana: incremento del 18%
 - Bugs post-merge: sin cambio significativo
@@ -108,7 +108,7 @@ Usar la fórmula del framework con los datos del piloto en lugar de estimaciones
 ### Plan de rollout
 - Mes 1: Formación del equipo restante (10 devs) en 2 sesiones de 2h
 - Mes 2: Adopción progresiva con buddy system (early adopter + nuevo usuario)
-- Mes 3: Revisión de convenciones y ajuste de CLAUDE.md
+- Mes 3: Revisión de convenciones y ajuste del archivo de instrucciones del repositorio
 - Mes 4+: Métricas mensuales y optimización continua
 
 ### Riesgos y mitigaciones

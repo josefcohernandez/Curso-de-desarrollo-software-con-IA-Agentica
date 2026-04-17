@@ -13,8 +13,8 @@ El error más común es intentar que todo el equipo use la herramienta desde el 
 | Fase | Descripción | Duración típica | Señales de avance |
 |------|-------------|-----------------|-------------------|
 | **1. Exploración** | 1-2 early adopters prueban la herramienta por iniciativa propia | 1-2 semanas | Los primeros fans comparten tips y resultados |
-| **2. Estandarización** | El equipo acuerda convenciones (CLAUDE.md, skills, permisos) | 2-4 semanas | CLAUDE.md en el repo, reglas de permisos configuradas |
-| **3. Integración** | La IA se incorpora al workflow diario (PRs, code review, debugging) | 1-3 meses | >50% del equipo usa IA diariamente |
+| **2. Estandarización** | El equipo acuerda convenciones (`AGENTS.md` / `CLAUDE.md`, skills, permisos) | 2-4 semanas | Archivo de instrucciones en el repo, reglas de permisos configuradas |
+| **3. Integración** | La IA se incorpora al flujo de trabajo diario (PRs, code review, debugging) | 1-3 meses | >50% del equipo usa IA diariamente |
 | **4. Optimización** | Métricas, skills personalizados, CI/CD con IA | Continua | ROI medible, reducción de cycle time |
 
 ---
@@ -49,7 +49,7 @@ Cuando hay suficiente interés (no tiene que ser todo el equipo), se formalizan 
 
 ### Qué acordar
 
-1. **CLAUDE.md compartido**: reglas de estilo, comandos de build/test, arquitectura
+1. **Archivo compartido de instrucciones del repositorio** (`AGENTS.md`, `CLAUDE.md` o equivalente): reglas de estilo, comandos de build/test, arquitectura
 2. **Skills del equipo**: workflows repetibles (review, deploy, test)
 3. **Reglas de permisos**: qué puede hacer el agente sin pedir permiso
 4. **Política de code review**: el código IA se revisa igual que el código humano
@@ -60,24 +60,24 @@ Cuando hay suficiente interés (no tiene que ser todo el equipo), se formalizan 
 
 ### Entregable de esta fase
 
-Un CLAUDE.md en el repositorio del proyecto y un documento breve (puede ser en el wiki o en el README) con las convenciones acordadas.
+Un archivo de instrucciones persistentes en el repositorio del proyecto y un documento breve (puede ser en el wiki o en el README) con las convenciones acordadas.
 
 ---
 
 ## Fase 3: Integración
 
-La herramienta se convierte en parte del workflow diario. No es algo que se usa "a veces" — es una herramienta más como el IDE, Git o el terminal.
+La herramienta se convierte en parte del flujo de trabajo diario. No es algo que se usa "a veces": es una herramienta más como el IDE, Git o el terminal.
 
 ### Indicadores de integración exitosa
 
 - Los PRs incluyen de forma natural código generado con asistencia de IA
 - El code review aplica los criterios del [Módulo A3](../../modulo-A3-revision-codigo-ia/README.md) sin necesidad de recordarlo
-- Los developers usan la IA para debugging, exploración y tareas repetitivas
-- Los nuevos miembros del equipo reciben el CLAUDE.md como parte del onboarding
+- Los desarrolladores usan la IA para debugging, exploración y tareas repetitivas
+- Los nuevos miembros del equipo reciben el archivo de instrucciones del repositorio como parte del onboarding
 
 ### Riesgo en esta fase
 
-La **dependencia excesiva**: developers que aceptan todo lo que genera el agente sin revisarlo. Mitigación: mantener la cultura de code review y las técnicas del [Módulo A2](../../modulo-A2-limitaciones-fallos/README.md).
+La **dependencia excesiva**: desarrolladores que aceptan todo lo que genera el agente sin revisarlo. Mitigación: mantener la cultura de code review y las técnicas del [Módulo A2](../../modulo-A2-limitaciones-fallos/README.md).
 
 ---
 
@@ -100,7 +100,7 @@ Con el equipo usando la herramienta de forma integrada, el foco cambia a **medir
 | Error | Consecuencia | Alternativa |
 |-------|-------------|-------------|
 | Forzar adopción desde día 1 | Resistencia activa, mala experiencia | Empezar con early adopters voluntarios |
-| No invertir en CLAUDE.md | Cada dev configura diferente, resultados inconsistentes | Dedicar una sesión a crear convenciones |
+| No invertir en un archivo de instrucciones compartido | Cada dev configura diferente, resultados inconsistentes | Dedicar una sesión a crear convenciones |
 | Esperar que la IA reemplace procesos | Frustración cuando no es así | La IA augmenta procesos, no los reemplaza |
 | No medir impacto | Imposible justificar la inversión | Definir métricas desde la fase 2 |
 | Ignorar la resistencia | Se convierte en conflicto | Abordar con empatía (ver [02-resistencia-cambio.md](02-resistencia-cambio.md)) |
@@ -111,8 +111,8 @@ Con el equipo usando la herramienta de forma integrada, el foco cambia a **medir
 
 ```text
 Semana 1-2:  [Fase 1] Early adopters experimentan
-Semana 3-6:  [Fase 2] Convenciones y CLAUDE.md
-Semana 7-14: [Fase 3] Integración en workflow diario
+Semana 3-6:  [Fase 2] Convenciones y archivo de instrucciones del repo
+Semana 7-14: [Fase 3] Integración en flujo de trabajo diario
 Semana 15+:  [Fase 4] Métricas y optimización continua
 ```
 
@@ -124,7 +124,7 @@ Este timeline es orientativo. Equipos pequeños (3-5 personas) pueden completar 
 
 - **Módulo A1** (Prompting): la calidad de los prompts determina la experiencia inicial de los early adopters
 - **Módulo A2** (Limitaciones): conocer las limitaciones previene frustraciones tempranas
-- **Módulo C2** (Ética): las consideraciones de privacidad y compliance afectan qué herramienta elegir
+- **Módulo D2** (Ética): las consideraciones de privacidad y compliance afectan qué herramienta elegir
 
 ---
 

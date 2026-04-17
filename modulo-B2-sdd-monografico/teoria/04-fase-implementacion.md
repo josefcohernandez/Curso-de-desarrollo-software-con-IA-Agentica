@@ -173,7 +173,7 @@ No hay desviaciones "pequeñas" que valga la pena ignorar. Una desviación no do
 Para fases largas (más de 30 minutos de implementación), vale la pena limpiar el contexto entre fases y reinyectar solo lo necesario:
 
 ```text
-[Después de /clear o nueva sesión]
+[Después de reiniciar el contexto o abrir una sesión nueva]
 
 Continuando la implementación de SPEC.md.
 Fases completadas: 1 (CRUD base) y 2 (autenticación). Todos los tests pasan.
@@ -201,7 +201,7 @@ Antes de dar una fase por completada:
 
 ---
 
-> **En Claude Code**: usa `/clear` entre fases largas. La spec está en el repositorio, así que el agente puede leerla con `Read` al inicio de cada sesión.
+> **En Claude Code**: usa una sesión nueva o el comando de limpieza de contexto entre fases largas. La spec está en el repositorio, así que el agente puede leerla con `Read` al inicio de cada sesión.
 >
 > **En Cursor**: abre una nueva pestaña de chat para cada fase. Referencia SPEC.md explícitamente en el primer mensaje.
 >

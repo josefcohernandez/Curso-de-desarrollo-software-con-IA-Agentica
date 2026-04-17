@@ -64,7 +64,7 @@ Al completar este módulo serás capaz de:
 - **Spec-first en greenfield**: la especificación es el artefacto más importante — sin spec, el agente toma decisiones de arquitectura que luego cuestan cambiar
 - **Tests-first en legacy**: nunca modificar código legacy sin antes tener una red de seguridad de tests que proteja el comportamiento existente
 - **Fatiga de supervisión**: límite cognitivo real al supervisar código generado por IA; máximo 2-3 sesiones profundas al día
-- **Higiene de contexto**: usar `/clear` entre tickets no relacionados para evitar degradación por contexto saturado
+- **Higiene de contexto**: usar sesiones nuevas o limpieza de contexto entre tickets no relacionados para evitar degradación por contexto saturado
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Practicar la gestión empática de la resistencia al cambio en un escenario realista donde un developer senior se opone a la adopción de IA.
+Practicar la gestión empática de la resistencia al cambio en un escenario realista donde un desarrollador senior se opone a la adopción de IA.
 
 **Tiempo estimado: 10 minutos**
 
@@ -10,7 +10,7 @@ Practicar la gestión empática de la resistencia al cambio en un escenario real
 
 ## Escenario
 
-**Contexto**: tu equipo lleva 3 semanas en la Fase 2 de adopción (estandarización). La mayoría del equipo está usando la herramienta con buenos resultados. Pero Miguel, un developer senior con 15 años de experiencia, se ha negado a participar.
+**Contexto**: tu equipo lleva 3 semanas en la Fase 2 de adopción (estandarización). La mayoría del equipo está usando la herramienta con buenos resultados. Pero Miguel, un desarrollador senior con 15 años de experiencia, se ha negado a participar.
 
 **Lo que Miguel ha dicho** (en diferentes momentos):
 
@@ -20,7 +20,7 @@ Practicar la gestión empática de la resistencia al cambio en un escenario real
 4. *"Yo soy más rápido sin la herramienta. Me distraigo más configurándola que escribiendo código."*
 
 **Datos relevantes**:
-- Miguel es uno de los mejores developers del equipo, con conocimiento profundo del dominio
+- Miguel es uno de los mejores desarrolladores del equipo, con conocimiento profundo del dominio
 - Sus PRs tienen la tasa de bugs más baja del equipo
 - Otros miembros del equipo lo respetan y su opinión influye
 - Su resistencia está empezando a contagiar a 2 miembros más del equipo

@@ -17,7 +17,7 @@ Cuando recibes un resultado del agente, evalúa qué porcentaje es correcto y ac
 | **80-100%** | Corrección puntual | "Cambia el nombre de la variable `data` a `userProfile` en la línea 23" |
 | **50-80%** | Refinamiento del enfoque | "El enfoque es correcto, pero necesito que además manejes el caso cuando el array está vacío" |
 | **20-50%** | Redirect parcial | "La estructura del componente está bien, pero la lógica de estado es incorrecta. Usa useReducer en lugar de useState para manejar los 3 estados" |
-| **< 20%** | **Parar. Limpiar. Replantear** | Haz `/clear`, analiza qué falló en tu prompt, y reescríbelo desde cero |
+| **< 20%** | **Parar. Limpiar. Replantear** | Reinicia la sesión o limpia el contexto acumulado, analiza qué falló en tu prompt, y reescríbelo desde cero |
 
 ### Ejemplo: corrección al 80%
 
@@ -35,9 +35,8 @@ Si la validación falla, devuelve 400 con los errores específicos.
 
 ```text
 # El agente implementó algo completamente diferente a lo esperado.
-# No corrijas — el contexto está contaminado.
-
-/clear
+# No corrijas: el contexto está contaminado.
+# En Claude Code esto suele resolverse con limpieza de contexto; en otras herramientas, con una sesión nueva.
 
 # Nuevo prompt replanteado con más contexto y restricciones:
 Necesito un endpoint POST /api/invitations que...
@@ -52,7 +51,7 @@ Necesito un endpoint POST /api/invitations que...
 
 Esto es contraintuitivo. Cuando el agente no hace lo que quieres, la reacción natural es decirle "no, hazlo así". Pero si llevas 3 correcciones sobre el mismo tema (estilo de código, enfoque arquitectónico, formato de respuesta), lo que necesitas es:
 
-1. Hacer `/clear` para limpiar el contexto acumulado
+1. Abrir una sesión nueva o usar el comando de limpieza de contexto de tu herramienta
 2. Analizar qué faltaba en tu prompt original
 3. Reescribir el prompt incluyendo esa información desde el principio
 
@@ -92,9 +91,9 @@ en src/lib/query-client.ts.
 
 ---
 
-## Cuándo Usar `/clear`
+## Cuándo Usar un Reset de Contexto
 
-El comando `/clear` (o equivalente en tu herramienta) reinicia el contexto de la conversación. Úsalo cuando:
+El comando de limpieza de contexto de tu herramienta (o una sesión nueva) reinicia el contexto de la conversación. Úsalo cuando:
 
 | Situación | Por qué limpiar |
 |-----------|-----------------|
@@ -138,7 +137,7 @@ Tras los cambios, ejecuta npm test -- test/auth.test.ts y reporta.
 | Corrección progresiva | Evalúa el % correcto y ajusta la estrategia |
 | Regla de las 2 correcciones | Más de 2 correcciones al mismo aspecto = reescribir el prompt |
 | Feedback específico | Qué está bien + qué cambiar + cómo cambiarlo |
-| `/clear` | Limpiar contexto cuando la conversación se contamina |
+| Reset de contexto | Limpiar contexto cuando la conversación se contamina |
 | Agrupar correcciones | Un mensaje con todos los ajustes, no varios mensajes |
 
 ---

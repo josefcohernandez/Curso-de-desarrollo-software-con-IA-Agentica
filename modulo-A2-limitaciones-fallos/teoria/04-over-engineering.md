@@ -113,7 +113,7 @@ No crees archivos nuevos — añade la lógica directamente en el archivo
 del formulario.
 ```
 
-### 2. Incluir reglas en CLAUDE.md
+### 2. Incluir reglas en el archivo de instrucciones del repositorio
 
 ```markdown
 ## Reglas de diseño
@@ -143,5 +143,5 @@ El indicador más fiable es el **tamaño del diff**: ejecuta `git diff --stat`. 
 - Over-engineering es el fallo más frecuente de los agentes de código
 - Ocurre por sesgo del training data hacia código "robusto" y "completo"
 - Las 5 señales: utils innecesarios, try/catch excesivo, interfaces genéricas, mejoras no pedidas, documentación excesiva
-- Prevenir: prompts explícitos, reglas en CLAUDE.md, revisión del diff
+- Prevenir: prompts explícitos, reglas en tu `AGENTS.md`, `CLAUDE.md` o equivalente, y revisión del diff
 - Si el diff es mucho mayor de lo esperado, investiga antes de aceptar

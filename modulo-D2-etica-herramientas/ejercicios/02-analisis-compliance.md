@@ -18,7 +18,7 @@ Eres el CTO de **PayQuick**, una fintech que procesa pagos con tarjeta de crédi
 - Repositorios privados en GitHub Enterprise
 - Entorno de producción en AWS con datos de tarjetas encriptados
 
-El equipo propone usar Claude Code con plan Max ($100/mes por developer).
+El equipo propone usar Claude Code con plan Max ($100/mes por desarrollador).
 
 ---
 

@@ -1,8 +1,8 @@
-# Ejercicio: Crear un CLAUDE.md de Equipo
+# Ejercicio: Crear un Archivo de Instrucciones de Equipo
 
 ## Objetivo
 
-Crear un CLAUDE.md completo para un proyecto ejemplo que cubra todas las áreas necesarias para que un equipo de desarrollo trabaje de forma consistente con IA agéntica.
+Crear un archivo de instrucciones completo para un proyecto ejemplo que cubra todas las áreas necesarias para que un equipo de desarrollo trabaje de forma consistente con IA agéntica.
 
 **Tiempo estimado: 15 minutos**
 
@@ -10,7 +10,7 @@ Crear un CLAUDE.md completo para un proyecto ejemplo que cubra todas las áreas 
 
 ## Escenario
 
-Eres el tech lead de un equipo de 6 developers que trabaja en **TaskFlow**, una aplicación web de gestión de proyectos. El stack es:
+Eres el tech lead de un equipo de 6 desarrolladores que trabaja en **TaskFlow**, una aplicación web de gestión de proyectos. El stack es:
 
 - **Backend**: Node.js + Express + TypeScript
 - **Frontend**: React + TypeScript + Tailwind CSS
@@ -19,15 +19,15 @@ Eres el tech lead de un equipo de 6 developers que trabaja en **TaskFlow**, una 
 - **CI/CD**: GitHub Actions
 - **Estructura**: monorepo con pnpm workspaces (`packages/api`, `packages/web`, `packages/shared`)
 
-El equipo acaba de decidir adoptar IA agéntica y necesita un CLAUDE.md que establezca las convenciones.
+El equipo acaba de decidir adoptar IA agéntica y necesita un archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente) que establezca las convenciones.
 
 ---
 
 ## Instrucciones
 
-### Parte 1: CLAUDE.md Básico
+### Parte 1: Archivo base de instrucciones
 
-Crea un archivo `CLAUDE.md` que incluya como mínimo:
+Crea un archivo de instrucciones del repositorio que incluya como mínimo:
 
 1. **Build y Test**: todos los comandos necesarios para compilar, testear y verificar el proyecto
 2. **Arquitectura**: descripción de la estructura del monorepo y las dependencias entre packages
@@ -35,7 +35,7 @@ Crea un archivo `CLAUDE.md` que incluya como mínimo:
 
 ### Parte 2: Restricciones y Permisos
 
-Añade al CLAUDE.md:
+Añade al archivo de instrucciones:
 
 4. **Restricciones**: qué archivos o directorios no deben modificarse sin aprobación
 5. **Permisos**: qué puede hacer el agente libremente y qué requiere confirmación
@@ -53,26 +53,26 @@ Añade una sección que defina:
 ## Criterios de Éxito
 
 ```markdown
-- [ ] El CLAUDE.md tiene todas las secciones (build, arquitectura, convenciones, restricciones, permisos, decisiones, límites)
+- [ ] El archivo de instrucciones tiene todas las secciones (build, arquitectura, convenciones, restricciones, permisos, decisiones, límites)
 - [ ] Los comandos de build y test son específicos y ejecutables
 - [ ] Las restricciones son claras (qué archivos, quién aprueba)
 - [ ] Los permisos usan allow/ask/deny de forma coherente
 - [ ] Las decisiones arquitectónicas son concretas, no genéricas
 - [ ] Hay una sección explícita de "qué no delegar a IA"
-- [ ] Un nuevo miembro del equipo podría usar el CLAUDE.md sin preguntar nada
+- [ ] Un nuevo miembro del equipo podría usar el archivo de instrucciones sin preguntar nada
 ```
 
 ---
 
 ## Entregable
 
-Un archivo `CLAUDE.md` listo para subir al repositorio del proyecto. Puedes usar como punto de partida el template de [03-convenciones-equipo.md](../teoria/03-convenciones-equipo.md) y adaptarlo al escenario de TaskFlow.
+Un archivo `AGENTS.md`, `CLAUDE.md` o equivalente listo para subir al repositorio del proyecto. Puedes usar como punto de partida el template de [03-convenciones-equipo.md](../teoria/03-convenciones-equipo.md) y adaptarlo al escenario de TaskFlow.
 
 ---
 
 ## Reflexión
 
-Tras crear el CLAUDE.md, pregúntate:
+Tras crear el archivo de instrucciones, pregúntate:
 
 - ¿Hay alguna convención implícita en tu equipo real que no está documentada?
 - ¿Qué restricciones pondrías si fuera tu proyecto real?

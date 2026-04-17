@@ -113,7 +113,7 @@ Ejecuta ese código y muéstrame el output antes de continuar.
 
 Usar MCP servers, `@archivo` en Cursor, o pegar snippets de docs oficiales con la instrucción: "No inventes métodos — usa solo lo que aparece en esta documentación."
 
-### 2. Incluir reglas en CLAUDE.md
+### 2. Incluir reglas en el archivo de instrucciones del repositorio
 
 ```markdown
 ## Reglas de verificación
@@ -146,5 +146,5 @@ Implementa la función y ejecútala con datos de prueba. Muéstrame el resultado
 - Las alucinaciones son imports, métodos o comportamientos inventados que el agente presenta con total confianza
 - Compilar y ejecutar es tu primera defensa — detecta la mayoría
 - Verificar imports contra documentación oficial cubre el resto
-- Prevenir es mejor que detectar: da acceso a docs, incluye reglas en CLAUDE.md, pide ejecución de tests
+- Prevenir es mejor que detectar: da acceso a docs, incluye reglas en tu `AGENTS.md`, `CLAUDE.md` o equivalente, y pide ejecución de tests
 - Nunca confíes en "debería funcionar" — ejecuta y verifica siempre

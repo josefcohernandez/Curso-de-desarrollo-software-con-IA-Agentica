@@ -62,7 +62,7 @@ Fix only this bug. Don't refactor other code.
 
 ### Lección
 
-> Una tarea por prompt. Las otras 3 tareas se hacen después, cada una en su propio prompt con `/clear` entre ellas.
+> Una tarea por prompt. Las otras 3 tareas se hacen después, cada una en su propio prompt con una sesión nueva o limpieza de contexto entre ellas.
 
 ---
 

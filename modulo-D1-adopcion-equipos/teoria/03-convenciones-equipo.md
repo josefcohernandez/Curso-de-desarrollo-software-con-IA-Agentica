@@ -2,15 +2,15 @@
 
 ## Introducción
 
-Cuando cada developer configura su herramienta de IA de forma diferente, los resultados son inconsistentes: estilos de código distintos, permisos arbitrarios, y nadie sabe qué puede hacer el agente y qué no. Las convenciones de equipo eliminan esta variabilidad y hacen que la IA sea **predecible y fiable** para todo el equipo.
+Cuando cada desarrollador configura su herramienta de IA de forma diferente, los resultados son inconsistentes: estilos de código distintos, permisos arbitrarios, y nadie sabe qué puede hacer el agente y qué no. Las convenciones de equipo eliminan esta variabilidad y hacen que la IA sea **predecible y fiable** para todo el equipo.
 
 ---
 
 ## Qué Acordar como Equipo
 
-### 1. CLAUDE.md Compartido
+### 1. Archivo Compartido de Instrucciones del Repositorio
 
-El `CLAUDE.md` (o su equivalente en otras herramientas) es el documento más importante para la adopción en equipo. Define las reglas que el agente seguirá para **todos** los miembros.
+El archivo de instrucciones persistentes del repositorio es el documento más importante para la adopción en equipo. En Codex suele ser `AGENTS.md`; en Claude Code, `CLAUDE.md`. El nombre cambia, pero el concepto es el mismo: define las reglas que el agente seguirá para **todos** los miembros.
 
 Debe incluir:
 - Comandos de build, test y lint
@@ -72,10 +72,10 @@ Basándose en el análisis del [Módulo A2](../../modulo-A2-limitaciones-fallos/
 
 ---
 
-## Template Completo de CLAUDE.md de Equipo
+## Template Completo de `AGENTS.md` / `CLAUDE.md` de Equipo
 
 ```markdown
-# CLAUDE.md — [Nombre del Proyecto]
+# AGENTS.md / CLAUDE.md — [Nombre del Proyecto]
 
 ## Build y Test
 
@@ -130,8 +130,8 @@ Basándose en el análisis del [Módulo A2](../../modulo-A2-limitaciones-fallos/
 ## Proceso para Crear Convenciones
 
 1. **Reunión inicial** (30-60 min): los early adopters presentan su experiencia y proponen las primeras convenciones
-2. **Borrador**: un miembro del equipo escribe el primer CLAUDE.md basándose en la reunión
-3. **Review como PR**: el CLAUDE.md se sube como PR y todo el equipo revisa y comenta
+2. **Borrador**: un miembro del equipo escribe el primer `AGENTS.md` / `CLAUDE.md` basándose en la reunión
+3. **Review como PR**: el archivo se sube como PR y todo el equipo revisa y comenta
 4. **Iteración**: se incorpora el feedback y se mergea
 5. **Revisión mensual**: cada mes se revisan las convenciones y se ajustan según la experiencia acumulada
 
@@ -142,7 +142,7 @@ Basándose en el análisis del [Módulo A2](../../modulo-A2-limitaciones-fallos/
 - El código generado por IA es consistente independientemente de quién lo generó
 - Los PRs con código IA pasan code review sin comentarios de estilo
 - Los nuevos miembros pueden empezar a usar la IA productivamente en 1-2 días
-- El CLAUDE.md se actualiza regularmente (no es un documento olvidado)
+- El archivo de instrucciones del repositorio se actualiza regularmente (no es un documento olvidado)
 
 ---
 

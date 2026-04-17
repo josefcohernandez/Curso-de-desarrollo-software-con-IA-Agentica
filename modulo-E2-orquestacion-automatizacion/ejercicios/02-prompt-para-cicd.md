@@ -45,7 +45,7 @@ Para cada archivo modificado, verifica:
 1. SEGURIDAD: ¿Hay inputs no validados, inyección SQL/XSS, secrets expuestos?
 2. TESTS: ¿Los cambios tienen cobertura de tests? ¿Qué tests faltan?
 3. REGRESIONES: ¿El cambio puede romper funcionalidad existente?
-4. CONVENCIONES: ¿El código sigue las convenciones del proyecto (lee CLAUDE.md)?
+4. CONVENCIONES: ¿El código sigue las convenciones del proyecto (lee el archivo de instrucciones del repositorio)?
 
 Reglas estrictas:
 - Si encuentras un issue con severity "critical", approved DEBE ser false

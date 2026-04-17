@@ -117,7 +117,7 @@ Verifica para cada archivo modificado:
 1. No hay vulnerabilidades de seguridad (OWASP top 10)
 2. Los tests cubren los cambios (o explica qué tests faltan)
 3. No hay regresiones obvias (cambios que rompen funcionalidad existente)
-4. El código sigue las convenciones del proyecto (lee CLAUDE.md si existe)
+4. El código sigue las convenciones del proyecto (lee el archivo de instrucciones del repositorio si existe)
 
 Output JSON con formato:
 {

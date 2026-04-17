@@ -68,7 +68,7 @@ Crea tambien `sample-data.csv` con columnas: `name,department,salary,years` y 5-
 ## Tu misión
 
 1. **Entender (10 min)**: pide al agente que explique inputs/outputs, side effects y edge cases. No modifiques nada
-2. **Tests sin cambiar codigo (20 min)**: cubrir happy path, sort, output a archivo, lineas vacias, CSV sin datos. Todos pasan con el codigo original intacto
+2. **Tests sin cambiar código (20 min)**: cubrir happy path, sort, output a archivo, líneas vacías, CSV sin datos. Todos pasan con el código original intacto
 3. **Feature: filtrado por fechas (20 min)**: nueva opcion `opts.dateFilter` con `column`, `from`, `to`. Filtra registros por rango de strings ISO, ANTES del sort y estadisticas. TDD: tests primero
 4. **Refactor opcional (10 min)**: `var` a `const/let`, arrow functions, extraer funciones. Tests verdes
 
@@ -80,13 +80,13 @@ Crea tambien `sample-data.csv` con columnas: `name,department,salary,years` y 5-
 |----------|------|-----------|--------------|
 | Tests del comportamiento original | 30% | 7+ tests incluyendo edge cases | Menos de 4 tests |
 | Feature de filtrado | 35% | Funciona con TDD, no rompe nada | No funciona o rompe tests |
-| Proceso seguido | 25% | Entender -> Tests -> Feature -> Refactor | Modifico codigo antes de tests |
+| Proceso seguido | 25% | Entender -> Tests -> Feature -> Refactor | Modifico código antes de tests |
 | Refactor (bonus) | 10% | Codigo legible, tests pasan | Rompe tests |
 
 ---
 
 ## Reflexión post-ejercicio
 
-1. ¿Los tests del paso 2 te dieron confianza para modificar el codigo?
-2. ¿Encontraste algun bug en el codigo original mientras escribias tests?
-3. ¿Habrias abordado este modulo de forma diferente sin IA?
+1. ¿Los tests del paso 2 te dieron confianza para modificar el código?
+2. ¿Encontraste algún bug en el código original mientras escribías tests?
+3. ¿Habrías abordado este módulo de forma diferente sin IA?

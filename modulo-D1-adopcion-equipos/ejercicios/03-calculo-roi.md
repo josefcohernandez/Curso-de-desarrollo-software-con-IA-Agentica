@@ -14,14 +14,14 @@ Tu equipo tiene estas características:
 
 | Dato | Valor |
 |------|-------|
-| Developers en el equipo | 5 |
+| Desarrolladores en el equipo | 5 |
 | Salario medio anual (bruto + coste empresa) | $90,000 |
 | Horas de trabajo efectivas por semana | 35 |
-| Coste de la herramienta de IA | $50/mes por developer |
+| Coste de la herramienta de IA | $50/mes por desarrollador |
 | Coste estimado de formación | $1,500 (taller de 1 día para todo el equipo) |
 | Semanas de curva de aprendizaje | 2 (productividad reducida un 20%) |
 
-Tras un piloto de 4 semanas con 2 developers, los datos observados son:
+Tras un piloto de 4 semanas con 2 desarrolladores, los datos observados son:
 
 | Tarea | Tiempo sin IA | Tiempo con IA | Frecuencia semanal |
 |-------|---------------|---------------|-------------------|
@@ -37,8 +37,8 @@ Tras un piloto de 4 semanas con 2 developers, los datos observados son:
 
 ### Parte 1: Cálculo de Horas Ahorradas
 
-1. Calcula el ahorro semanal por developer para cada tipo de tarea
-2. Suma el total de horas ahorradas por semana por developer
+1. Calcula el ahorro semanal por desarrollador para cada tipo de tarea
+2. Suma el total de horas ahorradas por semana por desarrollador
 3. Calcula el total anual para el equipo completo
 
 ### Parte 2: Cálculo de Costes
@@ -50,7 +50,7 @@ Tras un piloto de 4 semanas con 2 developers, los datos observados son:
 
 ### Parte 3: Cálculo de ROI
 
-1. Calcula el coste/hora de un developer (salario anual / horas anuales)
+1. Calcula el coste/hora de un desarrollador (salario anual / horas anuales)
 2. Convierte las horas ahorradas en ahorro monetario
 3. Aplica la fórmula de ROI
 
@@ -67,7 +67,7 @@ Rellena esta tabla resumen para presentar a management:
 
 | Concepto | Valor |
 |----------|-------|
-| Ahorro semanal por developer | ___h |
+| Ahorro semanal por desarrollador | ___h |
 | Ahorro anual (equipo completo) | $_____ |
 | Coste anual (licencias + formación) | $_____ |
 | ROI primer año | ___% |

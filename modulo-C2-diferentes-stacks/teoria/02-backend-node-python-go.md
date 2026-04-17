@@ -7,7 +7,7 @@ Cada lenguaje backend tiene un perfil diferente cuando trabajas con un agente de
 | Lenguaje | Fortaleza del agente | Debilidad | Tip |
 |----------|---------------------|-----------|-----|
 | **Python** | Excelente generación de código, bibliotecas bien conocidas (FastAPI, Django, SQLAlchemy) | Puede mezclar paradigmas (sync/async), tipado débil oculta errores | Pedir type hints siempre |
-| **Node/TypeScript** | Muy bueno con Express/Fastify, ecosistema NPM bien cubierto | Over-engineering de types, imports circulares entre módulos | Especificar estilo estricto en CLAUDE.md |
+| **Node/TypeScript** | Muy bueno con Express/Fastify, ecosistema NPM bien cubierto | Over-engineering de types, imports circulares entre módulos | Especificar estilo estricto en el archivo de instrucciones del repositorio |
 | **Go** | Buenos patterns estándar, error handling idiomático, stdlib potente | Puede generar goroutines innecesarias, linters estrictos fallan | Ejecutar `go vet` + `golangci-lint` como hook |
 | **Java/Kotlin** | Patterns enterprise bien conocidos (Spring Boot, Hibernate) | Verbosidad excesiva, abstracciones innecesarias (factories de factories) | Pedir código conciso explícitamente |
 | **Rust** | Buen manejo del borrow checker, patterns idiomáticos | Puede "luchar" con lifetimes y generar `clone()` excesivos | Revisar ownership cuidadosamente |
@@ -19,7 +19,7 @@ Cada lenguaje backend tiene un perfil diferente cuando trabajas con un agente de
 Python es probablemente donde el agente se siente más cómodo. El ecosistema está extremadamente bien documentado y los patterns son predecibles. Pero hay trampas:
 
 - **Mezcla sync/async**: el agente puede usar `requests` (sync) en un proyecto FastAPI (async) sin darse cuenta del conflicto. Especifica siempre: "Usa `httpx` para HTTP requests, todo async."
-- **Tipado**: sin instrucciones explícitas, el agente genera código sin type hints. Añade en tu CLAUDE.md: "All Python code must include type hints (PEP 484)."
+- **Tipado**: sin instrucciones explícitas, el agente genera código sin type hints. Añade en tu archivo de instrucciones del repositorio: "All Python code must include type hints (PEP 484)."
 - **Dependencias**: el agente puede sugerir bibliotecas obsoletas o con vulnerabilidades. Verifica siempre las versiones.
 
 ### Node/TypeScript

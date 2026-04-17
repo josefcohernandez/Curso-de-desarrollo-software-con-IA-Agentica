@@ -4,7 +4,7 @@
 
 El proyecto final simula un **sprint de desarrollo completo de 3 "días"** donde aplicarás todas las técnicas aprendidas en el curso. Construirás una API REST real con asistencia de IA agéntica, evaluando no solo el resultado final sino el **proceso** que seguiste.
 
-Este proyecto integra los módulos A1-A4, B1-B2, C1 y C2 en un escenario realista que refleja el trabajo diario de un developer profesional.
+Este proyecto integra los módulos A1-A4, B1-B2, C1 y C2 en un escenario realista que refleja el trabajo diario de un desarrollador profesional.
 
 **Tiempo estimado: 4-6 horas** (repartidas en 3 sesiones)
 

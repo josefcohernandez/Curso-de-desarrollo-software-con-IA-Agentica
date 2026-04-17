@@ -35,7 +35,7 @@ Write the final result to SPEC.md.
 
 ### Paso 2: Diseño de arquitectura (20 minutos)
 
-Con la spec en mano, activa Plan Mode (o pide explícitamente que no escriba código todavía):
+Con la spec en mano, activa una fase de planificación (o pide explícitamente que no escriba código todavía):
 
 ```text
 Based on SPEC.md, design the architecture for this project.
@@ -126,7 +126,7 @@ El tiempo invertido en los pasos 1 y 2 se recupera multiplicado en los pasos 3 y
 |-------|--------------|-------------|
 | Saltar directamente al código | Arquitectura emergente caótica | Siempre spec + architecture antes de escribir código |
 | Aceptar la primera arquitectura que propone el agente | Over-engineering o tecnologías inadecuadas | Pedir 2-3 alternativas y evaluar pros/contras |
-| Intentar implementar todo en una sesión | Fatiga de supervisión, calidad decreciente | Una feature a la vez, `/clear` entre features |
+| Intentar implementar todo en una sesión | Fatiga de supervisión, calidad decreciente | Una feature a la vez, con sesión nueva entre features |
 | No escribir tests desde el inicio | Deuda técnica desde el día 1 | TDD desde la primera feature |
 | Spec demasiado vaga ("una app de tareas") | El agente llena los huecos con asunciones | Responder las preguntas de la entrevista con detalle |
 

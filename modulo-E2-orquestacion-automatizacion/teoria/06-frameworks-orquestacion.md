@@ -6,6 +6,8 @@ Los cinco patrones del fichero 01 (fan-out, pipeline, jerárquico, writer/review
 
 Los frameworks de orquestación resuelven esa infraestructura repetitiva y te permiten centrarte en la lógica de coordinación de tu caso de uso específico.
 
+> **Nota**: nombres de producto, versiones y estados GA/beta cambian rápido. Usa este capítulo como mapa conceptual y verifica la documentación oficial antes de comprometer una decisión de arquitectura.
+
 **El ecosistema en 2025-2026**: el mercado se ha consolidado alrededor de dos tipos de herramientas. Los "LLM frameworks" de primera generación (LangChain clásico, LlamaIndex) abstraían llamadas a modelos y chains estáticos. Los "Agent SDKs" de segunda generación (LangGraph, OpenAI Agents SDK, Google ADK) modelan agentes autónomos con estado, ciclos y coordinación dinámica. El valor ya no está en envolver la API del modelo — está en orquestar agentes que colaboran.
 
 ---
@@ -16,7 +18,7 @@ Los frameworks de orquestación resuelven esa infraestructura repetitiva y te pe
 |-----------|------------------------|-------------------|-----------|---------|-------------------|
 | **LangGraph** | Grafo de estado dirigido con ciclos | Agnóstico (OpenAI, Anthropic, Google, Ollama) | Python, JavaScript | GA desde oct. 2025 (v1.0) | Flujos complejos con condicionales, ciclos y estado persistente |
 | **CrewAI** | Declarativo: agentes con roles, goals y backstory | Agnóstico | Python | Estable, muy activo | Equipos de agentes con roles fijos y colaboración estructurada |
-| **OpenAI Agents SDK** | Handoffs entre agentes + guardrails + tracing | Optimizado para OpenAI, extensible | Python | GA desde mar. 2025 | Ecosistema OpenAI, aplicaciones con guardrails de seguridad nativos |
+| **OpenAI Agents SDK** | Handoffs entre agentes + guardrails + tracing | Optimizado para OpenAI, extensible | Python, TypeScript | GA desde mar. 2025 | Ecosistema OpenAI, aplicaciones con guardrails de seguridad nativos |
 | **Google ADK** | Orquestación jerárquica nativa | Multi-modelo (Gemini, Anthropic, etc.) | Python | GA desde abr. 2025 (Google Cloud NEXT) | Ecosistema Google Cloud, integración con Vertex AI |
 | **Semantic Kernel** | Planners que descomponen tareas en pasos | Multi-modelo (Azure, OpenAI, Hugging Face) | C#, Python, Java | Estable, 18K+ GitHub stars | Ecosistema Azure, aplicaciones enterprise multi-lenguaje |
 | **AutoGen** | Conversación multi-agente, GroupChat | Multi-modelo | Python | Maduro pero menos adoptado en producción | Prototipado rápido, investigación, patrones conversacionales |

@@ -8,7 +8,7 @@ En febrero de 2025, Andrej Karpathy acuñó el término en una publicación que 
 
 La descripción es precisa: vibe coding es la práctica de generar código con IA sin leerlo, entenderlo ni revisarlo. El criterio de aceptación es si "parece funcionar" en el happy path. No se revisa el diff, no se leen los cambios, no se ejecutan tests. Se acepta lo que el agente produce basándose en la respuesta inmediata.
 
-No es un fenómeno marginal. En 2026, el 72% de developers usa herramientas de IA diariamente y el 41% del código global es generado por IA. El vibe coding es la trampa natural de esa adopción masiva: la velocidad aparente hace que revisar parezca un coste innecesario.
+No es un fenómeno marginal. La adopción de herramientas de IA ya es suficientemente amplia como para que el vibe coding aparezca de forma natural en equipos reales: la velocidad aparente hace que revisar parezca un coste innecesario.
 
 Este fichero examina el fenómeno desde una perspectiva profesional — no para moralizarlo, sino para entender sus riesgos concretos y gestionar el nivel de delegación de forma consciente.
 
@@ -35,7 +35,7 @@ El nivel 1 tiene riesgo bajo no porque las sugerencias sean siempre correctas, s
 
 ### Seguridad
 
-El dato más citado en la industria: según análisis de OWASP y Snyk, el **45% del código generado por IA contiene al menos una vulnerabilidad de seguridad**. En plataformas como Lovable — donde el vibe coding es el modo por defecto — análisis independientes encontraron que el 10% de las aplicaciones generadas tenían vulnerabilidades críticas (inyección SQL, autenticación bypassable, secretos expuestos en el código).
+Un dato útil para fijar el orden de magnitud: informes recientes como el GenAI Code Security Report de Veracode han encontrado porcentajes altos de problemas de seguridad en salidas generadas por IA cuando no hay revisión rigurosa. En plataformas donde el vibe coding es el modo por defecto, análisis independientes también han detectado vulnerabilidades críticas con frecuencia preocupante (inyección SQL, autenticación bypassable, secretos expuestos en el código).
 
 Esto no es un fallo de los modelos, es una consecuencia del proceso: cuando el criterio de aceptación es "funciona", las vulnerabilidades que no impiden la ejecución pasan sin revisión.
 
@@ -63,19 +63,19 @@ Este es el riesgo menos visible y el más duradero.
 
 Si no puedes explicar por qué una función funciona, no puedes arreglarla cuando falle. Si no puedes arreglarla, dependes del agente para todos los cambios futuros, incluidos los urgentes. Si dependes del agente para todos los cambios, necesitas que el agente tenga suficiente contexto para entender el código que él mismo generó — y aquí entra la degradación de contexto del fichero 05.
 
-El developer que hace vibe coding sistemáticamente pierde la capacidad de debuggear su propio proyecto. Eso no es un problema teórico; es lo que determina si puedes resolver un incidente a las 2 AM o si tienes que esperar a que el agente lo haga.
+El desarrollador que hace vibe coding sistemáticamente pierde la capacidad de debuggear su propio proyecto. Eso no es un problema teórico; es lo que determina si puedes resolver un incidente a las 2 AM o si tienes que esperar a que el agente lo haga.
 
 ### Accountability difusa
 
 El código que nadie leyó sigue siendo responsabilidad de quien lo mergeó.
 
-Legalmente, la firma en el commit pertenece al developer. El argumento "lo generó la IA" no es una defensa en una auditoría de seguridad, en un incidente de datos ni en una revisión de compliance. La cuenta del agente no aparece en `git blame`.
+Legalmente, la firma en el commit pertenece al desarrollador. El argumento "lo generó la IA" no es una defensa en una auditoría de seguridad, en un incidente de datos ni en una revisión de compliance. La cuenta del agente no aparece en `git blame`.
 
 ### Escalabilidad falsa
 
 Un MVP puede funcionar perfectamente con vibe coding. El problema aparece cuando el MVP tiene usuarios reales y necesita escalar.
 
-Sin arquitectura deliberada, sin separación de concerns, sin patrones consistentes de manejo de errores — lo que funciona a pequeña escala se convierte en un muro cuando intentas añadir caching, migrar bases de datos, o incorporar a nuevos developers al equipo. La velocidad inicial se paga con interés compuesto.
+Sin arquitectura deliberada, sin separación de concerns, sin patrones consistentes de manejo de errores — lo que funciona a pequeña escala se convierte en un muro cuando intentas añadir caching, migrar bases de datos, o incorporar a nuevos desarrolladores al equipo. La velocidad inicial se paga con interés compuesto.
 
 ---
 
@@ -94,7 +94,7 @@ Ninguna de estas fuerzas es irracional en el momento. Son racionales a corto pla
 
 ## El Posicionamiento Profesional
 
-La diferencia entre un developer que usa IA profesionalmente y uno que hace vibe coding no es la herramienta que usa — es cómo interactúa con el output.
+La diferencia entre un desarrollador que usa IA profesionalmente y uno que hace vibe coding no es la herramienta que usa — es cómo interactúa con el output.
 
 | Aspecto | Developer profesional con IA | Vibe coder |
 |---------|------------------------------|------------|
@@ -106,7 +106,7 @@ La diferencia entre un developer que usa IA profesionalmente y uno que hace vibe
 | **Accountability** | Firma commits con conocimiento de lo que contienen | Firma commits a ciegas |
 | **Deuda técnica** | La gestiona activamente; pide refactors cuando el código se deteriora | No la mide; la descubre cuando ya es un problema |
 
-La distinción no es moralista. Es práctica: el developer profesional puede sostener la velocidad de entrega durante meses. El vibe coder tiene sprints rápidos seguidos de parones para deshacerse de la deuda acumulada — o no se para y el proyecto colapsa.
+La distinción no es moralista. Es práctica: el desarrollador profesional puede sostener la velocidad de entrega durante meses. El vibe coder tiene sprints rápidos seguidos de parones para deshacerse de la deuda acumulada — o no se para y el proyecto colapsa.
 
 ---
 
@@ -117,11 +117,11 @@ Hay escenarios legítimos donde el nivel de supervisión puede ser mínimo:
 - **Prototipos desechables**: un prototipo cuya función es mostrar una idea y que se va a reescribir desde cero si gusta.
 - **Hackathons y exploración personal**: cuando el objetivo es aprender o validar rápidamente y el código no va a ningún lado.
 - **Scripts de un solo uso**: automatizaciones personales que se ejecutan una vez y no van a producción.
-- **Experimentación local**: código de laboratorio que nunca sale del entorno del developer.
+- **Experimentación local**: código de laboratorio que nunca sale del entorno del desarrollador.
 
 La regla es simple: **si nadie más va a mantenerlo y no va a producción, el riesgo es tuyo**. Eso es una decisión adulta y válida.
 
-En cuanto el código toca producción, datos de usuarios, o el trabajo de otros developers en el equipo, las reglas cambian.
+En cuanto el código toca producción, datos de usuarios, o el trabajo de otros desarrolladores en el equipo, las reglas cambian.
 
 ---
 
@@ -138,14 +138,14 @@ Nunca aceptes más de 3 cambios consecutivos sin revisar al menos uno en detalle
 Si el agente genera código sin tests, la tarea no está terminada. El criterio de "done" incluye tests.
 
 ```text
-Ejemplo de instrucción en CLAUDE.md:
+Ejemplo de instrucción en `AGENTS.md`, `CLAUDE.md` o equivalente:
 "No generes código de producción sin incluir tests unitarios para los casos
 principales. Si no es posible testear algo, explica por qué antes de continuar."
 ```
 
-### /clear entre tareas
+### Reset de contexto entre tareas
 
-Cada nueva tarea empieza con contexto limpio. Esto elimina la acumulación silenciosa de contexto que degrada la coherencia del agente (ver fichero 05) y también te fuerza a rearticularqué quieres, lo que activa tu supervisión.
+Cada nueva tarea empieza con contexto limpio. Esto elimina la acumulación silenciosa de contexto que degrada la coherencia del agente (ver fichero 05) y también te fuerza a rearticular qué quieres, lo que activa tu supervisión.
 
 ### Revisión del flujo de verificación estándar
 

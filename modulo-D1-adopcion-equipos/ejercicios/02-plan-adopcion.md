@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Diseñar un plan de adopción de 4 fases para un equipo de 8 developers, incluyendo timeline, actividades concretas, métricas y criterios de avance entre fases.
+Diseñar un plan de adopción de 4 fases para un equipo de 8 desarrolladores, incluyendo timeline, actividades concretas, métricas y criterios de avance entre fases.
 
 **Tiempo estimado: 15 minutos**
 
@@ -10,7 +10,7 @@ Diseñar un plan de adopción de 4 fases para un equipo de 8 developers, incluye
 
 ## Escenario
 
-Eres engineering manager de un equipo de 8 developers con estos perfiles:
+Eres engineering manager de un equipo de 8 desarrolladores con estos perfiles:
 
 | Developer | Experiencia | Actitud hacia IA |
 |-----------|-------------|-------------------|
@@ -23,7 +23,7 @@ Eres engineering manager de un equipo de 8 developers con estos perfiles:
 | Hugo | Mid, 3 años | Indiferente |
 | Isabel | Junior, 2 años | Nerviosa — "me va a quitar el trabajo" |
 
-El equipo trabaja en un backend en Python (FastAPI) para una empresa de e-commerce. La empresa aprobó un presupuesto de $100/mes por developer para herramientas de IA.
+El equipo trabaja en un backend en Python (FastAPI) para una empresa de e-commerce. La empresa aprobó un presupuesto de $100/mes por desarrollador para herramientas de IA.
 
 ---
 

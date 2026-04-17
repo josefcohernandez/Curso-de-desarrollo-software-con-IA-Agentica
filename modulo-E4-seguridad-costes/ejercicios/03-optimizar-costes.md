@@ -74,7 +74,7 @@ Analiza este historial de uso de IA y encuentra los desperdicios:
 Busca:
 1. Tareas donde se usó un modelo más potente de lo necesario
 2. Desarrolladores con ratio prompts/tarea anormalmente alto
-3. Sesiones donde no se usó /compact o /clear (input tokens altos)
+3. Sesiones donde no se usó compactación o limpieza de contexto (input tokens altos)
 4. Patrones de uso ineficiente
 ```
 
@@ -83,7 +83,7 @@ Busca:
 1. Dev A usa Opus para todo. ¿Qué tareas podrían haberse hecho con Sonnet o Haiku?
 2. Dev B necesitó 55 prompts para una sola feature (login social, lunes+martes). ¿Es normal?
 3. Dev C tiene 160 prompts en la semana. ¿Cuál es su ratio prompts/tarea? ¿Qué indica?
-4. ¿Alguien parece no usar `/clear` entre tareas? ¿Cómo lo sabes?
+4. ¿Alguien parece no reiniciar o limpiar el contexto entre tareas? ¿Cómo lo sabes?
 
 ---
 
@@ -107,8 +107,8 @@ Completa esta tabla con el modelo que debería haberse usado:
 
 | Optimización | Desarrollador | Ahorro estimado |
 |-------------|--------------|-----------------|
-| /clear entre tareas | | |
-| /compact proactivo | | |
+| Sesión nueva o limpieza entre tareas | | |
+| Compactación proactiva | | |
 | Mejores prompts (menos iteraciones) | | |
 | Batching de tareas | | |
 
@@ -122,7 +122,7 @@ Escribe un plan concreto que reduzca el coste semanal de $27.54 a menos de $19.2
 Dado el análisis anterior, diseña un plan de optimización para este equipo.
 El plan debe incluir:
 1. Política de selección de modelo por tipo de tarea
-2. Reglas de /compact y /clear
+2. Reglas de compactación y limpieza de contexto
 3. Coaching específico para cada desarrollador
 4. Budget máximo por persona/semana
 5. Coste semanal objetivo tras la optimización

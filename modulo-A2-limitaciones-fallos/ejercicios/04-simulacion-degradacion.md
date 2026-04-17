@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Realizar una sesión deliberadamente larga con un agente de código para **observar en primera persona** cómo se degrada la calidad de las respuestas. Documentar el punto de inflexión y practicar la técnica de `/clear` + reinyección de contexto.
+Realizar una sesión deliberadamente larga con un agente de código para **observar en primera persona** cómo se degrada la calidad de las respuestas. Documentar el punto de inflexión y practicar la técnica de reinicio de sesión + reinyección de contexto.
 
 **Tiempo estimado: 10 minutos de preparación + sesión práctica**
 
@@ -54,7 +54,7 @@ Pide al agente que lea 2-3 archivos clave del proyecto. Anota las decisiones exp
 
 ### Fase 2: Trabajo progresivo (intercambios 6-20)
 
-Asigna tareas de complejidad creciente, sin hacer `/clear`:
+Asigna tareas de complejidad creciente, sin reiniciar ni limpiar el contexto:
 
 1. Añadir una función simple a un archivo existente
 2. Crear un nuevo endpoint que interactúe con la base de datos
@@ -82,9 +82,9 @@ Ahora empuja deliberadamente los límites:
 - ¿Hay contradicciones con las decisiones iniciales?
 - ¿Las respuestas se sienten más genéricas?
 
-### Fase 4: Recuperación con `/clear` (intercambio 31+)
+### Fase 4: Recuperación con sesión nueva (intercambio 31+)
 
-Ejecuta `/clear` (o su equivalente en tu herramienta). Luego reinyecta **solo** el contexto esencial:
+Reinicia la sesión o usa el comando equivalente de tu herramienta. Luego reinyecta **solo** el contexto esencial:
 
 ```text
 Estamos trabajando en [proyecto]. Contexto esencial:
@@ -104,7 +104,7 @@ Al terminar la sesión, responde estas preguntas:
 
 1. **¿En qué intercambio notaste el primer signo de degradación?**
 2. **¿Cuál fue el signo más claro?** (contradicción, duplicación, olvido, calidad genérica)
-3. **¿La calidad post-`/clear` fue comparable a la del inicio?**
+3. **¿La calidad tras reiniciar la sesión fue comparable a la del inicio?**
 4. **¿Qué información fue esencial reinyectar y cuál pudiste omitir?**
 5. **¿Qué harías diferente la próxima vez?** (dividir antes, usar subagentes, etc.)
 
@@ -114,5 +114,5 @@ Al terminar la sesión, responde estas preguntas:
 
 - Completar la sesión de 30+ intercambios documentando cada checkpoint
 - Identificar al menos 1 signo claro de degradación
-- Practicar la recuperación con `/clear` y comprobar la diferencia de calidad
+- Practicar la recuperación con una sesión nueva y comprobar la diferencia de calidad
 - Formular al menos 2 reglas personales para gestionar sesiones largas

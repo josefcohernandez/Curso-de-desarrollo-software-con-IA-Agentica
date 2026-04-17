@@ -61,7 +61,7 @@ Al completar este módulo serás capaz de:
 - **STRIDE**: framework de threat modeling (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege)
 - **Attack surface mapping**: identificación sistemática de todos los puntos de entrada de un sistema
 - **Token budgeting**: gestión consciente del consumo de tokens para controlar costes sin perder productividad
-- **Cached tokens**: tokens que se repiten entre llamadas (CLAUDE.md, system prompt) y tienen descuento del ~90%
+- **Cached tokens**: tokens que se repiten entre llamadas (`AGENTS.md`, `CLAUDE.md`, system prompt) y tienen descuento del ~90%
 - **Effort levels**: niveles de razonamiento del modelo (low, medium, high, max) que afectan calidad, velocidad y coste
 - **Fallback model**: modelo de respaldo cuando el principal no está disponible, para degradación elegante
 - **Mutation score vs coverage**: el mutation score mide calidad real de tests; aquí aplicamos el mismo principio a security reviews

@@ -2,13 +2,13 @@
 
 ## Por Qué Existe MCP
 
-Antes de MCP, cada agente de IA integraba herramientas externas de forma ad hoc. Cursor tenía su propio sistema de plugins. Claude Code, su propio. Copilot, el suyo. Un equipo que desarrollaba una integración con su base de datos interna tenía que reimplementarla tres veces para que funcionara en los tres tools que usaba.
+Antes de MCP, cada agente de IA integraba herramientas externas de forma ad hoc. Codex, Claude Code, Cursor o Copilot podían tener mecanismos distintos. Un equipo que desarrollaba una integración con su base de datos interna tenía que reimplementarla varias veces para que funcionara en los distintos hosts que usaba.
 
 MCP (Model Context Protocol) es un protocolo abierto publicado por Anthropic en noviembre de 2024 que estandariza cómo los agentes de IA se conectan con herramientas y datos externos. La analogía más directa: **MCP es para agentes de IA lo que USB es para dispositivos** — antes de USB, cada periférico necesitaba un conector y driver diferente para cada ordenador; después de USB, el mismo dispositivo funciona en cualquier máquina.
 
 Una formulación equivalente: MCP es para agentes lo que HTTP es para navegadores web. Del mismo modo que cualquier servidor web puede servir contenido a cualquier navegador porque ambos hablan HTTP, cualquier servidor MCP puede servir herramientas a cualquier agente porque ambos hablan MCP.
 
-**El impacto fue inmediato**: en noviembre de 2025, el SDK de MCP superó los 97 millones de descargas mensuales. Adoptado por OpenAI, Google DeepMind, AWS, Microsoft, Hugging Face y LangChain. Esto convierte a MCP en la apuesta más segura de estandarización en el ecosistema de agentes en 2025-2026.
+Su adopción en 2025-2026 ha sido suficientemente amplia como para tratarlo como una apuesta seria de estandarización en el ecosistema de agentes.
 
 ---
 
@@ -18,7 +18,7 @@ Un sistema MCP tiene tres participantes que interactúan con un protocolo bien d
 
 ```text
 ┌─────────────────────────────────────────────────────┐
-│  HOST (Claude Code, Cursor, VS Code + Copilot, etc.) │
+│  HOST (Codex, Claude Code, Cursor, VS Code + Copilot, etc.) │
 │                                                      │
 │   ┌──────────────┐        ┌──────────────────────┐  │
 │   │  Tu agente   │◄──────►│   MCP Client         │  │
@@ -34,7 +34,7 @@ Un sistema MCP tiene tres participantes que interactúan con un protocolo bien d
                           └─────────────────────────────-┘
 ```
 
-**Host**: la aplicación que ejecuta al agente. Claude Code, Cursor, VS Code con Copilot, Windsurf, Cline. El host es responsable de iniciar y gestionar las conexiones con los servidores MCP.
+**Host**: la aplicación que ejecuta al agente. Codex, Claude Code, Cursor, VS Code con Copilot, Windsurf, Cline. El host es responsable de iniciar y gestionar las conexiones con los servidores MCP.
 
 **MCP Client**: el componente dentro del host que implementa el protocolo. Descubre qué herramientas ofrece cada servidor, traduce las peticiones del modelo en llamadas MCP, y devuelve los resultados al modelo. El desarrollador de aplicaciones no interactúa directamente con el MCP Client — está integrado en el host.
 
@@ -64,7 +64,7 @@ MCP define tres tipos de capacidades que un servidor puede exponer:
 
 ### Tools: Acciones con Side Effects
 
-Los tools son funciones que el agente puede invocar para actuar sobre sistemas externos. Son el equivalente a las herramientas que ya conoces en Claude Code (Bash, Read, Write, etc.), pero implementadas por tu servidor.
+Los tools son funciones que el agente puede invocar para actuar sobre sistemas externos. Son el equivalente a las herramientas integradas del host (terminal, lectura/escritura, búsqueda, navegador, etc.), pero implementadas por tu servidor.
 
 Cuando el modelo decide usar un tool, el host ejecuta la llamada al servidor MCP y devuelve el resultado al modelo. El modelo nunca ejecuta código directamente — siempre hay un proceso servidor intermedio.
 
@@ -156,7 +156,11 @@ python servidor_mcp.py
 
 ---
 
-## Configuración en Claude Code
+## Configuración en un Host Compatible
+
+Cada host compatible con MCP tiene su propio mecanismo de configuración. El concepto general es siempre el mismo: declaras el servidor, cómo arrancarlo o dónde encontrarlo, y qué credenciales necesita.
+
+### Ejemplo específico en Claude Code
 
 Para que Claude Code descubra y use tu servidor MCP, añádelo en `.claude/settings.json` en la raíz del proyecto (configuración de proyecto) o en `~/.claude/settings.json` (configuración global del usuario):
 
@@ -175,9 +179,9 @@ Para que Claude Code descubra y use tu servidor MCP, añádelo en `.claude/setti
 }
 ```
 
-Tras guardar el fichero, Claude Code reinicia los servidores MCP automáticamente. Puedes verificar que el servidor está activo y los tools disponibles con el comando `/mcp` en la interfaz interactiva de Claude Code.
+Tras guardar el fichero, Claude Code reinicia los servidores MCP automáticamente. Puedes verificar que el servidor está activo y los tools disponibles con el comando `/mcp` en la interfaz interactiva.
 
-Para un servidor remoto con Streamable HTTP:
+### Ejemplo de servidor remoto con Streamable HTTP
 
 ```json
 {
@@ -202,6 +206,7 @@ En 2026, los clientes MCP-compatibles incluyen:
 
 | Cliente | Tipo |
 |---------|------|
+| Codex | Terminal / agente con herramientas |
 | Claude Code | Terminal / IDE integration |
 | Cursor | IDE con agente integrado |
 | VS Code con GitHub Copilot | IDE con Copilot Chat |
@@ -210,7 +215,7 @@ En 2026, los clientes MCP-compatibles incluyen:
 | Claude.ai (web) | Interfaz web |
 | Cualquier cliente basado en el SDK de MCP | Librería de terceros |
 
-**Implicación práctica**: si tu equipo usa Claude Code hoy pero considera migrar a Cursor el año que viene, o si diferentes personas del equipo prefieren diferentes herramientas, un servidor MCP asegura que la integración funciona en todos los casos. La inversión en MCP no depende de ningún vendor específico.
+**Implicación práctica**: si tu equipo usa Claude Code o Codex hoy pero considera migrar a otra herramienta el año que viene, un servidor MCP reduce el coste de migración y de mantenimiento. No garantiza una experiencia idéntica en todos los hosts, pero evita rehacer la integración desde cero.
 
 ---
 

@@ -46,7 +46,7 @@ Al completar este módulo serás capaz de:
 | 1 | [01-comparativa-prompts.md](ejercicios/01-comparativa-prompts.md) | Escribir 3 versiones de un prompt (vaga, razonable, óptima) para un bug de autenticación y comparar resultados | 15 min |
 | 2 | [02-prompt-por-patron.md](ejercicios/02-prompt-por-patron.md) | Dado un repositorio de ejemplo, escribir un prompt para cada uno de los 6 patrones | 15 min |
 | 3 | [03-rescue-prompt-fallido.md](ejercicios/03-rescue-prompt-fallido.md) | Diagnosticar por qué un prompt produce resultados incorrectos y reescribirlo | 15 min |
-| 4 | [04-cookbook-personal.md](ejercicios/04-cookbook-personal.md) | Crear una colección personal de 5 prompts reutilizables y guardarlos como skills o en CLAUDE.md | 15 min |
+| 4 | [04-cookbook-personal.md](ejercicios/04-cookbook-personal.md) | Crear una colección personal de 5 prompts reutilizables y guardarlos como skills o en el archivo de instrucciones del proyecto | 15 min |
 
 ---
 
@@ -89,7 +89,7 @@ Este módulo complementa especialmente:
 
 - [M01 - Introducción y Metodología](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-01-introduccion/README.md): donde se presenta la metodología de desarrollo asistido y los primeros prompts
 - [M03 - Contexto y Tokens](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-03-contexto-y-tokens/README.md): donde se profundiza en cómo el agente gestiona el contexto
-- [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md): donde se enseña a crear archivos de memoria que complementan tus prompts
+- [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md): donde se enseña a crear archivos de memoria persistente que complementan tus prompts
 
 ---
 

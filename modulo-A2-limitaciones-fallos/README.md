@@ -18,7 +18,7 @@ Al completar este módulo serás capaz de:
 2. **Detectar** alucinaciones de código (imports falsos, APIs inventadas, parámetros inexistentes) antes de aceptar cambios
 3. **Prevenir** regresiones silenciosas mediante tests, análisis de dependencias y revisión de diffs
 4. **Identificar** señales de over-engineering y simplificar código innecesariamente complejo generado por IA
-5. **Reconocer** los síntomas de degradación por contexto saturado y aplicar técnicas de mitigación (`/clear`, `/compact`, subagentes)
+5. **Reconocer** los síntomas de degradación por contexto saturado y aplicar técnicas de mitigación (sesiones nuevas, compactación del contexto, subagentes)
 6. **Decidir** cuándo delegar una tarea a IA y cuándo es más seguro o eficiente hacerla manualmente
 7. **Aplicar** un flujo de verificación sistemático que combine compilación, tests y revisión de diff
 8. **Identificar** los 4 niveles del espectro de delegación y gestionar conscientemente el riesgo de vibe coding

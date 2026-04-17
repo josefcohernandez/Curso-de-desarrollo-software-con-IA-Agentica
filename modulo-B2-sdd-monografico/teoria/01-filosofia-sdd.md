@@ -113,7 +113,7 @@ La señal práctica: si puedes describir la tarea completa en una sola oración 
 | Requisitos implementados correctamente en primer intento | ~60% | ~90% |
 | Horas de retrabajo por malentendidos | 2-4 horas | 0-1 hora |
 | Cobertura de edge cases en el diseño inicial | Baja | Alta |
-| Capacidad de onboarding de otro developer | Difícil (el contexto está en la sesión del agente) | Fácil (SPEC.md es la fuente de verdad) |
+| Capacidad de onboarding de otro desarrollador | Difícil (el contexto está en la sesión del agente) | Fácil (SPEC.md es la fuente de verdad) |
 | Verificabilidad del resultado final | Subjetiva ("¿funciona como quería?") | Objetiva (lista de requisitos verificados) |
 
 El coste inicial de 15 minutos de entrevista y 10 minutos de redacción de spec se recupera en el primer ciclo de implementación, y genera valor compuesto: la spec sirve como documentación, como base para tests, y como referencia para futuras modificaciones.
@@ -150,4 +150,4 @@ Los siguientes cuatro ficheros profundizan en cada fase con técnicas, ejemplos 
 
 ---
 
-> **Nota sobre herramientas**: los conceptos de SDD son independientes de la herramienta que uses. Claude Code, Cursor, GitHub Copilot Chat, y Windsurf pueden ejecutar las cuatro fases. La diferencia está en cómo gestionas el contexto entre fases: en Claude Code usas `/clear`; en Cursor abres una nueva pestaña de chat; en Copilot Chat empiezas una nueva conversación.
+> **Nota sobre herramientas**: los conceptos de SDD son independientes de la herramienta que uses. Claude Code, Cursor, GitHub Copilot Chat y Windsurf pueden ejecutar las cuatro fases. La diferencia está en cómo gestionas el contexto entre fases: unas herramientas ofrecen comandos de limpieza de contexto y otras se apoyan en abrir una sesión nueva.

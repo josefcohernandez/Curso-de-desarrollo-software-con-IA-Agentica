@@ -20,7 +20,7 @@ Context engineering no reemplaza lo aprendido en los ficheros anteriores de este
 
 ## Las 5 Operaciones de Context Engineering
 
-Anthropic identifica cinco operaciones para gestionar el contexto de forma óptima. Dominarlas es la diferencia entre un usuario que "habla con la IA" y un desarrollador que orquesta sesiones de trabajo eficientes.
+Para este curso, es útil trabajar con cinco operaciones para gestionar el contexto de forma óptima. No hace falta tratarlas como una taxonomía oficial cerrada: son una **forma pedagógica de organizar una práctica real**. Dominarlas es la diferencia entre un usuario que "habla con la IA" y un desarrollador que orquesta sesiones de trabajo eficientes.
 
 ### 1. Select — Elegir qué incluir
 
@@ -56,7 +56,7 @@ El error ocurre en el step "deploy-staging":
 Las lineas anteriores del build pasan sin errores.
 ```
 
-En Claude Code, `/compact` aplica compresión automática al historial de la conversación cuando se acerca al límite de contexto.
+En herramientas que lo soportan, un comando de compactación o un resumen automático del historial aplica esta idea de forma operativa. Si tu herramienta no lo hace, puedes resumir manualmente antes de continuar.
 
 ### 3. Order — El orden importa
 
@@ -89,7 +89,7 @@ Cuando mezclas contextos de tareas diferentes en la misma conversación, el agen
 # El agente arrastra el contexto del bug de auth, que no tiene nada que ver
 
 # Solucion: aislar contextos
-/clear
+[sesión nueva o comando equivalente de limpieza]
 "Contexto fresco. Necesito implementar el flujo de pagos con Stripe..."
 ```
 
@@ -122,7 +122,7 @@ sea valido y que name tenga entre 2 y 100 caracteres"
 - 400 con errores de validación detallados
 ```
 
-El frontmatter YAML también es efectivo para metadata de contexto en archivos `CLAUDE.md`.
+El frontmatter YAML también es efectivo para metadata de contexto en archivos de instrucciones persistentes como `AGENTS.md`, `CLAUDE.md` o equivalentes.
 
 ---
 
@@ -160,7 +160,7 @@ El agente genera migraciones con la sintaxis de Drizzle
 sobre una base de código que usa Prisma.
 ```
 
-**Prevención**: mantener `CLAUDE.md` como fuente de verdad actualizada, no confiar en documentación desactualizada.
+**Prevención**: mantener actualizado el archivo de instrucciones persistentes del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente), no confiar en documentación desactualizada.
 
 ### Context Distraction (Distracción)
 
@@ -187,7 +187,7 @@ Información contradictoria dentro del mismo contexto.
 
 ```text
 # Escenario real:
-CLAUDE.md dice:        "Stack: Node.js + Express + PostgreSQL"
+El archivo de instrucciones del repositorio dice: "Stack: Node.js + Express + PostgreSQL"
 Un comentario en código: "TODO: migrar a Fastify"
 Un fichero de config:    version: fastify@4.28.0
 
@@ -196,7 +196,7 @@ El agente no sabe qué framework usar.
 Las respuestas mezclan patrones de Express y Fastify.
 ```
 
-**Prevención**: auditar el contexto permanente (`CLAUDE.md`, documentación interna) para eliminar contradicciones. Cuando hay ambigüedad, explicitarla en el prompt: "Usamos Express, ignora referencias a Fastify — es una migración pendiente".
+**Prevención**: auditar el contexto permanente (`AGENTS.md`, `CLAUDE.md`, documentación interna) para eliminar contradicciones. Cuando hay ambigüedad, explicitarla en el prompt: "Usamos Express, ignora referencias a Fastify: es una migración pendiente".
 
 ### Context Clash (Colisión)
 
@@ -213,7 +213,7 @@ manejo de errores mezclado con los patrones del debug,
 y coherencia interna degradada.
 ```
 
-**Prevención**: usar `/clear` al cambiar de tarea. Es el equivalente de abrir una ventana de terminal nueva para un trabajo diferente.
+**Prevención**: usar el comando de limpieza de contexto de tu herramienta o abrir una sesión nueva al cambiar de tarea. Es el equivalente de abrir una ventana de terminal nueva para un trabajo diferente.
 
 ### Relación con la taxonomía del módulo A2
 
@@ -273,9 +273,9 @@ Esta tabla cubre las 5 situaciones más frecuentes en un día de trabajo normal 
 | Situación | Operación | Acción concreta |
 |-----------|-----------|-----------------|
 | Empiezas a trabajar en un bug | Select | Identifica los 2-3 archivos relevantes antes de abrir la sesión. Menciónalos explícitamente |
-| La sesión lleva más de 30 intercambios | Compress + Isolate | Ejecuta `/compact` si está disponible, o empieza una sesión nueva con `/clear` |
-| El agente genera código inconsistente con el proyecto | Format + Select | Revisa tu `CLAUDE.md`. Si no existe o está desactualizado, créalo o actualízalo antes de continuar |
-| Cambias de tarea a mitad de sesión | Isolate | `/clear` antes de la nueva tarea. No arrastres el contexto anterior |
+| La sesión lleva más de 30 intercambios | Compress + Isolate | Usa la función de compactación de tu herramienta si existe, o empieza una sesión nueva |
+| El agente genera código inconsistente con el proyecto | Format + Select | Revisa tu archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente). Si no existe o está desactualizado, créalo o actualízalo antes de continuar |
+| Cambias de tarea a mitad de sesión | Isolate | Empieza una sesión nueva antes de la nueva tarea. No arrastres el contexto anterior |
 | El agente ignora una restricción que pusiste al principio | Order | Mueve esa restricción al final del prompt en la siguiente iteración |
 
 ---
@@ -287,13 +287,13 @@ Las operaciones abstractas se implementan con herramientas concretas. Esta tabla
 | Operación | Herramienta | Cómo usarla |
 |-----------|-------------|-------------|
 | **Select** | `@file` mentions | Citar archivos específicos en lugar de "mira en src/" |
-| **Select** | Plan Mode | El agente selecciona qué leer antes de actuar — más preciso que tu selección manual en tareas complejas |
-| **Compress** | `/compact` | Comprime el historial de la conversación manteniendo el resumen de decisiones tomadas |
+| **Select** | Modo o fase de planificación | El agente selecciona qué leer antes de actuar — más preciso que tu selección manual en tareas complejas |
+| **Compress** | Compactación o resumen manual | Comprime el historial de la conversación manteniendo el resumen de decisiones tomadas |
 | **Order** | Estructura del prompt | Restricciones y verificación al final. Contexto general al principio |
-| **Isolate** | `/clear` | Nueva conversación para nueva tarea. No arrastres contexto entre tareas no relacionadas |
+| **Isolate** | Sesión nueva o limpieza de contexto | Nueva conversación para nueva tarea. No arrastres contexto entre tareas no relacionadas |
 | **Isolate** | Subagentes | Cada subagente tiene su propio contexto; las tareas paralelas no se contaminan entre sí |
 | **Isolate** | Worktrees | Cada worktree mantiene su estado de código aislado — útil para features en paralelo |
-| **Format** | `CLAUDE.md` | El contexto permanente del proyecto; estructura con headers YAML y listas |
+| **Format** | Archivo de instrucciones del repositorio | El contexto permanente del proyecto (`AGENTS.md`, `CLAUDE.md`, `.cursorrules` o equivalente); estructura clara con headings y listas |
 | **Format** | Markdown en prompts | Headers, listas, bloques de código en lugar de prosa corrida |
 
 > En **Cursor**, el equivalente de Select es usar `@codebase` con preguntas específicas en lugar de abrir el chat sin contexto. El equivalente de Isolate es abrir una nueva ventana de chat.
@@ -304,13 +304,13 @@ Las operaciones abstractas se implementan con herramientas concretas. Esta tabla
 
 ## Resumen
 
-| Operación | Cuándo aplicarla | Herramienta en Claude Code |
+| Operación | Cuándo aplicarla | Ejemplos concretos |
 |-----------|-----------------|---------------------------|
-| **Select** | Al iniciar cualquier tarea: identifica qué archivos son relevantes | `@file`, Plan Mode |
-| **Compress** | Cuando la sesión es larga o los inputs son voluminosos | `/compact`, resumir manualmente antes de pegar |
+| **Select** | Al iniciar cualquier tarea: identifica qué archivos son relevantes | `@file`, selección explícita de archivos, fase de planificación |
+| **Compress** | Cuando la sesión es larga o los inputs son voluminosos | Función de compactación, resumen manual antes de pegar |
 | **Order** | Al escribir el prompt: restricciones y verificación van al final | Estructura consciente del prompt |
-| **Isolate** | Al cambiar de tarea, al detectar context clash o conversación larga | `/clear`, subagentes, worktrees |
-| **Format** | Siempre: usar markdown en prompts y `CLAUDE.md` con estructura clara | `CLAUDE.md`, markdown en prompts |
+| **Isolate** | Al cambiar de tarea, al detectar context clash o conversación larga | Sesión nueva, limpieza de contexto, subagentes, worktrees |
+| **Format** | Siempre: usar markdown en prompts y un archivo de instrucciones con estructura clara | `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, markdown en prompts |
 
 ---
 

@@ -126,7 +126,7 @@ documenta explícitamente qué cambia en las respuestas actuales.
 1. ¿La spec documenta claramente qué código del sistema existente NO se puede tocar? ¿Dónde lo hace?
 2. ¿La spec especifica cómo cambia la respuesta de `GET /api/v1/tasks` al añadir tags? ¿Los tests existentes necesitan actualizarse?
 3. ¿Elegiste tags como strings directos o como entidades con ID propio? ¿Por qué? ¿Qué implicaciones tiene?
-4. Si un developer del equipo que no participó en la entrevista tiene que implementar esta feature, ¿puede hacerlo solo con SPEC-TAGS.md? ¿Qué le faltaría?
+4. Si un desarrollador del equipo que no participó en la entrevista tiene que implementar esta feature, ¿puede hacerlo solo con SPEC-TAGS.md? ¿Qué le faltaría?
 
 ---
 

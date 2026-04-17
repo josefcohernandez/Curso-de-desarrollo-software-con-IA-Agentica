@@ -179,7 +179,7 @@ Evalúa un flujo completo de múltiples pasos. No verifica pasos aislados sino q
 
 Preguntas que responde:
 - ¿El pipeline Writer/Reviewer completa el ciclo correctamente?
-- ¿El agente de code review detecta la vulnerabilidad, genera el feedback y el developer puede entender la corrección sugerida?
+- ¿El agente de code review detecta la vulnerabilidad, genera el feedback y el desarrollador puede entender la corrección sugerida?
 - ¿El merge resultado del pipeline es funcional (compila, pasa los tests)?
 
 Más lento que los unit evals, requiere setup del entorno (repositorio, base de datos de prueba, etc.) y evaluadores más sofisticados.

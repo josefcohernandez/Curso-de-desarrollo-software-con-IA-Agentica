@@ -19,7 +19,7 @@ Verifica que el agente no hizo más (ni menos) de lo solicitado.
 - Cambios de formato (whitespace, imports reordenados) en archivos no relacionados
 - "Mejoras" no solicitadas en código existente
 
-**Acción**: si hay archivos no relacionados en el diff, pregunta al developer por qué están ahí. Si no hay justificación, revertir esos cambios.
+**Acción**: si hay archivos no relacionados en el diff, pregunta al desarrollador por qué están ahí. Si no hay justificación, revertir esos cambios.
 
 ### 1.2. No hay archivos nuevos innecesarios
 

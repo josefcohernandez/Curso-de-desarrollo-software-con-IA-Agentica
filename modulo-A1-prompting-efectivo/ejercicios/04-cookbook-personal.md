@@ -60,9 +60,9 @@ Rellena cada template con datos reales de tu proyecto actual (o de un proyecto d
 
 Elige una de estas opciones para guardar tus templates:
 
-#### Opción A: En tu CLAUDE.md del proyecto
+#### Opción A: En el archivo de instrucciones de tu proyecto
 
-Añade una sección al archivo `CLAUDE.md` de tu proyecto:
+Añade una sección al archivo de instrucciones de tu proyecto (`AGENTS.md`, `CLAUDE.md` o equivalente):
 
 ```markdown
 ## Prompt Templates del Equipo
@@ -76,7 +76,7 @@ Investiga, corrige, y ejecuta [comando test].
 ...
 ```
 
-> **Referencia**: ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md) para aprender a configurar estos archivos.
+> **Referencia**: ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md) para aprender a configurar estos archivos persistentes.
 
 #### Opción B: Como custom slash commands (Claude Code)
 

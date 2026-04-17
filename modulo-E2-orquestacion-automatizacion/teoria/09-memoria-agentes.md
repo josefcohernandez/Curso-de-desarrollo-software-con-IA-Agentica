@@ -26,7 +26,7 @@ Es la "memoria de trabajo" del agente. Tiene capacidad limitada (la context wind
 
 Ficheros, bases de datos y configuraciones que el agente lee al inicio de la sesión o cuando los necesita. Persiste entre sesiones porque vive fuera del modelo.
 
-En coding agents, el ejemplo más claro es el `CLAUDE.md` o `.cursorrules`: documentos que el agente lee automáticamente y que contienen instrucciones, convenciones y contexto del proyecto. También entran aquí los memory files que Claude Code escribe en `~/.claude/projects/`.
+En coding agents, el ejemplo más claro es el archivo de instrucciones persistentes del repositorio: `AGENTS.md` en Codex, `CLAUDE.md` en Claude Code, `.cursorrules` en Cursor o equivalentes. También entran aquí los memory files que algunas herramientas escriben automáticamente.
 
 Esta memoria no es automática — alguien tiene que escribirla y mantenerla. Su ventaja es la predictibilidad: es texto plano que puedes leer, auditar y controlar.
 
@@ -49,19 +49,19 @@ Es el mapa del territorio, no el historial de exploraciones. Se construye leyend
 | Tipo | Persistencia | Ejemplo en coding | Implementación típica |
 |------|-------------|-------------------|-----------------------|
 | **In-context** | Dura lo que dura la sesión | El historial de chat actual | Automática por el modelo |
-| **Externa persistente** | Entre sesiones indefinidamente | `CLAUDE.md`, `.cursorrules`, memory files | Ficheros que el agente lee al inicio |
+| **Externa persistente** | Entre sesiones indefinidamente | `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, memory files | Ficheros que el agente lee al inicio |
 | **Episódica** | Hasta que se poda explícitamente | "El deploy del viernes falló por X" | Frameworks como Mem0, Letta, o manual |
-| **Semántica** | Hasta que el código cambia | "El stack es Next.js + Prisma + AWS" | `CLAUDE.md`, vector stores, RAG |
+| **Semántica** | Hasta que el código cambia | "El stack es Next.js + Prisma + AWS" | Archivo de instrucciones, vector stores, RAG |
 
 ---
 
 ## Mecanismos de Memoria en Coding Agents Actuales
 
-### CLAUDE.md y .cursorrules
+### `AGENTS.md`, `CLAUDE.md` y `.cursorrules`
 
-La forma más robusta y predecible de memoria en coding agents. Es memoria que el developer escribe intencionadamente y el agente lee al inicio de cada sesión.
+La forma más robusta y predecible de memoria en coding agents. Es memoria que el desarrollador escribe intencionadamente y el agente lee al inicio de cada sesión.
 
-Un `CLAUDE.md` bien mantenido elimina la necesidad de repetir contexto en cada prompt: arquitectura del proyecto, convenciones de código, comandos de build y test, restricciones ("no modificar `legacy/` sin avisar"), decisiones de diseño y sus motivos.
+Un archivo de instrucciones bien mantenido (`AGENTS.md`, `CLAUDE.md` o equivalente) elimina la necesidad de repetir contexto en cada prompt: arquitectura del proyecto, convenciones de código, comandos de build y test, restricciones ("no modificar `legacy/` sin avisar"), decisiones de diseño y sus motivos.
 
 ```markdown
 # Proyecto: api-pagos
@@ -85,13 +85,13 @@ Un `CLAUDE.md` bien mantenido elimina la necesidad de repetir contexto en cada p
 - Rate limiting en el gateway, no en los servicios individuales
 ```
 
-Es memoria semántica explícita, controlada por el developer. Su debilidad: requiere disciplina para mantenerla actualizada conforme el proyecto evoluciona.
+Es memoria semántica explícita, controlada por el desarrollador. Su debilidad: requiere disciplina para mantenerla actualizada conforme el proyecto evoluciona.
 
-En Cursor, el equivalente es `.cursorrules`. En GitHub Copilot, los ficheros de instrucciones en `.github/copilot-instructions.md`.
+En Codex el patrón suele resolverse con `AGENTS.md`. En Cursor, con `.cursorrules`. En GitHub Copilot, con ficheros de instrucciones como `.github/copilot-instructions.md`.
 
-### Auto-Memory de Claude Code
+### Auto-memory como implementación específica de herramienta
 
-Claude Code escribe automáticamente ficheros de memoria en `~/.claude/projects/<project-id>/memory/`. A diferencia del `CLAUDE.md`, esta memoria la gestiona el agente, no el developer.
+Claude Code escribe automáticamente ficheros de memoria en `~/.claude/projects/<project-id>/memory/`. A diferencia del archivo de instrucciones del repositorio, esta memoria la gestiona el agente, no el desarrollador.
 
 Los tipos de entradas que Claude Code guarda automáticamente:
 
@@ -103,7 +103,7 @@ Los tipos de entradas que Claude Code guarda automáticamente:
 └── reference.md     # Referencias a ficheros y decisiones importantes
 ```
 
-Esta memoria se incluye automáticamente en el contexto de nuevas sesiones del mismo proyecto. No requiere acción del developer, pero es menos predecible: el agente decide qué guardar.
+Esta memoria se incluye automáticamente en el contexto de nuevas sesiones del mismo proyecto. No requiere acción del desarrollador, pero es menos predecible: el agente decide qué guardar.
 
 Puedes leer y editar estos ficheros directamente si necesitas corregir o eliminar información que el agente guardó incorrectamente.
 
@@ -127,7 +127,7 @@ Instruir al agente para que consulte el historial de git antes de modificar un m
 
 | Mecanismo | Tipo de memoria | Quién la gestiona | Fiabilidad |
 |-----------|----------------|-------------------|------------|
-| `CLAUDE.md` / `.cursorrules` | Semántica + episódica | Developer | Alta — texto explícito, auditable |
+| `AGENTS.md` / `CLAUDE.md` / `.cursorrules` | Semántica + episódica | Desarrollador | Alta — texto explícito, auditable |
 | Auto-memory de Claude Code | Semántica + preferencias | Agente | Media — puede incluir información incorrecta |
 | Historial git | Episódica + semántica | El equipo (via commits) | Alta si los commits son descriptivos |
 | Session history del IDE | In-context | IDE | Baja — suele perderse al cerrar |
@@ -151,7 +151,7 @@ m = Memory()
 
 # Añadir memoria desde una conversación
 m.add("El proyecto usa PostgreSQL 16 con Prisma", user_id="agent-codereview")
-m.add("El developer prefiere async/await sobre callbacks", user_id="agent-codereview")
+m.add("El desarrollador prefiere async/await sobre callbacks", user_id="agent-codereview")
 
 # Recuperar memorias relevantes para una tarea
 results = m.search("cómo conectar a la base de datos", user_id="agent-codereview")
@@ -161,7 +161,7 @@ for r in results:
 # El proyecto usa PostgreSQL 16 con Prisma
 ```
 
-Mejor caso de uso: agentes conversacionales o asistentes que necesitan personalización por usuario. Para coding agents en producción, la combinación `CLAUDE.md` + auto-memory suele ser suficiente.
+Mejor caso de uso: agentes conversacionales o asistentes que necesitan personalización por usuario. Para coding agents en producción, la combinación archivo de instrucciones + auto-memory suele ser suficiente.
 
 ### Letta (antes MemGPT)
 
@@ -231,7 +231,7 @@ def end_of_session_hook(conversation_history: list[dict]) -> None:
         "De esta conversación de desarrollo, extrae:\n"
         "1. Decisiones de arquitectura tomadas\n"
         "2. Problemas encontrados y sus soluciones\n"
-        "3. Preferencias del developer expresadas\n"
+        "3. Preferencias del desarrollador expresadas\n"
         "4. Convenciones del proyecto descubiertas\n\n"
         f"Conversación:\n{format_history(conversation_history)}"
     )
@@ -353,11 +353,11 @@ Si usas un coding agent existente (Claude Code, Cursor, Copilot, Windsurf), no n
 
 | Componente | Para qué | Cómo mantenerlo |
 |------------|----------|-----------------|
-| `CLAUDE.md` / `.cursorrules` | Memoria semántica del proyecto: stack, convenciones, restricciones, decisiones | Actualizar al inicio del proyecto y tras cada decisión arquitectural importante |
-| Auto-memory del agente | Preferencias del developer, feedback, patrones observados | Revisar periódicamente `~/.claude/projects/*/memory/`, corregir errores |
+| `AGENTS.md` / `CLAUDE.md` / `.cursorrules` | Memoria semántica del proyecto: stack, convenciones, restricciones, decisiones | Actualizar al inicio del proyecto y tras cada decisión arquitectural importante |
+| Auto-memory del agente | Preferencias del desarrollador, feedback, patrones observados | Revisar periódicamente los ficheros de memoria de tu herramienta, corregir errores |
 | Git history | Memoria episódica del proyecto | Escribir commit messages descriptivos, usar PR descriptions detalladas |
 
-Los frameworks como Mem0 o Letta son relevantes cuando **construyes** un agente custom, no cuando usas uno existente. Si tu caso de uso es "quiero que mi coding agent me conozca mejor", el `CLAUDE.md` y el auto-memory de Claude Code ya lo resuelven sin dependencias adicionales.
+Los frameworks como Mem0 o Letta son relevantes cuando **construyes** un agente custom, no cuando usas uno existente. Si tu caso de uso es "quiero que mi coding agent me conozca mejor", un archivo de instrucciones persistentes y el auto-memory de la herramienta suelen resolverlo sin dependencias adicionales.
 
 Si tu caso de uso es "estoy construyendo un agente que atiende a múltiples usuarios y necesita recordar las preferencias de cada uno", entonces sí necesitas un framework como Mem0.
 
@@ -368,8 +368,8 @@ Si tu caso de uso es "estoy construyendo un agente que atiende a múltiples usua
 | Tipo de memoria | Recomendación de implementación para coding agents |
 |----------------|---------------------------------------------------|
 | **In-context** | Gestionar el tamaño de la sesión activamente. Cerrar y abrir sesiones nuevas para tareas independientes. Ver módulo A2 para degradación de contexto |
-| **Externa persistente** | Mantener `CLAUDE.md` actualizado. Invertir 5 minutos después de cada decisión arquitectural importante |
+| **Externa persistente** | Mantener actualizado el archivo de instrucciones persistentes del repositorio. Invertir 5 minutos después de cada decisión arquitectural importante |
 | **Episódica** | Usar auto-memory del agente para preferencias y feedback. Complementar con `DECISIONS.md` para decisiones relevantes del proyecto |
-| **Semántica** | `CLAUDE.md` es suficiente para la mayoría de proyectos. Para proyectos grandes, considerar un RAG sobre la documentación interna |
+| **Semántica** | El archivo de instrucciones del repositorio es suficiente para la mayoría de proyectos. Para proyectos grandes, considerar un RAG sobre la documentación interna |
 
-La memoria de agentes no es un problema tecnológico — es un problema de disciplina de equipo. Las herramientas existen. La pregunta es quién mantiene qué y con qué frecuencia. Un `CLAUDE.md` desactualizado es peor que no tener ninguno: el agente trabaja con un mapa incorrecto del territorio.
+La memoria de agentes no es un problema tecnológico: es un problema de disciplina de equipo. Las herramientas existen. La pregunta es quién mantiene qué y con qué frecuencia. Un archivo de instrucciones desactualizado es peor que no tener ninguno: el agente trabaja con un mapa incorrecto del territorio.

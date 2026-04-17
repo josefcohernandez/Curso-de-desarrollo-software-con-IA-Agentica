@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Evaluar la AI-readability de un proyecto existente usando los 5 pilares del Módulo D1. Producir un informe con puntuación 1-5 por pilar y acciones de mejora priorizadas.
+Evaluar la AI-readability de un proyecto existente usando los 5 pilares del Módulo E1. Producir un informe con puntuación 1-5 por pilar y acciones de mejora priorizadas.
 
 ## Contexto
 
@@ -49,7 +49,7 @@ Usa esta rúbrica para cada uno de los 5 pilares:
 - ¿Los tests de un módulo se ejecutan independientemente?
 
 **Pilar 4 — Convenciones explícitas**:
-- ¿Hay un CLAUDE.md, README o documento de convenciones?
+- ¿Hay un `AGENTS.md`, `CLAUDE.md`, README o documento de convenciones?
 - ¿Las reglas de naming, estructura y patrones están escritas?
 - ¿Un desarrollador nuevo (o un agente) puede seguirlas sin preguntar?
 

@@ -65,7 +65,7 @@ Escribe un prompt completo usando la estructura de 5 componentes (contexto, arch
 
 Si tienes acceso a un agente de código (Claude Code, Cursor, etc.):
 
-1. Ejecuta cada prompt por separado, haciendo `/clear` entre cada uno
+1. Ejecuta cada prompt por separado, abriendo una sesión nueva o limpiando el contexto entre cada uno
 2. Para cada versión, anota:
    - Cuántas preguntas hizo el agente antes de actuar
    - Cuántos archivos modificó

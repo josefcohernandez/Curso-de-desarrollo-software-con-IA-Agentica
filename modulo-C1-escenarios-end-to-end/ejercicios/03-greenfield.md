@@ -89,7 +89,7 @@ Ejemplo del output esperado:
 | Calidad de ARCHITECTURE.md | 15% | Diseño proporcionado y justificado | Ausente o over-engineered |
 | Feature implementada | 35% | Detecta adds, modifies, deletes con tests | No detecta cambios o sin tests |
 | Calidad de tests | 25% | 5+ tests con happy path y edge cases | Menos de 3 tests |
-| Proceso seguido | 10% | Spec -> Architecture -> Scaffold -> TDD | Salto directo a codigo |
+| Proceso seguido | 10% | Spec -> Architecture -> Scaffold -> TDD | Salto directo a código |
 
 ---
 

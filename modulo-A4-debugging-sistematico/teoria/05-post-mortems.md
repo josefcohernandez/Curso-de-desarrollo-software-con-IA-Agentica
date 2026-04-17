@@ -155,10 +155,10 @@ Incidente → Post-mortem → Acciones preventivas → Mejor código/proceso
                                 ↓
                     Tests de regresión → Mejor cobertura
                                 ↓
-                    Actualización de CLAUDE.md → Mejor contexto para el agente
+                    Actualización del archivo de instrucciones → Mejor contexto para el agente
 ```
 
-Actualiza tu `CLAUDE.md` o archivo de instrucciones del agente con las lecciones aprendidas:
+Actualiza tu archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente) con las lecciones aprendidas:
 
 ```markdown
 ## Lecciones de incidentes

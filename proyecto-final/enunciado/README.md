@@ -164,15 +164,15 @@ Añade búsqueda y filtrado a la lista de tareas.
 - Ordenamiento con `?sort=created_at&order=desc`
 - Tests para cada combinación de filtros
 
-### Fase 3.2: Configurar CLAUDE.md de Equipo
+### Fase 3.2: Configurar el Archivo de Instrucciones de Equipo
 
 | Módulo del curso | Técnica a aplicar |
 |-----------------|-------------------|
-| D1 (Adopción) | CLAUDE.md con convenciones, permisos y restricciones |
+| D1 (Adopción) | Archivo de instrucciones del repositorio con convenciones, permisos y restricciones |
 
-Crea un CLAUDE.md para el proyecto como si fuera a ser mantenido por un equipo de 5 developers.
+Crea un archivo de instrucciones para el proyecto (`AGENTS.md`, `CLAUDE.md` o equivalente) como si fuera a ser mantenido por un equipo de 5 desarrolladores.
 
-**Entregable**: `CLAUDE.md` con:
+**Entregable**: `AGENTS.md`, `CLAUDE.md` o equivalente con:
 - Comandos de build y test
 - Convenciones del proyecto
 - Restricciones del agente
@@ -223,7 +223,7 @@ Documenta tu experiencia con métricas concretas.
 | 2 | 2.3 | Documento de code review |
 | 2 | 2.4 | Código refactorizado |
 | 3 | 3.1 | Búsqueda y filtrado con tests |
-| 3 | 3.2 | `CLAUDE.md` |
+| 3 | 3.2 | Archivo de instrucciones del repositorio |
 | 3 | 3.3 | Auditoría de seguridad |
 | 3 | 3.4 | `RETROSPECTIVE.md` |
 
@@ -233,7 +233,7 @@ Documenta tu experiencia con métricas concretas.
 
 - **No busques la perfección en el código** — busca la calidad en el proceso
 - **Documenta tus prompts** — los mejores y los peores son igual de valiosos para aprender
-- **Usa `/clear` entre fases** no relacionadas para evitar contaminación de contexto
+- **Usa sesiones nuevas o limpieza de contexto entre fases** no relacionadas para evitar contaminación de contexto
 - **Si el agente se atasca**, aplica la regla de las 2 correcciones del Módulo A1
 - **El Día 3 es tan importante como los otros** — la documentación y retrospectiva son parte del oficio
 

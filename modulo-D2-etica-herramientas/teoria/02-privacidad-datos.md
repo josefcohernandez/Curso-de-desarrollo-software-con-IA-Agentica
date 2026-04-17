@@ -70,12 +70,12 @@ Asegúrate de que el agente no pueda leer archivos sensibles:
 
 | Proveedor | Retención de datos (por defecto) | Opción sin retención |
 |-----------|----------------------------------|---------------------|
-| **Anthropic (API)** | 7 días para detección de abuso (reducido desde 30 días en sept. 2025) | Sí, configurable |
-| **AWS Bedrock** | No retiene datos de inferencia | N/A (ya no retiene) |
-| **GCP Vertex AI** | No retiene por defecto | N/A |
-| **OpenAI (API)** | 30 días | Sí, opt-out disponible |
+| **Anthropic (API / Claude Code comercial)** | El valor estándar documentado ha sido 30 días en varios planes comerciales; revisar siempre la documentación vigente del plan | Sí, según plan o acuerdo |
+| **AWS Bedrock** | El servicio no usa prompts y respuestas para entrenar el modelo base, pero la retención operativa depende de la configuración y de otros servicios AWS asociados | Según servicio/configuración |
+| **GCP Vertex AI** | Depende del servicio y de la configuración de logging, residencia y observabilidad | Según configuración |
+| **OpenAI (API)** | La retención depende del producto y del plan; verificar la documentación actual antes de asumir un valor fijo | Según producto/plan |
 
-> **Importante**: estos datos son orientativos para mediados de 2026. Verifica siempre las políticas actuales del proveedor.
+> **Importante**: no memorices esta tabla; úsala para saber qué preguntar. Las políticas cambian, y en privacidad el detalle contractual importa más que la intuición.
 
 ### 4. Sanitizar datos de test
 

@@ -4,15 +4,26 @@
 
 ## Acerca de este curso
 
-Este curso enseña las habilidades, el pensamiento crítico y las metodologías que necesitas para trabajar de forma profesional y efectiva con agentes de código IA. No se centra en una herramienta específica — los conceptos son transferibles entre Claude Code, Cursor, Copilot, Windsurf, Cline o cualquier herramienta de coding con IA.
+Este curso enseña las habilidades, el pensamiento crítico y las metodologías que necesitas para trabajar de forma profesional y efectiva con agentes de código con IA. No se centra en una herramienta específica: los conceptos son transferibles, con matices, entre Claude Code, Codex, Cursor, Copilot, Windsurf, Cline y otras herramientas de desarrollo asistido por IA.
 
-Mientras que un curso de herramienta enseña *qué botones pulsar*, este curso enseña **cómo pensar**: escribir prompts efectivos, detectar errores del agente, revisar código generado por IA, debuggear de forma sistemática, y adoptar IA en equipos de desarrollo.
+Mientras que un curso de herramienta enseña *qué botones pulsar*, este curso enseña **cómo pensar**: escribir prompts efectivos, detectar errores del agente, revisar código generado por IA, depurar de forma sistemática, y adoptar IA en equipos de desarrollo.
+
+### Nota sobre herramientas y terminología
+
+Algunos ejemplos del curso usan Claude Code o Codex como referencia. Cuando veas términos concretos de una herramienta, léelos como ejemplos de un patrón más general:
+
+- `AGENTS.md` / `CLAUDE.md`: archivo de instrucciones persistentes del repositorio
+- `Plan Mode`: fase explícita de exploración y planificación antes de editar
+- `/clear`: reinicio de sesión o contexto
+- `/compact`: compresión o resumen del contexto acumulado
+
+La regla didáctica del curso es esta: **si una capacidad es específica de una herramienta, se nombra; si el concepto es general, se explica de forma vendor-neutral**.
 
 ### Público objetivo
 
-- Desarrolladores que ya usan Claude Code u otra herramienta de coding con IA y quieren ser más efectivos
+- Desarrolladores que ya usan Claude Code, Codex u otra herramienta de desarrollo con IA y quieren ser más efectivos
 - Usuarios de Cursor, Copilot, Windsurf o Cline que quieren mejorar su forma de trabajar
-- Equipos evaluando qué herramienta adoptar y cómo integrarla en su workflow
+- Equipos evaluando qué herramienta adoptar y cómo integrarla en su flujo de trabajo
 - Tech leads y managers que necesitan entender la disciplina sin dominar una herramienta específica
 - Cualquier desarrollador que quiera prepararse para el futuro del desarrollo de software
 

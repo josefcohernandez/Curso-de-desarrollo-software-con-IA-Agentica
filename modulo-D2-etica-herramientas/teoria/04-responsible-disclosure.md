@@ -136,7 +136,7 @@ semgrep --config=auto --diff-depth 2
 
 ## Cultura de Seguridad
 
-La IA no introduce más vulnerabilidades que un developer humano promedio — pero introduce vulnerabilidades **diferentes**. La clave es:
+La IA no introduce más vulnerabilidades que un desarrollador humano promedio — pero introduce vulnerabilidades **diferentes**. La clave es:
 
 - No asumir que el código IA es seguro porque "fue generado por una IA avanzada"
 - No asumir que es inseguro por defecto — usar las mismas herramientas de verificación que usarías con código humano

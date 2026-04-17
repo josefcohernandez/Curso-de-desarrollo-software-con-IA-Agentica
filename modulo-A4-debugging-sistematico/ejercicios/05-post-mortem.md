@@ -36,9 +36,9 @@ Escribe 3 tests de regresión que:
 - Cubran variaciones del mismo problema (otros caracteres especiales)
 - Fallen con el código original y pasen con el fix
 
-### Parte 3: Actualización de CLAUDE.md
+### Parte 3: Actualización del Archivo de Instrucciones
 
-Escribe las líneas que añadirías al `CLAUDE.md` del proyecto para que un agente de código no vuelva a introducir este tipo de bug. Piensa en:
+Escribe las líneas que añadirías al archivo de instrucciones del proyecto (`AGENTS.md`, `CLAUDE.md` o equivalente) para que un agente de código no vuelva a introducir este tipo de bug. Piensa en:
 - Regla sobre construcción de queries SQL
 - Regla sobre tests con caracteres especiales
 - Regla sobre validación de inputs
@@ -49,7 +49,7 @@ Escribe las líneas que añadirías al `CLAUDE.md` del proyecto para que un agen
 |-------|-----------|
 | **Aprobado** | Post-mortem completo con las 7 secciones |
 | **Notable** | Post-mortem + 3 tests de regresión funcionales |
-| **Excelente** | Todo lo anterior + actualización de CLAUDE.md con reglas específicas y accionables |
+| **Excelente** | Todo lo anterior + actualización del archivo de instrucciones con reglas específicas y accionables |
 
 ## Ejemplo de formato esperado
 

@@ -11,7 +11,7 @@ Medir el impacto de la IA en la productividad de un equipo es necesario pero del
 | Métrica | Cómo medir | Útil para | Trampa a evitar |
 |---------|------------|-----------|-----------------|
 | **Cycle time** | Tiempo desde ticket asignado hasta PR mergeado | Productividad general | No atribuir toda la mejora a la IA |
-| **PRs por semana** | Count de PRs mergeados por developer | Throughput del equipo | Más PRs no es mejor si son PRs triviales |
+| **PRs por semana** | Count de PRs mergeados por desarrollador | Throughput del equipo | Más PRs no es mejor si son PRs triviales |
 | **Tasa de bugs post-merge** | Bugs reportados en código de la última semana | Calidad del código | Diferenciar bugs en código IA vs código humano |
 | **Coste de tokens** | Gasto mensual en API / suscripciones | ROI y presupuesto | No optimizar coste sacrificando productividad |
 | **Tiempo de onboarding** | Días hasta primer PR significativo de un nuevo miembro | Eficiencia del equipo | Confundir velocidad con comprensión real |
@@ -23,7 +23,7 @@ Medir el impacto de la IA en la productividad de un equipo es necesario pero del
 
 ### 1. Cycle Time
 
-Es la métrica más representativa de productividad. Mide el tiempo total desde que un developer empieza a trabajar en un ticket hasta que el PR se mergea.
+Es la métrica más representativa de productividad. Mide el tiempo total desde que un desarrollador empieza a trabajar en un ticket hasta que el PR se mergea.
 
 ```text
 Cycle time = fecha_merge - fecha_inicio_trabajo
@@ -31,13 +31,13 @@ Cycle time = fecha_merge - fecha_inicio_trabajo
 
 **Cómo comparar**: mide el cycle time promedio durante 4 semanas sin IA, luego 4 semanas con IA. Compara promedios.
 
-**Cuidado**: el cycle time incluye tiempo de review, que no depende del developer. Para aislar el impacto de la IA, mide también el "coding time" (desde primer commit hasta PR abierto).
+**Cuidado**: el cycle time incluye tiempo de review, que no depende del desarrollador. Para aislar el impacto de la IA, mide también el "coding time" (desde primer commit hasta PR abierto).
 
 ### 2. PRs por Semana
 
 Mide el throughput — cuánto trabajo completo sale del equipo cada semana.
 
-**Cuidado**: si los developers empiezan a dividir PRs artificialmente para inflar esta métrica, deja de ser útil. Complementa con "tamaño medio de PR" para detectar este patrón.
+**Cuidado**: si los desarrolladores empiezan a dividir PRs artificialmente para inflar esta métrica, deja de ser útil. Complementa con "tamaño medio de PR" para detectar este patrón.
 
 ### 3. Tasa de Bugs Post-Merge
 
@@ -54,15 +54,15 @@ Tasa = bugs_encontrados_en_semana / PRs_mergeados_en_semana
 El gasto en herramientas de IA es un dato necesario para calcular el ROI.
 
 **Qué incluir**:
-- Suscripciones mensuales (ej: $20/mes por developer)
+- Suscripciones mensuales (ej: $20/mes por desarrollador)
 - Uso de API si aplica (tokens consumidos)
 - Tiempo de administración de la herramienta
 
-**Cuidado**: no optimizar el coste a costa de la productividad. Un developer que ahorra 5 horas/semana y gasta $100/mes está generando un retorno enorme.
+**Cuidado**: no optimizar el coste a costa de la productividad. Un desarrollador que ahorra 5 horas/semana y gasta $100/mes está generando un retorno enorme.
 
 ### 5. Tiempo de Onboarding
 
-¿Cuánto tarda un nuevo miembro del equipo en hacer su primer PR significativo? Con un buen CLAUDE.md y la IA como asistente de exploración, este tiempo puede reducirse drásticamente.
+¿Cuánto tarda un nuevo miembro del equipo en hacer su primer PR significativo? Con un buen archivo de instrucciones del repositorio y la IA como asistente de exploración, este tiempo puede reducirse drásticamente.
 
 **Cuidado**: rapidez en el primer PR no significa comprensión profunda del codebase. Complementa con entrevistas 1-on-1 para verificar que el nuevo miembro entiende la arquitectura.
 

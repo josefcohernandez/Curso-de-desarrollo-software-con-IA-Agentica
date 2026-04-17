@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Cada prompt que envías a un agente de IA cuesta dinero. No mucho por prompt individual, pero multiplicado por un equipo de 10 personas durante meses, la factura puede sorprender. La diferencia entre un equipo que gasta $500/mes y otro que gasta $5,000/mes para obtener resultados similares no es la cantidad de uso -- es la **estrategia**. Token budgeting es gestionar conscientemente ese gasto.
+Cada prompt que envías a un agente de IA cuesta dinero. No mucho por prompt individual, pero multiplicado por un equipo de 10 personas durante meses, la factura puede sorprender. La diferencia entre un equipo que gasta $500/mes y otro que gasta $5,000/mes para obtener resultados similares no es la cantidad de uso: es la **estrategia**. Token budgeting es gestionar conscientemente ese gasto.
 
 ---
 
@@ -12,9 +12,9 @@ Cada prompt que envías a un agente de IA cuesta dinero. No mucho por prompt ind
 
 | Tipo | Qué incluye | Coste relativo | Ejemplo |
 |------|-------------|----------------|---------|
-| **Input tokens** | Tu prompt, archivos leídos, contexto de herramientas, system prompt | Base (1x) | El contenido de CLAUDE.md + tu pregunta + los archivos que el agente lee |
+| **Input tokens** | Tu prompt, archivos leídos, contexto de herramientas, system prompt | Base (1x) | El contenido de `AGENTS.md` / `CLAUDE.md` + tu pregunta + los archivos que el agente lee |
 | **Output tokens** | Respuesta del agente, código generado, pensamiento interno (extended thinking) | 3-5x más caro que input | El código que el agente escribe + su razonamiento |
-| **Cached tokens** | Contenido que se repite entre llamadas (CLAUDE.md, system prompt, archivos ya leídos) | ~90% descuento vs input | Tu CLAUDE.md se envía en cada mensaje pero solo pagas ~10% después del primero |
+| **Cached tokens** | Contenido que se repite entre llamadas (`AGENTS.md`, `CLAUDE.md`, system prompt, archivos ya leídos) | ~90% descuento vs input | El archivo de instrucciones persistentes se envía en cada mensaje pero solo pagas una fracción después del primero |
 
 ### Cálculo de ejemplo
 
@@ -24,7 +24,7 @@ Sesión típica de desarrollo (1 hora, modelo Sonnet):
   Mensajes enviados: 15
   Input tokens promedio por mensaje: 8,000 (contexto + prompt)
   Output tokens promedio por mensaje: 2,000 (respuesta)
-  Cached tokens promedio: 5,000 (CLAUDE.md + archivos repetidos)
+  Cached tokens promedio: 5,000 (archivo de instrucciones + archivos repetidos)
 
   Coste input: 15 × 3,000 × $3/1M = $0.135 (solo tokens no cacheados)
   Coste cached: 15 × 5,000 × $0.30/1M = $0.0225
@@ -45,13 +45,15 @@ Los precios varían por modelo y proveedor. Consulta siempre la página de prici
 | # | Estrategia | Ahorro estimado | Cómo implementarla |
 |---|-----------|-----------------|---------------------|
 | 1 | **Elegir modelo por tarea** | 50-80% | Haiku para exploración, Sonnet para desarrollo, Opus para arquitectura |
-| 2 | **Subagentes con Haiku** | 40-60% | Configurar investigación y exploración con modelo económico |
-| 3 | **`/compact` proactivo** | 20-30% | Compactar el contexto antes de que se llene, no después |
-| 4 | **`/clear` entre tareas** | 30-50% | Limpiar contexto entre tareas no relacionadas; evitar pagar por contexto irrelevante |
-| 5 | **`--max-budget-usd`** | Techo fijo | Prevenir ejecuciones desbocadas con un límite por sesión |
-| 6 | **CLAUDE.md eficiente** | 10-20% | Instrucciones concisas y relevantes = menos tokens por llamada |
+| 2 | **Subagentes con modelo económico** | 40-60% | Configurar investigación y exploración con modelos económicos (`mini`, `haiku`, etc.) |
+| 3 | **Compactación proactiva del contexto** | 20-30% | Compactar o resumir el contexto antes de que se llene, no después |
+| 4 | **Reset de contexto entre tareas** | 30-50% | Limpiar contexto entre tareas no relacionadas; evitar pagar por contexto irrelevante |
+| 5 | **Límite de presupuesto por sesión** | Techo fijo | Prevenir ejecuciones desbocadas con un límite por sesión |
+| 6 | **Archivo de instrucciones eficiente** | 10-20% | Instrucciones concisas y relevantes = menos tokens por llamada |
 
 ### Estrategia 1: Elegir modelo por tarea
+
+> **Nota**: los comandos de ejemplo usan Claude Code porque el resto del módulo también lo usa como referencia. En Codex u otros agentes CLI el principio es el mismo, aunque cambien los flags concretos.
 
 No uses Opus para todo. Cada modelo tiene su punto óptimo:
 
@@ -78,30 +80,30 @@ Si tu flujo usa subagentes (agentes que el agente principal delega tareas), conf
 }
 ```
 
-### Estrategia 3: `/compact` proactivo
+### Estrategia 3: compactación proactiva del contexto
 
 ```text
 Regla práctica:
-- Después de 10-15 mensajes en la misma conversación → /compact
-- Antes de cambiar de tema/tarea → /compact
+- Después de 10-15 mensajes en la misma conversación → compactar o resumir
+- Antes de cambiar de tema/tarea → compactar o resumir
 - Cuando notas que el agente "olvida" cosas → ya es tarde, debiste compactar antes
 ```
 
-### Estrategia 4: `/clear` entre tareas
+### Estrategia 4: reset de contexto entre tareas
 
 ```text
 Flujo óptimo:
 1. Tarea A: implementar feature → 8 mensajes → completada
-2. /clear (contexto limpio)
+2. Nueva sesión o comando de reset de contexto
 3. Tarea B: fix bug en otro módulo → 5 mensajes → completada
 
 Flujo ineficiente:
 1. Tarea A: 8 mensajes
-2. Tarea B sin /clear: los 8 mensajes anteriores siguen en contexto, 
+2. Tarea B sin reset de contexto: los 8 mensajes anteriores siguen en contexto, 
    pagando tokens de input por contexto irrelevante
 ```
 
-### Estrategia 5: Presupuesto máximo
+### Estrategia 5: presupuesto máximo
 
 ```bash
 # Limitar una sesión a $2 máximo
@@ -110,16 +112,16 @@ claude --max-budget-usd 2 "Refactoriza el módulo de pagos"
 # Si el agente alcanza el límite, se detiene y te informa
 ```
 
-### Estrategia 6: CLAUDE.md eficiente
+### Estrategia 6: archivo de instrucciones eficiente
 
 ```markdown
-# MAL: CLAUDE.md verboso (800 tokens)
+# MAL: archivo de instrucciones verboso (800 tokens)
 Este proyecto es una aplicación web construida con React en el frontend 
 y Node.js con Express en el backend. Usamos PostgreSQL como base de datos 
 principal y Redis para caché. El proyecto fue iniciado en 2023 por el 
 equipo de desarrollo y desde entonces hemos ido añadiendo funcionalidades...
 
-# BIEN: CLAUDE.md conciso (200 tokens)
+# BIEN: archivo de instrucciones conciso (200 tokens)
 Stack: React + Express + PostgreSQL + Redis
 Tests: Jest (unit), Playwright (e2e)
 Convenciones: ESLint Airbnb, commits convencionales
@@ -155,8 +157,8 @@ Si alcanzas el budget sin completar la tarea, es señal de que necesitas reformu
 ### Herramientas de seguimiento
 
 ```bash
-# Ver consumo de la sesión actual en Claude Code
-# El indicador de tokens aparece en la barra de estado
+# Ver consumo de la sesión actual en tu host o CLI, si lo expone
+# En Claude Code, el indicador de tokens aparece en la barra de estado
 
 # Consultar historial de uso (si tu proveedor lo ofrece)
 # Anthropic Console: console.anthropic.com → Usage
@@ -177,7 +179,7 @@ Más allá del caching automático, existen mecanismos explícitos para maximiza
 
 ### Cache Control Explícito (API)
 
-Cuando construyes aplicaciones con la API de Anthropic (no solo usando Claude Code como herramienta), puedes controlar qué partes del contexto se cachean explícitamente:
+Cuando construyes aplicaciones con la API de Anthropic, puedes controlar qué partes del contexto se cachean explícitamente. El principio general existe también en otros proveedores, aunque la sintaxis concreta cambie.
 
 ```python
 from anthropic import Anthropic

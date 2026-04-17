@@ -209,4 +209,4 @@ Resume las decisiones clave tomadas en la entrevista:
 >
 > **En GitHub Copilot Chat**: el contexto se mantiene en la sesión activa. Inicia la entrevista en una sesión dedicada.
 >
-> **En Claude Code**: usa el modo interactivo normal. Al terminar la entrevista, pide al agente que genere el SPEC.md — puedes hacer `/clear` después de completar la entrevista si vas a usar una herramienta diferente para implementar.
+> **En Claude Code**: usa el modo interactivo normal. Al terminar la entrevista, pide al agente que genere el SPEC.md. Si cambias de herramienta o vas a empezar la implementación en una sesión aparte, reinicia el contexto antes de seguir.

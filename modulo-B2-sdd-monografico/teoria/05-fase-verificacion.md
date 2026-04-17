@@ -163,7 +163,7 @@ Entrevista → Spec (actualización de SPEC.md) → Implementación → Verifica
 
 Para cambios pequeños (bug fix, ajuste de validación), el ciclo es informal pero sigue el mismo espíritu: ¿qué debería hacer exactamente este cambio? ¿cómo verifico que funciona? ¿hay edge cases?
 
-La diferencia entre un developer que usa IA y un developer que domina el desarrollo con IA agéntica está exactamente aquí: el primero pide al agente que "arregle el bug"; el segundo especifica el comportamiento correcto, implementa, y verifica que la implementación lo cumple.
+La diferencia entre un desarrollador que usa IA y un desarrollador que domina el desarrollo con IA agéntica está exactamente aquí: el primero pide al agente que "arregle el bug"; el segundo especifica el comportamiento correcto, implementa, y verifica que la implementación lo cumple.
 
 ---
 

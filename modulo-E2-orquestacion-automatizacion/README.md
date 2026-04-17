@@ -72,7 +72,7 @@ Al completar este módulo serás capaz de:
 - **Criterio de selección**: ecosistema, complejidad del flujo, necesidad de ciclos y estado persistente
 - **MCP (Model Context Protocol)**: protocolo abierto para integración de herramientas; primitivas tools/resources/prompts; servidor con FastMCP; portabilidad entre clientes; seguridad (tool poisoning, supply chain, SSRF)
 - **Evaluación de agentes (evals)**: task completion rate, tool use accuracy, context retention; LLM-as-judge; framework de 3 niveles (unit, integration, end-to-end); SWE-bench como benchmark estándar
-- **Memoria de agentes**: in-context, externa persistente, episódica, semántica; CLAUDE.md como memoria explícita; auto-memory de Claude Code; frameworks Mem0, Letta, LangGraph Checkpointing; patrones write-through, summarize-and-store, retrieve-and-augment, forget-and-prune; memoria jerárquica en multi-agente
+- **Memoria de agentes**: in-context, externa persistente, episódica, semántica; archivo de instrucciones del repositorio (`AGENTS.md`, `CLAUDE.md`, etc.) como memoria explícita; auto-memory como implementación específica de herramienta; frameworks Mem0, Letta, LangGraph Checkpointing; patrones write-through, summarize-and-store, retrieve-and-augment, forget-and-prune; memoria jerárquica en multi-agente
 
 ---
 

@@ -60,9 +60,9 @@ Estos son los errores más comunes que producen resultados pobres:
 | **"Arregla los tests"** | Demasiado vago: no especifica cuáles tests, qué error, ni qué se espera | "El test en `test/auth.test.js:45` falla con `TypeError: user.role is undefined`. Investiga la causa raíz y corrígelo" |
 | **"Refactoriza este archivo"** | Sin criterio de éxito ni restricciones de scope | "Extrae las funciones de validación de `src/handlers.js` a un módulo `src/validators.js`. Los 12 tests existentes deben seguir pasando" |
 | **"Haz lo que creas mejor"** | Delegación total sin dirección. El agente no conoce tu criterio | "Propón 2-3 enfoques para resolver X, con pros y contras de cada uno. Yo decido cuál implementar" |
-| **Prompt de 500 palabras** | Saturación de contexto, posibles contradicciones internas | Acota a lo esencial. Si necesitas tanto contexto, usa Plan Mode primero y luego implementa |
-| **"Y también..." (scope creep)** | Acumular tareas no relacionadas en un solo prompt | Una tarea por prompt. Usa `/clear` entre tareas no relacionadas |
-| **"Igual que hicimos ayer"** | El agente no tiene memoria entre sesiones (salvo CLAUDE.md) | Referencia archivos concretos: "Sigue el mismo patrón que `src/api/users.ts`" |
+| **Prompt de 500 palabras** | Saturación de contexto, posibles contradicciones internas | Acota a lo esencial. Si necesitas tanto contexto, usa una fase de planificación primero y luego implementa |
+| **"Y también..." (scope creep)** | Acumular tareas no relacionadas en un solo prompt | Una tarea por prompt. Usa una sesión nueva entre tareas no relacionadas |
+| **"Igual que hicimos ayer"** | El agente no tiene memoria entre sesiones salvo la que dejes en archivos persistentes del repositorio | Referencia archivos concretos: "Sigue el mismo patrón que `src/api/users.ts`" |
 | **Copiar error sin contexto** | Pegar solo el mensaje de error sin qué se estaba haciendo | Incluye: qué comando ejecutaste, qué esperabas, qué obtuviste |
 
 ---

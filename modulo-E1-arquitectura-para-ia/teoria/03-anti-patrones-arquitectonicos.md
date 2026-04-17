@@ -32,7 +32,7 @@ porque "todos saben que las utilidades van en shared/helpers"
 
 ### Solución
 
-Documentar en CLAUDE.md o en `.claude/rules/`:
+Documentar en el archivo de instrucciones del repositorio o en reglas temáticas de la herramienta:
 
 ```markdown
 ## Estructura del código
@@ -103,7 +103,7 @@ router.add_middleware(get_user, [rate_limit_middleware(100, per="minute")])
 Si la metaprogramación es necesaria (frameworks, DSLs internos), documentarla explícitamente:
 
 ```markdown
-## Decoradores de API (ver `.claude/rules/api-decorators.md`)
+## Decoradores de API (ver el archivo de reglas temático de decoradores)
 - `@api_route(path)`: registra la función como endpoint en el router
 - `@require_auth(roles)`: añade middleware de autenticación
 - Orden obligatorio: @api_route → @require_auth → @cache → @rate_limit
@@ -246,7 +246,7 @@ describe("UserCRUD", () => {
 
 | Anti-patrón | Síntoma con IA | Solución |
 |-------------|----------------|----------|
-| Convenciones implícitas | Agente crea archivos en ubicaciones incorrectas | Documentar en CLAUDE.md o `.claude/rules/` |
+| Convenciones implícitas | Agente crea archivos en ubicaciones incorrectas | Documentar en el archivo de instrucciones del repositorio o en reglas temáticas |
 | Magia y metaprogramación | Agente genera código que ignora decoradores/proxies | Código explícito o documentación detallada de la magia |
 | Acoplamiento temporal | Tests/código fallan en runtime sin error claro | Setup explícito, checks en startup |
 | Tests acoplados al orden | Modificar un test rompe otros sin relación obvia | Tests independientes con setup/teardown propio |
