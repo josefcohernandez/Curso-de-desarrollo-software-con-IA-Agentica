@@ -8,6 +8,8 @@ Este curso enseña las habilidades, el pensamiento crítico y las metodologías 
 
 Mientras que un curso de herramienta enseña *qué botones pulsar*, este curso enseña **cómo pensar**: escribir prompts efectivos, detectar errores del agente, revisar código generado por IA, depurar de forma sistemática, y adoptar IA en equipos de desarrollo.
 
+> **Fuente de verdad del curso:** este README fija la estructura, las rutas y la navegación. [`../CURSO_IA_AGENTICA.md`](../CURSO_IA_AGENTICA.md) se mantiene de forma deliberada como resumen ejecutivo, no como temario detallado paralelo.
+
 ### Nota sobre herramientas y terminología
 
 Algunos ejemplos del curso usan Claude Code o Codex como referencia. Cuando veas términos concretos de una herramienta, léelos como ejemplos de un patrón más general:
@@ -33,7 +35,7 @@ La regla didáctica del curso es esta: **si una capacidad es específica de una 
 - Haber usado al menos una herramienta de coding con IA (no necesitas ser experto)
 - Familiaridad con conceptos básicos de desarrollo: tests, control de versiones, code review
 
-**Recomendado**: si usas Claude Code, haber completado los módulos M01-M06 del [Curso de Claude Code](https://github.com/josefcohernandez/claude-code-course) o tener experiencia equivalente.
+**Recomendado**: si usas Claude Code, haber completado los módulos M01-M06 del [Curso de Claude Code](../Curso-desarrollo-software-con-Claude-Code/README.md) o tener experiencia equivalente.
 
 ---
 
@@ -169,7 +171,7 @@ Sigue los bloques en orden (A → B → C → D → E → Proyecto). Cada módul
 
 ### En paralelo con el Curso de Claude Code
 
-Si estás haciendo el [Curso de Claude Code](https://github.com/josefcohernandez/claude-code-course), la combinación recomendada es:
+Si estás haciendo el [Curso de Claude Code](../Curso-desarrollo-software-con-Claude-Code/README.md), la combinación recomendada es:
 
 | Fase | Curso de Claude Code | Este curso |
 |------|---------------------|------------|
@@ -185,7 +187,7 @@ Si estás haciendo el [Curso de Claude Code](https://github.com/josefcohernandez
 
 ## Interrelación con el Curso de Claude Code
 
-Este curso es **independiente pero complementario** al [Curso de Desarrollo Asistido con Claude Code](https://github.com/josefcohernandez/claude-code-course).
+Este curso es **independiente pero complementario** al [Curso de Desarrollo Asistido con Claude Code](../Curso-desarrollo-software-con-Claude-Code/README.md).
 
 ```text
 Curso de Claude Code                     Este curso
@@ -221,7 +223,7 @@ M16 Proyecto     ◄────────────────────
 ## Estructura de carpetas
 
 ```text
-Curso-Desarrollo-Profesional-con-IA-Agentica/
+Curso-desarrollo-software-con-IA-Agentica/
 ├── README.md                              # Este archivo
 ├── modulo-A1-prompting-efectivo/
 │   ├── README.md
@@ -445,7 +447,7 @@ Curso-Desarrollo-Profesional-con-IA-Agentica/
 ## Recursos oficiales
 
 - **Documentación de Claude Code**: https://code.claude.com/docs
-- **Curso complementario de Claude Code**: https://github.com/josefcohernandez/claude-code-course
+- **Curso complementario de Claude Code**: [../Curso-desarrollo-software-con-Claude-Code/README.md](../Curso-desarrollo-software-con-Claude-Code/README.md)
 - **OWASP Top 10**: https://owasp.org/www-project-top-ten/
 - **OWASP Top 10 for Agentic Applications**: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
 - **Model Context Protocol (MCP)**: https://modelcontextprotocol.io/
