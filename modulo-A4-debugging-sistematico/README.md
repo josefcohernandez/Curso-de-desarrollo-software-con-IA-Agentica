@@ -1,6 +1,6 @@
 # Módulo A4: Debugging Sistemático con IA
 
-## Descripción General
+## Descripción general
 
 La IA no reemplaza al detective, le da superpoderes. Debugging es donde la asistencia de IA aporta más valor: los agentes pueden analizar logs masivos, correlacionar timestamps, explorar hipótesis en paralelo y generar post-mortems completos. Pero el humano sigue siendo quien dirige la investigación.
 
@@ -10,7 +10,7 @@ En este módulo aprenderás un workflow de debugging de 4 pasos optimizado para 
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -46,7 +46,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado el [Módulo A3: Revisión de Código Generado por IA](../modulo-A3-revision-codigo-ia/README.md)
 - Experiencia con debugging (haber depurado bugs en proyectos reales)
@@ -54,7 +54,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **IA como asistente de investigación**: la IA explora hipótesis en paralelo, pero el humano dirige la investigación
 - **Workflow de 4 pasos**: Reproducir → Aislar → Diagnosticar → Fix + Validar
@@ -65,7 +65,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: cada archivo construye sobre el anterior, desde los fundamentos hasta las técnicas avanzadas (01 → 05)
 2. **Practica el workflow de 4 pasos** con un bug real de tu proyecto
@@ -80,7 +80,7 @@ Este módulo complementa especialmente:
 
 - [Módulo B1 - Estrategias de Desarrollo con IA](../modulo-B1-estrategias-desarrollo-ia/README.md): donde se cubren Gherkin/BDD, TDD y patrones avanzados de workflow como Writer/Reviewer y Fan-out
 - [Módulo B2 - SDD Monográfico](../modulo-B2-sdd-monografico/README.md): donde se detalla Spec-Driven Development — las especificaciones generadas en SDD son la referencia para identificar regresiones durante el debugging
-- [M09 - Agentes, Skills y Teams](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-09-agentes-skills-teams/README.md): donde se enseñan las capacidades técnicas de subagentes — este módulo enseña cuándo y cómo aplicarlas en situaciones reales de debugging
+- [M09 - Agentes, Skills y Teams](../../Curso-desarrollo-software-con-Claude-Code/modulo-09-agentes-skills-teams/README.md): donde se enseñan las capacidades técnicas de subagentes — este módulo enseña cuándo y cómo aplicarlas en situaciones reales de debugging
 
 ---
 

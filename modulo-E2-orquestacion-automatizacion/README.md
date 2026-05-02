@@ -1,6 +1,6 @@
 # Módulo E2: Orquestación Multi-Agente y Automatización a Escala
 
-## Descripción General
+## Descripción general
 
 Cuando un solo agente no es suficiente, necesitas orquestar múltiples agentes trabajando en paralelo, en pipeline o en jerarquía. Y cuando necesitas que funcionen sin supervisión humana — en CI/CD, batch processing o ejecución nocturna — los prompts deben ser robustos, deterministas y tolerantes a fallos.
 
@@ -10,7 +10,7 @@ Este módulo cubre los patrones de coordinación multi-agente, la creación de p
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -51,7 +51,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia con al menos un agente de código en proyectos reales
 - Familiaridad con CI/CD (GitHub Actions, GitLab CI o similar)
@@ -60,7 +60,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Patrones de orquestación**: fan-out, pipeline, jerárquico, writer/reviewer, investigación paralela
 - **Prompts para CI/CD**: determinismo, fail-safe, verificación incluida, restricciones explícitas, output estructurado
@@ -76,7 +76,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: empieza por patrones de orquestación (01), luego prompts para CI/CD (02), batch processing (03), testing de prompts (04), gestión de fallos (05), frameworks de producción (06), MCP (07), evaluación de agentes (08) y memoria de agentes (09)
 2. **Relaciona con tu experiencia**: piensa en tareas de tu trabajo diario donde cada patrón aplicaría

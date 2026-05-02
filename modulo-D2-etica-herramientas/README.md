@@ -1,6 +1,6 @@
 # Módulo D2: Ética, Responsabilidad y Panorama de Herramientas
 
-## Descripción General
+## Descripción general
 
 Usar IA para escribir código plantea preguntas que van más allá de la productividad: ¿de quién es el código generado? ¿Qué datos estás enviando al proveedor? ¿Cumple con las regulaciones de tu sector? Y en un mercado con múltiples herramientas, ¿cuál es la adecuada para tu contexto?
 
@@ -12,7 +12,7 @@ Este módulo te da un marco práctico para responder estas preguntas. No es un c
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -20,7 +20,7 @@ Al completar este módulo serás capaz de:
 2. **Evaluar** los riesgos de privacidad según el contexto (open source, startup, enterprise regulada) y aplicar mitigaciones adecuadas
 3. **Identificar** los requisitos de compliance relevantes para tu sector (GDPR, SOC 2, PCI-DSS, HIPAA)
 4. **Aplicar** prácticas de responsible disclosure cuando el agente encuentra o introduce vulnerabilidades
-5. **Comparar** las principales herramientas de coding con IA usando criterios objetivos y seleccionar la adecuada para tu contexto
+5. **Comparar** las principales herramientas de desarrollo con IA usando criterios objetivos y seleccionar la adecuada para tu contexto
 6. **Distinguir** tendencias claras en el futuro del desarrollo con IA de lo que probablemente no cambiará
 
 ---
@@ -49,7 +49,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia usando al menos una herramienta de IA para desarrollo
 - Haber completado los módulos A1-A4, B1-B2 y C1-C2 de este curso (recomendado)
@@ -57,7 +57,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Propiedad intelectual**: los ToS del proveedor, la copyrightabilidad del output y el riesgo de reproducción no son lo mismo; hay que distinguirlos
 - **Privacidad por contexto**: el riesgo varía de bajo (open source) a muy alto (gobierno/defensa), y la mitigación debe corresponderse
@@ -70,7 +70,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: los temas legales (01-03) construyen un marco, la seguridad (04) lo complementa, y las herramientas (05-06) dan perspectiva
 2. **Evalúa tu situación actual**: ¿en qué contexto trabajas (open source, startup, enterprise)? Los riesgos son muy diferentes
@@ -83,8 +83,8 @@ Al completar este módulo serás capaz de:
 
 Este módulo complementa especialmente:
 
-- [M11 - Enterprise y Seguridad](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-11-enterprise-seguridad/README.md): configuración enterprise, políticas organizacionales, deployment on-premise
-- [M05 - Configuración y Permisos](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-05-configuracion-permisos/README.md): jerarquía de permisos allow/deny que implementa las políticas de este módulo
+- [M11 - Enterprise y Seguridad](../../Curso-desarrollo-software-con-Claude-Code/modulo-11-enterprise-seguridad/README.md): configuración enterprise, políticas organizacionales, deployment on-premise
+- [M05 - Configuración y Permisos](../../Curso-desarrollo-software-con-Claude-Code/modulo-05-configuracion-permisos/README.md): jerarquía de permisos allow/deny que implementa las políticas de este módulo
 
 ---
 

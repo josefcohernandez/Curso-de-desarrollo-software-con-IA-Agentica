@@ -1,6 +1,6 @@
 # Módulo E4: Seguridad, Costes y Optimización
 
-## Descripción General
+## Descripción general
 
 Desarrollar con IA agéntica no solo amplifica tu productividad -- también amplifica los riesgos de seguridad y los costes. Un agente puede generar código vulnerable tan rápido como código seguro, y una sesión mal gestionada puede consumir presupuesto sin producir valor. Este módulo te enseña a integrar seguridad por diseño en tu flujo de trabajo con IA, a controlar costes con estrategias de token budgeting, y a medir la productividad real de tu equipo para justificar (o ajustar) la inversión en herramientas de IA.
 
@@ -8,7 +8,7 @@ Desarrollar con IA agéntica no solo amplifica tu productividad -- también ampl
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -47,7 +47,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia con desarrollo web (al menos un stack: Node, Python, Java o similar)
 - Conocimientos básicos de seguridad web (OWASP Top 10, autenticación, autorización)
@@ -56,7 +56,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **STRIDE**: framework de threat modeling (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege)
 - **Attack surface mapping**: identificación sistemática de todos los puntos de entrada de un sistema
@@ -72,7 +72,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Seguridad primero**: lee las teorías 01 y 02 antes de las de costes -- la seguridad no se optimiza, se garantiza
 2. **Haz el threat model** (ejercicio 01) inmediatamente después de leer la teoría 01 -- se aprende haciendo

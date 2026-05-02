@@ -1,6 +1,6 @@
 # Módulo A3: Revisión de Código Generado por IA
 
-## Descripción General
+## Descripción general
 
 Aprender a leer código con ojos de detective, no de espectador. La revisión de código generado por IA requiere un enfoque diferente al code review tradicional: el código compila, los tests pasan, se lee bien... pero puede esconder regresiones silenciosas, abstracciones innecesarias y deuda técnica que nadie cuestiona porque "el agente lo generó y funciona".
 
@@ -10,7 +10,7 @@ En este módulo desarrollarás un método sistemático para revisar PRs generado
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -45,7 +45,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado el [Módulo A2: Limitaciones, Fallos y Pensamiento Crítico](../modulo-A2-limitaciones-fallos/README.md)
 - Experiencia básica con code review (haber revisado o recibido revisiones de código)
@@ -53,7 +53,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Rubber stamp**: aceptar código sin revisarlo porque "se ve bien"
 - **Errores coherentes**: código que compila y se lee bien pero hace lo incorrecto
@@ -64,7 +64,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: cada archivo construye sobre el anterior, desde los fundamentos hasta las técnicas avanzadas (01 → 05)
 2. **Haz una pausa y revisa un PR reciente** de tu propio trabajo con IA

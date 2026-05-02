@@ -1,6 +1,6 @@
 # Módulo E1: Arquitectura de Software Orientada a IA
 
-## Descripción General
+## Descripción general
 
 La arquitectura de tu software determina directamente cuánto valor puedes extraer de un agente de código. Un proyecto con buena "AI-readability" permite que el agente entienda, navegue y modifique el código con precisión. Un proyecto con mala AI-readability produce alucinaciones, cambios incorrectos y frustración.
 
@@ -10,7 +10,7 @@ Este módulo te enseña a diseñar y evaluar la arquitectura de tus proyectos pa
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -43,7 +43,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia con al menos un proyecto de software real (aplicación web, API, librería)
 - Familiaridad con conceptos de arquitectura: módulos, interfaces, dependency injection
@@ -52,7 +52,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **AI-readability**: la facilidad con la que un agente de código puede entender, navegar y modificar tu código
 - **Los 5 pilares**: modularidad explícita, interfaces como contrato, tests como especificación, convenciones explícitas, bajo acoplamiento
@@ -65,7 +65,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: empieza por entender qué es AI-readability (01), luego los patrones positivos (02), los anti-patrones a evitar (03) y finalmente la documentación como contrato (04)
 2. **Evalúa tu proyecto actual**: usa los 5 pilares de la teoría 01 para puntuar un proyecto real tuyo

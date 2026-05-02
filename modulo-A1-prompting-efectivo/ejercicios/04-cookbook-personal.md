@@ -76,7 +76,7 @@ Investiga, corrige, y ejecuta [comando test].
 ...
 ```
 
-> **Referencia**: ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md) para aprender a configurar estos archivos persistentes.
+> **Referencia**: ver [M04 - Memoria con CLAUDE.md](../../../Curso-desarrollo-software-con-Claude-Code/modulo-04-memoria-claude-md/README.md) para aprender a configurar estos archivos persistentes.
 
 #### Opción B: Como custom slash commands (Claude Code)
 
@@ -99,7 +99,7 @@ No modifiques otros archivos sin indicación explícita.
 
 Luego invócalo con: `/project:fix-test test/auth.test.js:45`
 
-> **Referencia**: ver [M09 - Agentes, Skills y Teams](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-09-agentes-skills-teams/README.md) para más detalles sobre custom slash commands.
+> **Referencia**: ver [M09 - Agentes, Skills y Teams](../../../Curso-desarrollo-software-con-Claude-Code/modulo-09-agentes-skills-teams/README.md) para más detalles sobre custom slash commands.
 
 #### Opción C: En un archivo de texto personal
 

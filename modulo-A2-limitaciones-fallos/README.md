@@ -1,6 +1,6 @@
 # Módulo A2: Limitaciones, Fallos y Pensamiento Crítico
 
-## Descripción General
+## Descripción general
 
 Los agentes de código no son infalibles. Alucinan APIs, introducen regresiones silenciosas, sobre-ingenierizan soluciones y pierden el hilo en sesiones largas. Conocer estos modos de fallo — y saber detectarlos antes de que lleguen a producción — es **la habilidad más importante** para trabajar profesionalmente con IA.
 
@@ -10,7 +10,7 @@ En este módulo desarrollarás un ojo clínico para los 8 tipos de fallo más co
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -51,15 +51,15 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
-- Experiencia básica con al menos una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Experiencia básica con al menos una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Familiaridad con conceptos de desarrollo: tests, control de versiones, imports, diffs
 - **Recomendado**: haber completado el [Módulo A1: Prompting Efectivo](../modulo-A1-prompting-efectivo/README.md)
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Taxonomía de fallos**: 8 categorías (alucinación API, alucinación lógica, regresión silenciosa, over-engineering, divergencia de estilo, degradación de contexto, sesgo de recencia, confianza excesiva)
 - **Alucinación de código**: el agente genera código que referencia APIs, funciones o imports que no existen en la realidad
@@ -73,7 +73,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: empieza por la taxonomía general (01) y luego profundiza en cada tipo de fallo (02-05)
 2. **Interioriza las señales de alarma**: cada teoría incluye indicadores prácticos que puedes aplicar inmediatamente

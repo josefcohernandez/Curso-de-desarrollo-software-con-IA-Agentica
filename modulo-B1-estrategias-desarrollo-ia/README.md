@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-Las herramientas de coding con IA son extraordinariamente potentes — pero la herramienta no es el factor limitante. El factor limitante es el proceso. Este módulo enseña las metodologías y estrategias que convierten la potencia del agente en resultados consistentes y predecibles.
+Las herramientas de desarrollo con IA son extraordinariamente potentes — pero la herramienta no es el factor limitante. El factor limitante es el proceso. Este módulo enseña las metodologías y estrategias que convierten la potencia del agente en resultados consistentes y predecibles.
 
 Cubrirás el mapa completo de estrategias (SDD, TDD, Gherkin/BDD, PRD, Design Docs, ADR, Visual-Driven, Fan-out), profundizarás en las dos más transformadoras (Gherkin y TDD), y aprenderás los patrones de workflow avanzados que multiplican la efectividad de cualquier agente de código.
 
@@ -23,7 +23,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado el [Bloque A del curso](../modulo-A1-prompting-efectivo/README.md) (módulos A1-A4) o tener experiencia equivalente
 - Familiaridad con al menos un framework de tests (Jest, pytest, Go testing o similar)
@@ -108,8 +108,8 @@ Este módulo está especialmente relacionado con:
 
 - [Módulo B2 - SDD Monográfico](../modulo-B2-sdd-monografico/README.md): profundización en Spec-Driven Development con las cuatro fases detalladas y casos de estudio end-to-end. Este módulo B1 introduce los conceptos; B2 los desarrolla en profundidad.
 - [Módulo E3 - Testing Avanzado y AI Pair Programming](../modulo-E3-testing-pair-programming/README.md): técnicas avanzadas de testing (property-based, mutation, visual regression) que amplían el TDD introducido aquí.
-- [M09 - Agentes, Skills y Teams](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-09-agentes-skills-teams/README.md): los patrones Fan-out y Writer/Reviewer aprovechan las capacidades de subagentes descritas en M09.
-- [M06 - Planificación con Opus](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-06-planificacion-opus/README.md): la fase de planificación en SDD y Design Docs beneficia del enfoque de M06.
+- [M09 - Agentes, Skills y Teams](../../Curso-desarrollo-software-con-Claude-Code/modulo-09-agentes-skills-teams/README.md): los patrones Fan-out y Writer/Reviewer aprovechan las capacidades de subagentes descritas en M09.
+- [M06 - Planificación con Opus](../../Curso-desarrollo-software-con-Claude-Code/modulo-06-planificacion-opus/README.md): la fase de planificación en SDD y Design Docs beneficia del enfoque de M06.
 
 ---
 

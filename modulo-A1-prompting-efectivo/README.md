@@ -1,6 +1,6 @@
 # Módulo A1: Prompting Efectivo para Agentes de Código
 
-## Descripción General
+## Descripción general
 
 El prompt es tu interfaz principal con un agente de código. No es una pregunta casual ni una búsqueda de Google — es una **especificación de trabajo** para un agente autónomo que va a leer archivos, tomar decisiones y modificar tu código. La calidad de tus resultados depende directamente de la calidad de tus prompts.
 
@@ -10,7 +10,7 @@ En este módulo aprenderás a escribir prompts que producen resultados predecibl
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -50,15 +50,15 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
-- Experiencia básica con al menos una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Experiencia básica con al menos una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Familiaridad con conceptos de desarrollo: tests, control de versiones, estructura de proyectos
-- **Recomendado**: haber completado los módulos M01-M06 del [Curso de Claude Code](https://github.com/josefcohernandez/claude-code-course)
+- **Recomendado**: haber completado los módulos M01-M06 del [Curso de Claude Code](../../Curso-desarrollo-software-con-Claude-Code/README.md)
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Prompt como especificación**: el prompt no es una pregunta, es un brief de trabajo para un agente autónomo
 - **Los 3 componentes**: contexto, intención y verificación — todo prompt efectivo los incluye
@@ -73,7 +73,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: cada archivo construye sobre el anterior, desde los fundamentos hasta las técnicas avanzadas
 2. **Toma notas de los patrones**: los 6 templates de la teoría 03 son tu referencia principal para el trabajo diario
@@ -87,9 +87,9 @@ Al completar este módulo serás capaz de:
 
 Este módulo complementa especialmente:
 
-- [M01 - Introducción y Metodología](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-01-introduccion/README.md): donde se presenta la metodología de desarrollo asistido y los primeros prompts
-- [M03 - Contexto y Tokens](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-03-contexto-y-tokens/README.md): donde se profundiza en cómo el agente gestiona el contexto
-- [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md): donde se enseña a crear archivos de memoria persistente que complementan tus prompts
+- [M01 - Introducción y Metodología](../../Curso-desarrollo-software-con-Claude-Code/modulo-01-introduccion/README.md): donde se presenta la metodología de desarrollo asistido y los primeros prompts
+- [M03 - Contexto y Tokens](../../Curso-desarrollo-software-con-Claude-Code/modulo-03-contexto-y-tokens/README.md): donde se profundiza en cómo el agente gestiona el contexto
+- [M04 - Memoria con CLAUDE.md](../../Curso-desarrollo-software-con-Claude-Code/modulo-04-memoria-claude-md/README.md): donde se enseña a crear archivos de memoria persistente que complementan tus prompts
 
 ---
 

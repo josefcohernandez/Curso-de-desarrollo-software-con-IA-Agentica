@@ -129,7 +129,7 @@ No modifiques ningún archivo. Solo investiga y dame un resumen estructurado.
 - Este patrón es ideal para onboarding en proyectos nuevos
 - El resultado es un mapa mental que te ayuda a escribir mejores prompts para las tareas siguientes
 
-> **Relación con el Curso de Claude Code**: el modo de exploración se potencia con el conocimiento de cómo el agente gestiona el contexto (ver [M03 - Contexto y Tokens](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-03-contexto-y-tokens/README.md)).
+> **Relación con el Curso de Claude Code**: el modo de exploración se potencia con el conocimiento de cómo el agente gestiona el contexto (ver [M03 - Contexto y Tokens](../../../Curso-desarrollo-software-con-Claude-Code/modulo-03-contexto-y-tokens/README.md)).
 
 ---
 

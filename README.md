@@ -4,7 +4,7 @@
 
 ## Acerca de este curso
 
-Este curso enseña las habilidades, el pensamiento crítico y las metodologías que necesitas para trabajar de forma profesional y efectiva con agentes de código con IA. No se centra en una herramienta específica: los conceptos son transferibles, con matices, entre Claude Code, Codex, Cursor, Copilot, Windsurf, Cline y otras herramientas de desarrollo asistido por IA.
+Este curso enseña las habilidades, el pensamiento crítico y las metodologías que necesitas para trabajar de forma profesional y efectiva con agentes de código basados en IA. No se centra en una herramienta específica: los conceptos son transferibles, con matices, entre Claude Code, Codex, Cursor, Copilot, Windsurf, Cline y otras herramientas de desarrollo asistido por IA.
 
 Mientras que un curso de herramienta enseña *qué botones pulsar*, este curso enseña **cómo pensar**: escribir prompts efectivos, detectar errores del agente, revisar código generado por IA, depurar de forma sistemática, y adoptar IA en equipos de desarrollo.
 
@@ -19,7 +19,7 @@ Algunos ejemplos del curso usan Claude Code o Codex como referencia. Cuando veas
 - `/clear`: reinicio de sesión o contexto
 - `/compact`: compresión o resumen del contexto acumulado
 
-La regla didáctica del curso es esta: **si una capacidad es específica de una herramienta, se nombra; si el concepto es general, se explica de forma vendor-neutral**.
+La regla didáctica del curso es esta: **si una capacidad es específica de una herramienta, se nombra; si el concepto es general, se explica de forma agnóstica respecto al proveedor**.
 
 ### Público objetivo
 
@@ -32,7 +32,7 @@ La regla didáctica del curso es esta: **si una capacidad es específica de una 
 ### Requisitos previos
 
 - Experiencia en programación (cualquier lenguaje)
-- Haber usado al menos una herramienta de coding con IA (no necesitas ser experto)
+- Haber usado al menos una herramienta de desarrollo con IA (no necesitas ser experto)
 - Familiaridad con conceptos básicos de desarrollo: tests, control de versiones, code review
 
 **Recomendado**: si usas Claude Code, haber completado los módulos M01-M06 del [Curso de Claude Code](../Curso-desarrollo-software-con-Claude-Code/README.md) o tener experiencia equivalente.
@@ -142,11 +142,11 @@ PROYECTO FINAL                                  ▼
 
 ## Cómo usar este curso
 
-### Como formación guiada
+### Cómo seguirlo como formación guiada
 
 Sigue los bloques en orden (A → B → C → D → E → Proyecto). Cada módulo construye sobre los anteriores. Dedica al menos 1 semana al Bloque A — es la base de todo lo demás. El Bloque E (Experto) es opcional si no necesitas nivel avanzado.
 
-### Como referencia rápida
+### Cómo usarlo como referencia rápida
 
 - **"¿Cómo escribo un buen prompt?"** → Módulo A1
 - **"¿Qué es context engineering?"** → Módulo A1 (teoría 07)
@@ -215,7 +215,7 @@ M16 Proyecto     ◄────────────────────
 
 - El **Curso de Claude Code** enseña a dominar la herramienta: CLI, configuración, MCP, hooks, subagentes, CI/CD
 - **Este curso** enseña el oficio: cómo pensar, cómo detectar errores, cómo revisar, cómo adoptar en equipos
-- Los conceptos de este curso son **transferibles** a cualquier herramienta de coding con IA
+- Los conceptos de este curso son **transferibles** a cualquier herramienta de desarrollo con IA
 - Los ejemplos usan Claude Code como referencia principal, con notas sobre equivalencias en otras herramientas
 
 ---

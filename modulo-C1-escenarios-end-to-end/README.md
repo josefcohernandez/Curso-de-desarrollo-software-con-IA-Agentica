@@ -1,6 +1,6 @@
 # Módulo C1: El Día a Día — Escenarios End-to-End
 
-## Descripción General
+## Descripción general
 
 Los módulos del Bloque A te enseñaron las habilidades individuales: prompting, pensamiento crítico, revisión de código y debugging. Pero el trabajo real no son habilidades aisladas — es **combinarlas en flujos completos** que resuelven problemas reales de principio a fin.
 
@@ -10,7 +10,7 @@ En este módulo vas a recorrer cinco escenarios que representan las situaciones 
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -46,17 +46,17 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado los módulos A1-A4 de este curso (Prompting, Limitaciones, Code Review, Debugging)
 - Haber completado el [Módulo B1: Estrategias de Desarrollo con IA Agéntica](../modulo-B1-estrategias-desarrollo-ia/README.md) y el [Módulo B2: SDD Monográfico](../modulo-B2-sdd-monografico/README.md)
-- Experiencia práctica con al menos una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Experiencia práctica con al menos una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Familiaridad con git, tests automatizados y al menos un lenguaje backend (Node.js, Python, Go, etc.)
-- **Recomendado**: haber completado los módulos M01-M10 del [Curso de Claude Code](https://github.com/josefcohernandez/claude-code-course)
+- **Recomendado**: haber completado los módulos M01-M10 del [Curso de Claude Code](../../Curso-desarrollo-software-con-Claude-Code/README.md)
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Workflow end-to-end**: secuencia completa de pasos desde que identificas un problema hasta que lo resuelves, documentas y verificas
 - **Onboarding con agente**: exploración estructurada en 4 fases (overview, deep dive, convenciones, primera contribución) que produce un mapa mental del proyecto
@@ -68,7 +68,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: cada escenario construye sobre los anteriores, desde situaciones simples (onboarding) hasta complejas (legacy)
 2. **Identifica tu escenario más frecuente**: no todos los escenarios tienen el mismo peso en tu día a día — prioriza el que más se parezca a tu trabajo actual
@@ -82,7 +82,7 @@ Al completar este módulo serás capaz de:
 
 Este módulo complementa especialmente:
 
-- [M09 - Agentes, Skills y Teams](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-09-agentes-skills-teams/README.md): donde se profundiza en la orquestación de agentes para tareas complejas
+- [M09 - Agentes, Skills y Teams](../../Curso-desarrollo-software-con-Claude-Code/modulo-09-agentes-skills-teams/README.md): donde se profundiza en la orquestación de agentes para tareas complejas
 - [Módulo B1 - Estrategias de Desarrollo con IA](../modulo-B1-estrategias-desarrollo-ia/README.md): donde se formalizan los patrones Gherkin/BDD, TDD y workflows avanzados que se aplican en los escenarios de este módulo
 - [Módulo B2 - SDD Monográfico](../modulo-B2-sdd-monografico/README.md): donde se detalla el proceso SDD completo que está en la base del escenario greenfield (teoría 03)
 

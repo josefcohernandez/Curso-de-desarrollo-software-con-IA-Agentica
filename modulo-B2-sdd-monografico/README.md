@@ -1,6 +1,6 @@
 # Módulo B2: SDD — Spec-Driven Development (Monográfico)
 
-## Descripción General
+## Descripción general
 
 SDD es la metodología que separa a los desarrolladores que usan IA de los que **dominan** el desarrollo con IA. Mientras otros acumulan horas de retrabajo porque el agente "interpretó mal lo que querían", quienes practican SDD tienen especificaciones que eliminan la ambigüedad antes de escribir la primera línea de código.
 
@@ -10,7 +10,7 @@ Este módulo monográfico profundiza en las cuatro fases de SDD — entrevista, 
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -24,11 +24,11 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado el [Módulo B1: Estrategias de Desarrollo con IA Agéntica](../modulo-B1-estrategias-desarrollo-ia/README.md), donde se introduce SDD en el contexto de las metodologías de desarrollo
 - Haber completado los módulos A1-A4 de este curso (Prompting, Limitaciones, Code Review, Debugging)
-- Experiencia práctica con al menos una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Experiencia práctica con al menos una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Familiaridad con el concepto de TDD (Test-Driven Development) — no es necesario dominarlo
 
 ---
@@ -77,7 +77,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **SDD (Spec-Driven Development)**: metodología de desarrollo donde la especificación formal precede siempre a la implementación, especialmente relevante cuando el implementador es un agente de IA
 - **Spec como single source of truth**: el SPEC.md es la referencia definitiva del comportamiento esperado del sistema — todo lo que no esté en la spec no existe
@@ -90,7 +90,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee los 7 ficheros de teoría en orden**: la filosofía (01) contextualiza todo lo demás; las fases (02-05) son el núcleo; el contexto (06) y los casos de estudio (07) te preparan para los ejercicios
 2. **Descarga las plantillas**: ten `plantilla-spec.md` y `plantilla-verificacion.md` abiertas mientras haces los ejercicios
@@ -106,7 +106,7 @@ Al completar este módulo serás capaz de:
 Este módulo expande y profundiza significativamente el contenido de:
 
 - [Módulo B1 - Estrategias de Desarrollo con IA](../modulo-B1-estrategias-desarrollo-ia/README.md): donde se introducen los patrones Gherkin/BDD, TDD y Writer/Reviewer en el contexto del desarrollo con IA agéntica. Este módulo B2 profundiza específicamente en SDD con más detalle en cada fase, casos de estudio adicionales y aplicación a contextos variados
-- [M09 - Agentes, Skills y Teams](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-09-agentes-skills-teams/README.md): el patrón Writer/Reviewer de la fase de verificación utiliza el concepto de múltiples agentes con roles distintos
+- [M09 - Agentes, Skills y Teams](../../Curso-desarrollo-software-con-Claude-Code/modulo-09-agentes-skills-teams/README.md): el patrón Writer/Reviewer de la fase de verificación utiliza el concepto de múltiples agentes con roles distintos
 
 ---
 

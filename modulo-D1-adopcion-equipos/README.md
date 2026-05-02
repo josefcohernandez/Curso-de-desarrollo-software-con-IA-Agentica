@@ -1,6 +1,6 @@
 # Módulo D1: Adopción en Equipos y Métricas
 
-## Descripción General
+## Descripción general
 
 Introducir una herramienta de IA en un equipo de desarrollo no es solo instalar software: es un **cambio de proceso** que afecta a personas, flujos de trabajo y cultura. Este módulo te prepara para liderar una adopción exitosa: desde las fases iniciales de exploración hasta la medición de ROI para justificar la inversión ante management.
 
@@ -10,7 +10,7 @@ Aprenderás a manejar la resistencia al cambio con empatía, a establecer conven
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -46,16 +46,16 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia trabajando en equipos de desarrollo (no necesariamente como lead)
 - Familiaridad con herramientas de IA para desarrollo (Claude Code, Cursor, Copilot, etc.)
 - **Recomendado**: haber completado los módulos A1-A4, B1-B2 y C1-C2 de este curso
-- **Complementario**: [M11 - Enterprise y Seguridad](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-11-enterprise-seguridad/README.md) del Curso de Claude Code
+- **Complementario**: [M11 - Enterprise y Seguridad](../../Curso-desarrollo-software-con-Claude-Code/modulo-11-enterprise-seguridad/README.md) del Curso de Claude Code
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Las 4 fases**: exploración (early adopters), estandarización (convenciones), integración (workflow diario), optimización (métricas y ROI)
 - **Regla de oro de la adopción**: nunca obligar, siempre demostrar. Los mejores evangelistas son los compañeros que muestran resultados
@@ -67,7 +67,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: las fases de adopción (01) te dan el marco general, y cada archivo posterior profundiza en un aspecto
 2. **Identifica tu situación**: ¿estás en fase de exploración? ¿ya tienes convenciones? Ubica a tu equipo en las 4 fases
@@ -81,9 +81,9 @@ Al completar este módulo serás capaz de:
 
 Este módulo complementa especialmente:
 
-- [M11 - Enterprise y Seguridad](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-11-enterprise-seguridad/README.md): configuración enterprise, permisos y políticas organizacionales
-- [M05 - Configuración y Permisos](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-05-configuracion-permisos/README.md): jerarquía de settings, permisos allow/deny
-- [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md): cómo crear y mantener archivos CLAUDE.md
+- [M11 - Enterprise y Seguridad](../../Curso-desarrollo-software-con-Claude-Code/modulo-11-enterprise-seguridad/README.md): configuración enterprise, permisos y políticas organizacionales
+- [M05 - Configuración y Permisos](../../Curso-desarrollo-software-con-Claude-Code/modulo-05-configuracion-permisos/README.md): jerarquía de settings, permisos allow/deny
+- [M04 - Memoria con CLAUDE.md](../../Curso-desarrollo-software-con-Claude-Code/modulo-04-memoria-claude-md/README.md): cómo crear y mantener archivos CLAUDE.md
 
 ---
 

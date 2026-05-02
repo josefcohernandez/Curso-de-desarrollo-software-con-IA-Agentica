@@ -1,6 +1,6 @@
 # Módulo E3: Testing Avanzado y AI Pair Programming
 
-## Descripción General
+## Descripción general
 
 Las prácticas de testing tradicionales (unit tests, integration tests, coverage) son necesarias pero insuficientes cuando se desarrolla con asistencia de IA. Este módulo explora técnicas de testing de siguiente nivel -- property-based testing, mutation testing y visual regression -- que aprovechan las capacidades generativas de los agentes de código. Además, aprenderás a colaborar en tiempo real con un agente de IA usando cinco patrones de pair programming, y a gestionar tu productividad y flow state en sesiones prolongadas.
 
@@ -8,7 +8,7 @@ Las prácticas de testing tradicionales (unit tests, integration tests, coverage
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -44,7 +44,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Experiencia escribiendo tests unitarios y de integración en al menos un lenguaje
 - Familiaridad con el concepto de code coverage y herramientas de testing (Jest, pytest, JUnit o similares)
@@ -53,7 +53,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Property-based testing**: definir propiedades invariantes en vez de ejemplos concretos; el framework genera los inputs
 - **Fuzzing**: generación de inputs malformados, extremos y adversariales para encontrar edge cases
@@ -65,7 +65,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee la teoría en orden**: los tres primeros archivos cubren técnicas de testing progresivamente más avanzadas; los dos últimos se centran en la colaboración humano-IA
 2. **Practica cada técnica de testing**: instala al menos una herramienta (Hypothesis, Stryker, Playwright) y ejecuta los ejemplos

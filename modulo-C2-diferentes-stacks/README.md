@@ -1,6 +1,6 @@
 # Módulo C2: Trabajar con Diferentes Stacks
 
-## Descripción General
+## Descripción general
 
 Cada stack tecnológico tiene sus particularidades cuando trabajas con un agente de código. Lo que funciona perfectamente en frontend puede ser un desastre en DevOps; las fortalezas del agente en Python no son las mismas que en Go o Rust. Este módulo te da un mapa completo: **qué esperar del agente en cada stack**, dónde brilla, dónde falla, y qué patrones aplicar para obtener resultados profesionales.
 
@@ -10,7 +10,7 @@ No se trata de aprender cada tecnología — se trata de saber **cómo dirigir a
 
 ---
 
-## Objetivos de Aprendizaje
+## Objetivos de aprendizaje
 
 Al completar este módulo serás capaz de:
 
@@ -47,16 +47,16 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Prerequisitos
+## Prerrequisitos
 
 - Haber completado el [Módulo A1: Prompting Efectivo](../modulo-A1-prompting-efectivo/README.md) — necesitas saber escribir buenos prompts antes de adaptarlos por stack
-- Experiencia práctica con al menos una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Experiencia práctica con al menos una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Conocimiento básico de al menos 2 de los 5 stacks cubiertos (frontend, backend, DevOps, data, mobile)
 - **Recomendado**: haber completado el [Módulo C1: Escenarios End-to-End](../modulo-C1-escenarios-end-to-end/README.md)
 
 ---
 
-## Conceptos Clave
+## Conceptos clave
 
 - **Fortalezas por stack**: el agente destaca en generación de componentes UI, queries SQL complejas y scaffolding de infraestructura
 - **Debilidades por stack**: componentes monolíticos en frontend, queries ineficientes en SQL, configuraciones inseguras en Docker/Kubernetes
@@ -68,7 +68,7 @@ Al completar este módulo serás capaz de:
 
 ---
 
-## Flujo de Trabajo Recomendado
+## Flujo de trabajo recomendado
 
 1. **Lee las 5 teorías**: incluso si solo trabajas con un stack, entender las diferencias te hace más consciente de las limitaciones generales del agente
 2. **Identifica tu stack principal**: enfócate en los ejercicios que coinciden con tu trabajo diario

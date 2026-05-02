@@ -91,7 +91,7 @@ Añade paginación con cursor al endpoint GET /api/products.
 Sigue el mismo patrón que GET /api/orders (ya tiene paginación).
 ```
 
-> **Referencia**: para aprender a crear archivos CLAUDE.md efectivos, ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md) del Curso de Claude Code.
+> **Referencia**: para aprender a crear archivos CLAUDE.md efectivos, ver [M04 - Memoria con CLAUDE.md](../../../Curso-desarrollo-software-con-Claude-Code/modulo-04-memoria-claude-md/README.md) del Curso de Claude Code.
 
 ---
 

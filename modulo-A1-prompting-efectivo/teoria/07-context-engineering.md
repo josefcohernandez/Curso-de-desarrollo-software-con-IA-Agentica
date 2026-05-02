@@ -262,7 +262,7 @@ El contenido estático al principio (el prefijo) se cachea entre peticiones. El 
 
 Para una visión detallada de cómo los costes de tokens impactan en proyectos reales, ver [E4 — Token Budgeting](../../modulo-E4-seguridad-costes/teoria/03-token-budgeting.md).
 
-> **Referencia**: para profundizar en la gestión de la ventana de contexto desde la perspectiva de la herramienta, ver [M03 - Contexto y Tokens](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-03-contexto-y-tokens/README.md) del Curso de Claude Code.
+> **Referencia**: para profundizar en la gestión de la ventana de contexto desde la perspectiva de la herramienta, ver [M03 - Contexto y Tokens](../../../Curso-desarrollo-software-con-Claude-Code/modulo-03-contexto-y-tokens/README.md) del Curso de Claude Code.
 
 ---
 

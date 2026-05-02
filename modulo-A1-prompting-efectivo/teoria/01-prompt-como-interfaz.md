@@ -53,7 +53,7 @@ y los modelos en src/models/. Usamos TypeScript y Prisma como ORM.
 
 El contexto le da al agente el **modelo mental** del proyecto. Sin él, el agente tiene que explorar desde cero — lo cual es válido en algunas situaciones, pero consume más tokens y tiempo.
 
-> **Relación con el Curso de Claude Code**: el contexto permanente del proyecto suele vivir en un archivo de instrucciones persistentes del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente; ver [M04 - Memoria con CLAUDE.md](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-04-memoria-claude-md/README.md)). El contexto del prompt complementa esa información con lo específico de la tarea actual.
+> **Relación con el Curso de Claude Code**: el contexto permanente del proyecto suele vivir en un archivo de instrucciones persistentes del repositorio (`AGENTS.md`, `CLAUDE.md` o equivalente; ver [M04 - Memoria con CLAUDE.md](../../../Curso-desarrollo-software-con-Claude-Code/modulo-04-memoria-claude-md/README.md)). El contexto del prompt complementa esa información con lo específico de la tarea actual.
 
 ### 2. Intención
 

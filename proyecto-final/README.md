@@ -1,6 +1,6 @@
 # Proyecto Final: Caso Práctico Integrador
 
-## Descripción General
+## Descripción general
 
 El proyecto final simula un **sprint de desarrollo completo de 3 "días"** donde aplicarás todas las técnicas aprendidas en el curso. Construirás una API REST real con asistencia de IA agéntica, evaluando no solo el resultado final sino el **proceso** que seguiste.
 
@@ -10,22 +10,22 @@ Este proyecto integra los módulos A1-A4, B1-B2, C1 y C2 en un escenario realist
 
 ---
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 | Documento | Contenido |
 |-----------|-----------|
-| [Enunciado completo](enunciado/README.md) | Sprint de 3 días con fases, entregables y mapping a módulos del curso |
+| [Enunciado completo](enunciado/README.md) | Sprint de 3 días con fases, entregables y mapeo con los módulos del curso |
 | [Rúbrica de evaluación](criterios-evaluacion/rubrica.md) | 5 criterios de evaluación con 3 niveles y ejemplos |
 
 ---
 
-## El Proyecto en una Frase
+## El proyecto en una frase
 
 Desarrollar una **API REST de gestión de tareas** (todo list avanzada) en 3 sesiones, aplicando prompting efectivo, pensamiento crítico, debugging, code review, y configuración de equipo — todo con asistencia de IA agéntica.
 
 ---
 
-## Qué se Evalúa
+## Qué se evalúa
 
 No es un examen de programación. Se evalúa **cómo trabajas con IA**, no solo el resultado:
 
@@ -42,7 +42,7 @@ No es un examen de programación. Se evalúa **cómo trabajas con IA**, no solo 
 ## Prerrequisitos
 
 - Haber completado los módulos A1-A4, B1-B2, C1-C2 y D1-D2 del curso
-- Acceso a una herramienta de coding con IA (Claude Code, Cursor, Copilot, etc.)
+- Acceso a una herramienta de desarrollo con IA (Claude Code, Cursor, Copilot, etc.)
 - Entorno de desarrollo funcional (Node.js/Python + base de datos)
 - Conocimientos básicos de APIs REST
 
@@ -50,7 +50,7 @@ No es un examen de programación. Se evalúa **cómo trabajas con IA**, no solo 
 
 ## Relación con el Proyecto del Curso de Claude Code
 
-Si también estás haciendo el [Proyecto Final del Curso de Claude Code (M16)](https://github.com/josefcohernandez/claude-code-course/blob/master/curso/modulo-16-proyecto-final/enunciado/README.md), puedes combinar ambos proyectos:
+Si también estás haciendo el [Proyecto Final del Curso de Claude Code (M16)](../../Curso-desarrollo-software-con-Claude-Code/modulo-16-proyecto-final/enunciado/README.md), puedes combinar ambos proyectos:
 
 - Usa el proyecto de M16 (herramienta CLI de análisis de calidad) como base
 - Aplica las técnicas de este curso durante su desarrollo
@@ -63,3 +63,5 @@ Si también estás haciendo el [Proyecto Final del Curso de Claude Code (M16)](h
 | | |
 |---|---|
 | **Anterior** | [Módulo E4: Seguridad, Costes y Optimización](../modulo-E4-seguridad-costes/README.md) |
+| **Enunciado** | [Enunciado completo](enunciado/README.md) |
+| **Rúbrica** | [Criterios de evaluación](criterios-evaluacion/rubrica.md) |
